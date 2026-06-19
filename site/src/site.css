@@ -1,5 +1,10 @@
 @import url('/design-system/styles.css');
 
+:root {
+  --color-dev-notes: #f2b84b;
+  --color-dev-notes-tint: color-mix(in srgb, var(--color-dev-notes) 12%, transparent);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -392,7 +397,7 @@ h1 {
 }
 
 .section-header-dev-notes {
-  --section-color: var(--color-positive);
+  --section-color: var(--color-dev-notes);
 }
 
 .section-header h2 {
@@ -408,6 +413,7 @@ h1 {
 .thread-grid,
 .related-grid,
 .method-grid,
+.flow-grid,
 .quote-grid {
   display: grid;
   gap: var(--space-5);
@@ -415,7 +421,8 @@ h1 {
 
 .bucket-grid,
 .thread-grid,
-.method-grid {
+.method-grid,
+.flow-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -431,6 +438,7 @@ h1 {
 .thread-card,
 .ask-card,
 .method-card,
+.flow-card,
 .quote-card {
   border: var(--border-1);
   border-radius: var(--radius-lg);
@@ -711,6 +719,12 @@ h1 {
   overflow: visible;
 }
 
+.overview-card {
+  min-height: 168px;
+  margin-top: var(--space-2);
+  overflow: visible;
+}
+
 .ask-heading {
   align-items: flex-start;
   padding: var(--space-1) var(--space-9) var(--space-2) 0;
@@ -756,6 +770,24 @@ h1 {
   margin-top: auto;
   padding-top: var(--space-3);
   border-top: var(--border-1);
+}
+
+.ask-card .signal-bar {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: var(--border-1);
+}
+
+.ask-card .signal-bar > div + div {
+  padding-left: var(--space-4);
+  border-left: var(--border-1);
+}
+
+.ask-card .signal-bar dd {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  overflow-wrap: anywhere;
 }
 
 .ask-card dl > div {
@@ -1020,9 +1052,11 @@ h1 {
   padding: var(--space-2);
   border: var(--border-1);
   border-radius: var(--radius-lg);
-  background: color-mix(in srgb, var(--color-surface-1) 84%, transparent);
-  backdrop-filter: blur(18px) saturate(1.12);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+  background: color-mix(in srgb, var(--color-surface-1) 76%, transparent);
+  backdrop-filter: blur(28px) saturate(1.18);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.32),
+    0 0 0 1px color-mix(in srgb, var(--color-border-strong) 64%, transparent);
 }
 
 .thread-toc a {
@@ -1076,7 +1110,7 @@ h1 {
 }
 
 .thread-toc a.toc-dev-notes {
-  --toc-color: var(--color-positive);
+  --toc-color: var(--color-dev-notes);
 }
 
 .thread-toc a.toc-related {
@@ -1241,6 +1275,12 @@ h1 {
   margin: 0;
   color: var(--color-text-muted);
   font-size: var(--text-md);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
+}
+
+.sentiment-card p + p {
+  margin-top: var(--space-3);
 }
 
 .quote-card {
@@ -1339,21 +1379,100 @@ h1 {
 
 .prose {
   padding: var(--space-6);
-  background: var(--color-surface-1);
+  border-left: var(--accent-rail);
+  border-left-color: var(--color-dev-notes);
+  background:
+    linear-gradient(135deg, var(--color-dev-notes-tint), transparent 38%),
+    var(--color-surface-1);
 }
 
 .prose p {
   margin: 0;
   color: var(--color-text-muted);
   font-size: var(--text-md);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-normal);
 }
 
 .prose p + p {
   margin-top: var(--space-4);
 }
 
-.method-card {
+.method-card,
+.flow-card {
   padding: var(--space-5);
+}
+
+.flow-card {
+  position: relative;
+  min-height: 168px;
+}
+
+.flow-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 26px;
+  margin-bottom: var(--space-4);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 42%, transparent);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-tint);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.flow-card p {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
+}
+
+.data-export-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border: var(--border-1);
+  border-left: 3px solid var(--color-blue);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-blue) 10%, transparent), transparent 42%),
+    var(--color-surface-1);
+}
+
+.data-export-card h2 {
+  font-size: var(--text-lg);
+}
+
+.data-export-card p {
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-muted);
+}
+
+.schema-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.schema-list div {
+  min-width: 0;
+  padding: var(--space-3);
+  border: var(--border-1);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+}
+
+.schema-list dt {
+  color: var(--color-blue-bright);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.schema-list dd {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text-muted);
 }
 
 .site-footer {
@@ -1424,10 +1543,19 @@ h1 {
   .bucket-grid,
   .thread-grid,
   .method-grid,
+  .flow-grid,
   .related-grid,
   .quote-grid,
   .finding-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ask-card .signal-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .data-export-card {
+    grid-template-columns: 1fr;
   }
 
   .sentiment-card-body {
@@ -1477,10 +1605,15 @@ h1 {
   .bucket-grid,
   .thread-grid,
   .method-grid,
+  .flow-grid,
   .related-grid,
   .quote-grid,
   .finding-list,
   .ask-card dl {
+    grid-template-columns: 1fr;
+  }
+
+  .ask-card .signal-bar {
     grid-template-columns: 1fr;
   }
 

@@ -11,7 +11,12 @@
 Bug Report
 
 ## Summary
-Players submitted a range of text errors, mistranslations, incorrect stat displays, and mislabelled items found across the game's UI, armory, store, and skill descriptions. The thread was dominated by a small group of thorough contributors — particularly @berserkaries (German localisation), @silverwolf0313 (Vanguard skill ordering), and @imajes (English UI and store) — who catalogued multiple errors each. The overall volume of distinct bugs reported is high relative to the participant count.
+
+Players submitted a range of text errors, mistranslations, incorrect stat displays, and mislabelled items found across the game's UI, armory, store, and skill descriptions.
+
+The thread was dominated by a small group of thorough contributors — particularly @berserkaries (German localisation), @silverwolf0313 (Vanguard skill ordering), and @imajes (English UI and store) — who catalogued multiple errors each.
+
+The overall volume of distinct bugs reported is high relative to the participant count.
 
 ## Error Categories Found
 
@@ -150,9 +155,12 @@ These reports were posted by @berserkaries with screenshots but don't map cleanl
 - **Loudness:** Low — Reaction counts are minimal and participation is narrow. This is a structured reporting thread rather than a discussion, so low loudness is expected; the signal here is in content quality, not volume.
 
 ## Sentiment
+
 **Overall:** Positive
 
-Contributors are reporting in good faith and with notable specificity — many bugs come with screenshots and proposed corrections. @imajes is an active player contributor (not staff), responsible for several of the English-language store and UI error reports. The only mild friction is @berserkaries occasionally posting general UI improvement suggestions rather than strict typo/error reports. One message posted in the wrong thread (a loadout request) was quickly self-corrected.
+Contributors are reporting in good faith and with notable specificity — many bugs come with screenshots and proposed corrections. @imajes is an active player contributor (not staff), responsible for several of the English-language store and UI error reports.
+
+The only mild friction is @berserkaries occasionally posting general UI improvement suggestions rather than strict typo/error reports. One message posted in the wrong thread (a loadout request) was quickly self-corrected.
 
 Overall, this thread is functioning as intended as a structured community bug-gathering exercise.
 
@@ -183,7 +191,12 @@ Specific, verifiable localisation error on a named weapon; easy to fix once conf
 A copywriting clarity issue rather than a strict typo, but the double negative creates genuine comprehension difficulty; worth flagging to the content team alongside the harder errors.
 
 ## Thread Assessment
-This thread successfully surfaced a meaningful backlog of text-layer bugs across multiple languages and content areas. The most immediately actionable items are the Explosive Burst talent value swap (clearly wrong numbers), the OS Protocol Sealed Cache store mislabelling (affects spending), the Warlord proficiency requirement ambiguity (affects progression), and the wrong skill-mod names in Specialisation Training (systemic, multiple specs). The German localisation errors (@berserkaries) form a self-contained cluster that would benefit from a dedicated review pass with the German localisation team.
+
+This thread successfully surfaced a meaningful backlog of text-layer bugs across multiple languages and content areas.
+
+The most immediately actionable items are the Explosive Burst talent value swap (clearly wrong numbers), the OS Protocol Sealed Cache store mislabelling (affects spending), the Warlord proficiency requirement ambiguity (affects progression), and the wrong skill-mod names in Specialisation Training (systemic, multiple specs).
+
+The German localisation errors (@berserkaries) form a self-contained cluster that would benefit from a dedicated review pass with the German localisation team.
 
 Participation is narrow — 13 players, heavily dominated by 4–5 contributors — so this does not represent broad community awareness of these issues. That said, the reporters are clearly engaged players who know the game in detail and have provided actionable, specific reports rather than vague complaints.
 

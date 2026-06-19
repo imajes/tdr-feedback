@@ -11,7 +11,10 @@
 Rework Request
 
 ## Summary
-Players are frustrated by two intertwined problems: Recalibration Modules (books) are almost exclusively earned through Conflict PvP, which many players dislike or cannot reliably access, and the rate at which modules are consumed per recalibration attempt is seen as excessive and punishing. Several players explicitly request the Division 2 Recalibration Library system as a superior model. The overall ask is to broaden drop sources and dramatically reduce per-roll costs.
+
+Players are frustrated by two intertwined problems: Recalibration Modules (books) are almost exclusively earned through Conflict PvP, which many players dislike or cannot reliably access, and the rate at which modules are consumed per recalibration attempt is seen as excessive and punishing.
+
+Several players explicitly request the Division 2 Recalibration Library system as a superior model. The overall ask is to broaden drop sources and dramatically reduce per-roll costs.
 
 ## Primary Asks
 
@@ -56,9 +59,14 @@ Players are frustrated by two intertwined problems: Recalibration Modules (books
 - **Loudness:** High — highest reaction total across all six threads; the 10-reaction and 7-reaction posts represent unusually strong endorsement for this format, signaling this as the most acutely felt issue in the set
 
 ## Sentiment
+
 **Overall:** Frustrated
 
-This thread has the most concentrated frustration of any thread analyzed. Players describe the recalibration system as "the worst part of the game" (@toxic_trades), "the hardest grind" (same), and note that items can consume 10+ books without producing a wanted result — that's an entire week's worth of Conflict farming for a single item. The AFK-farming problem in Conflict (players going idle to collect books passively) is raised as a symptom of a broken incentive structure.
+This thread has the most concentrated frustration of any thread analyzed.
+
+Players describe the recalibration system as "the worst part of the game" (@toxic_trades), "the hardest grind" (same), and note that items can consume 10+ books without producing a wanted result — that's an entire week's worth of Conflict farming for a single item.
+
+The AFK-farming problem in Conflict (players going idle to collect books passively) is raised as a symptom of a broken incentive structure.
 
 Importantly, multiple players aren't just frustrated — they're describing how this one system is bottlenecking their entire gear progression.
 
@@ -83,8 +91,17 @@ Strong language, but the reaction pattern across the thread validates the sentim
 4 reactions; the most analytically framed post, distinguishing the earn-side from the spend-side as two separate problems — a useful frame for dev prioritization.
 
 ## Thread Assessment
-Recalibration Modules generate more reaction engagement than any other topic in this thread set, which is a reliable signal of depth of feeling. The problem has two distinct halves: supply (books are gated behind a PvP mode many players don't enjoy or can access reliably) and spend rate (the escalating per-roll cost means books disappear faster than they can be earned, especially with bad RNG). Both halves need addressing; fixing only one would still leave players frustrated.
 
-The Division 2 Recalibration Library is the reference solution that multiple players independently raise. It would address the RNG frustration by allowing players to bank specific attributes they've found and apply them deliberately. Whether a full library is technically feasible for this title is a dev question, but the player signal is clear that the current one-random-roll-per-book model is not working.
+Recalibration Modules generate more reaction engagement than any other topic in this thread set, which is a reliable signal of depth of feeling.
 
-The AFK-in-Conflict issue is worth flagging separately: it represents both an anti-fun pattern in Conflict and a symptom of the book scarcity. Players will min-max however they can, and if the path of least resistance for books is idle Conflict participation, that will keep happening regardless of intent. Broadening PvE drop sources would reduce this behavior. The attribute-talent mismatch bug flagged by @xejvs is potentially a quick win — removing obviously invalid rolls from the pool would meaningfully improve the perceived fairness of every calibration attempt.
+The problem has two distinct halves: supply (books are gated behind a PvP mode many players don't enjoy or can access reliably) and spend rate (the escalating per-roll cost means books disappear faster than they can be earned, especially with bad RNG).
+
+Both halves need addressing; fixing only one would still leave players frustrated.
+
+The Division 2 Recalibration Library is the reference solution that multiple players independently raise. It would address the RNG frustration by allowing players to bank specific attributes they've found and apply them deliberately.
+
+Whether a full library is technically feasible for this title is a dev question, but the player signal is clear that the current one-random-roll-per-book model is not working.
+
+The AFK-in-Conflict issue is worth flagging separately: it represents both an anti-fun pattern in Conflict and a symptom of the book scarcity. Players will min-max however they can, and if the path of least resistance for books is idle Conflict participation, that will keep happening regardless of intent.
+
+Broadening PvE drop sources would reduce this behavior. The attribute-talent mismatch bug flagged by @xejvs is potentially a quick win — removing obviously invalid rolls from the pool would meaningfully improve the perceived fairness of every calibration attempt.

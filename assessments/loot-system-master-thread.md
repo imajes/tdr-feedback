@@ -11,7 +11,10 @@
 Multiple (Balance Change / QoL Improvement / New Feature)
 
 ## Summary
-Players identify the loot system as one of the game's most pressing issues, with complaints spanning skewed drop rates (yellow/skill-tier gear dominating), misleading mission reward previews, and the absence of targeted loot. The most repeated concrete asks are: a targeted loot system modelled on The Division 2, in-group item trading, and a fix to the Clan Store's restrictive weekly purchase limit on upgrade items.
+
+Players identify the loot system as one of the game's most pressing issues, with complaints spanning skewed drop rates (yellow/skill-tier gear dominating), misleading mission reward previews, and the absence of targeted loot.
+
+The most repeated concrete asks are: a targeted loot system modelled on The Division 2, in-group item trading, and a fix to the Clan Store's restrictive weekly purchase limit on upgrade items.
 
 ## Primary Asks
 
@@ -58,9 +61,12 @@ Players identify the loot system as one of the game's most pressing issues, with
 - **Loudness:** High — 51 reactions across 13 messages from 12 unique participants (nearly one unique voice per message) signals broad community interest. The @imisniperimi posts collectively earned 17 reactions and represent the most organized community feedback in any thread in this set.
 
 ## Sentiment
+
 **Overall:** Negative
 
-This is the most negatively-toned thread in the set. @imisniperimi explicitly warns about "noticeable decline in player retention" and describes the grind as not respecting players' time. The phrase "absolute boredom for dedicated players" appears. Even the most measured contributor (@rexwolfe203) opens by saying they dismantle or sell 90% of what they find. The lone outlier is @liekong suggesting removing the element system entirely — an extreme position that reflects how broken the system feels to them.
+This is the most negatively-toned thread in the set. @imisniperimi explicitly warns about "noticeable decline in player retention" and describes the grind as not respecting players' time. The phrase "absolute boredom for dedicated players" appears.
+
+Even the most measured contributor (@rexwolfe203) opens by saying they dismantle or sell 90% of what they find. The lone outlier is @liekong suggesting removing the element system entirely — an extreme position that reflects how broken the system feels to them.
 
 There is no voice defending the current loot system.
 
@@ -87,9 +93,14 @@ The most nuanced and well-reasoned post in the thread: acknowledges the DZ's rol
 The canonical statement of the targeted loot ask; references a proven precedent from the franchise.
 
 ## Thread Assessment
-The loot system thread is the most wide-ranging in the set and touches on interconnected systems: drop rates, reward UI accuracy, Clan Store economy, Skill Mod accessibility, and Watch progression. The sheer breadth of issues raised by @imisniperimi — representing consolidated community feedback from Reddit, Discord, and clan networks — suggests these are not isolated complaints but systemic problems affecting player retention.
 
-The single most actionable and highest-consensus ask is targeted loot. It has precedent in The Division 2, multiple players explicitly reference it, and it would address the core pain point of repetitive unrewarding grinding without requiring a complete economy redesign. In-group trading is the second most-reacted ask (8 reactions on @contracept's post), which is particularly notable given how brief it is.
+The loot system thread is the most wide-ranging in the set and touches on interconnected systems: drop rates, reward UI accuracy, Clan Store economy, Skill Mod accessibility, and Watch progression.
+
+The sheer breadth of issues raised by @imisniperimi — representing consolidated community feedback from Reddit, Discord, and clan networks — suggests these are not isolated complaints but systemic problems affecting player retention.
+
+The single most actionable and highest-consensus ask is targeted loot. It has precedent in The Division 2, multiple players explicitly reference it, and it would address the core pain point of repetitive unrewarding grinding without requiring a complete economy redesign.
+
+In-group trading is the second most-reacted ask (8 reactions on @contracept's post), which is particularly notable given how brief it is.
 
 The Skill Mod accessibility issue deserves special attention: @jamalski_'s post is the only one to explicitly articulate a progression design principle (Dark Zone as the fastest path, not the only path), and it reflects a broader tension the dev team should consider — PvP-averse players are currently locked out of a core build system, which may be contributing to churn.
 

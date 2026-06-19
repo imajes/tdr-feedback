@@ -11,7 +11,10 @@
 Balance Change / Rework Request
 
 ## Summary
-Players broadly agree that Bulwark (specifically the Juggernaut specialisation) is overtuned in PvP — primarily because of the Shockwave Spike's large AoE stun with a short cooldown, compounded by the class's extreme damage reduction and the Pummeling Shield OS's additional stun. The dominant ask is for a stun counter-mechanic (a break-free ability, shock resistance stat, or wind-up delay before the spike detonates) plus a cap on damage reduction. A minority argues the class is working as intended and Juggernaut's tankiness is appropriate, directing blame at specific OS interactions instead.
+
+Players broadly agree that Bulwark (specifically the Juggernaut specialisation) is overtuned in PvP — primarily because of the Shockwave Spike's large AoE stun with a short cooldown, compounded by the class's extreme damage reduction and the Pummeling Shield OS's additional stun.
+
+The dominant ask is for a stun counter-mechanic (a break-free ability, shock resistance stat, or wind-up delay before the spike detonates) plus a cap on damage reduction. A minority argues the class is working as intended and Juggernaut's tankiness is appropriate, directing blame at specific OS interactions instead.
 
 ## Primary Asks
 
@@ -79,11 +82,18 @@ Players broadly agree that Bulwark (specifically the Juggernaut specialisation) 
 - **Loudness:** Medium — 109 messages across 30 participants is substantive, but reactions are relatively low (26 total). The thread became contentious in places, splitting energy into debate rather than unified signal-sending.
 
 ## Sentiment
+
 **Overall:** Mixed / Frustrated
 
-A majority of participants are frustrated with Bulwark in PvP — particularly the stun loop created by combining Shockwave Spike with the Pummeling Shield OS. The emotional register escalates from analytical early in the thread (detailed mechanic breakdowns) to increasingly irritated as similar complaints repeat without resolution. The Rogue-stun experience is described as "impossible to outplay," and multiple players report leaving the Dark Zone rather than fighting through repeated stuns.
+A majority of participants are frustrated with Bulwark in PvP — particularly the stun loop created by combining Shockwave Spike with the Pummeling Shield OS.
 
-A notable counter-current runs through the thread, led primarily by @jamalski_ (jamalski), who argues that Juggernaut is functioning as intended as a tank class, that comparable tankiness exists in Field Medic and Aegis, and that the community is pattern-matching "hard to kill" to "broken." This position generates genuine debate — @jorge8a27 and @contracept push back — but @jamalski_ makes some points that go unaddressed (e.g. Field Medic performing similarly in 1v1 DZ fights).
+The emotional register escalates from analytical early in the thread (detailed mechanic breakdowns) to increasingly irritated as similar complaints repeat without resolution.
+
+The Rogue-stun experience is described as "impossible to outplay," and multiple players report leaving the Dark Zone rather than fighting through repeated stuns.
+
+A notable counter-current runs through the thread, led primarily by @jamalski_ (jamalski), who argues that Juggernaut is functioning as intended as a tank class, that comparable tankiness exists in Field Medic and Aegis, and that the community is pattern-matching "hard to kill" to "broken."
+
+This position generates genuine debate — @jorge8a27 and @contracept push back — but @jamalski_ makes some points that go unaddressed (e. g. Field Medic performing similarly in 1v1 DZ fights).
 
 A separate heated exchange between @jim.7080 and @zeryano about whether Juggernaut does too much PvE damage generates noise without resolution.
 
@@ -116,12 +126,21 @@ A concrete, PvE-safe implementation suggestion for the charge-up mechanic that a
 2 reactions; captures the consistent DZ experience in a single sentence — the predictable, unavoidable 3-step kill combo.
 
 ## Thread Assessment
-The Bulwark thread has a clear signal beneath considerable noise. The core consensus is that the Shockwave Spike's stun is too difficult to counter in PvP — specifically: no resistance mechanic exists, the AoE is large enough to be nearly undodgeable, and the cooldown is short enough that — when combined with the Pummeling Shield OS — a Juggernaut can cycle stuns indefinitely. This creates an unwinnable situation for the target regardless of skill.
+
+The Bulwark thread has a clear signal beneath considerable noise.
+
+The core consensus is that the Shockwave Spike's stun is too difficult to counter in PvP — specifically: no resistance mechanic exists, the AoE is large enough to be nearly undodgeable, and the cooldown is short enough that — when combined with the Pummeling Shield OS — a Juggernaut can cycle stuns indefinitely.
+
+This creates an unwinnable situation for the target regardless of skill.
 
 The "rogue, stun, ult, dead" sequence described by @destirian reflects a consistent lived experience, not edge-case frustration.
 
-The most important nuance for a developer to carry away is the PvE/PvP distinction. Several players, including @jamalski_ and @n1trozipp3r, explicitly support fixing the stun's PvP impact while opposing any change that would degrade its usefulness in Legendary PvE content where crowd control is genuinely valuable. The proposed charge-up delay (2–3 seconds before detonation, so the spike can be shot or dodged in PvP) appears to be the solution most likely to satisfy both camps, and has the most cross-thread support of any specific suggestion.
+The most important nuance for a developer to carry away is the PvE/PvP distinction. Several players, including @jamalski_ and @n1trozipp3r, explicitly support fixing the stun's PvP impact while opposing any change that would degrade its usefulness in Legendary PvE content where crowd control is genuinely valuable.
 
-The thread also surfaces three discrete bugs that are separate from the balance discussion: the spike re-pickup resetting the stun (a likely unintended interaction), the invincibility bug when poison overlaps with certain Bulwark states, and the shield deactivating on geometry. These should be routed to the engineering team independently of the balance conversation.
+The proposed charge-up delay (2–3 seconds before detonation, so the spike can be shot or dodged in PvP) appears to be the solution most likely to satisfy both camps, and has the most cross-thread support of any specific suggestion.
+
+The thread also surfaces three discrete bugs that are separate from the balance discussion: the spike re-pickup resetting the stun (a likely unintended interaction), the invincibility bug when poison overlaps with certain Bulwark states, and the shield deactivating on geometry.
+
+These should be routed to the engineering team independently of the balance conversation.
 
 Finally, @jamalski_'s consistency challenge — that Field Medic and Aegis have comparable survivability and nobody is asking for those nerfs — is worth taking seriously when scoping the response, since a Bulwark-only nerf may not resolve the underlying PvP balance problem.

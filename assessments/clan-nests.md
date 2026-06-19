@@ -11,7 +11,10 @@
 Multiple
 
 ## Summary
-Players find Clan Nests repetitive, unrewarding, and structurally tedious — requiring physical travel to the clan base between runs, offering low credit yields per run, and capping meaningful rewards at just four investigations per week. The dominant asks are fast travel to nests, better rewards (more clan credits per run or higher difficulty tiers with better payouts), and an increase or removal of the weekly reward cap. A more ambitious secondary cluster asks for entirely new clan content, particularly clan vs. clan wars or raids.
+
+Players find Clan Nests repetitive, unrewarding, and structurally tedious — requiring physical travel to the clan base between runs, offering low credit yields per run, and capping meaningful rewards at just four investigations per week.
+
+The dominant asks are fast travel to nests, better rewards (more clan credits per run or higher difficulty tiers with better payouts), and an increase or removal of the weekly reward cap. A more ambitious secondary cluster asks for entirely new clan content, particularly clan vs. clan wars or raids.
 
 ## Primary Asks
 
@@ -66,9 +69,12 @@ Players find Clan Nests repetitive, unrewarding, and structurally tedious — re
 - **Loudness:** Medium — 52 messages is the highest raw count in the thread set, but reactions are the lowest (6 total), partly due to a multi-message conversation thread between @rezorex and @aoqeez doing clan credit math and @caelancromwell's back-and-forth about clan wars. Substantive signal exists but is diluted by conversational volume.
 
 ## Sentiment
+
 **Overall:** Negative
 
-Players find clan nests mind-numbing. The words "boring," "repetitive," "tedious," and "grind" appear repeatedly and independently. @rezorex calls it "too grindy for the sake of grindy and more importantly mind numbingly boring." @dauntlessdante calls it "the most brain dead mission in the entire game." @x3mlyncomffee, who has done "way too many investigations," found themselves doing them purely to level up other specs — the clan credit reward stopped being a real motivation.
+Players find clan nests mind-numbing. The words "boring," "repetitive," "tedious," and "grind" appear repeatedly and independently. @rezorex calls it "too grindy for the sake of grindy and more importantly mind numbingly boring." @dauntlessdante calls it "the most brain dead mission in the entire game."
+
+@x3mlyncomffee, who has done "way too many investigations," found themselves doing them purely to level up other specs — the clan credit reward stopped being a real motivation.
 
 There's no positivity about the current content format; the only differentiation is between players who want it fixed versus those who want it replaced or supplemented with entirely new clan content.
 
@@ -93,10 +99,17 @@ Reveals that even dedicated players have mentally decoupled from the intended re
 "Cross country running grind treadmill" is a vivid phrase that captures both the physical traversal friction and the unrewarding repetition in a single image.
 
 ## Thread Assessment
-Clan Nests suffer from a structural problem that's compounding across the whole clan system: the credit earn rate is too low, the content format is identical to content players already do in other contexts (hostile nests), and the round-trip travel between the clan base and nest locations adds real-time friction to an already unrewarding activity. The four-per-week cap means even motivated players hit a ceiling quickly, and after that cap the activity becomes nearly pointless.
 
-The most common solutions in order of frequency: fast travel (eliminates the biggest friction point immediately), higher rewards or difficulty scaling (makes the activity feel proportionate to its grind), and an increase to the weekly cap. These are all incremental and feasible. The more ambitious ask — clan vs. clan wars — represents a distinct design space that several players are excited about, but it's not a fix for the core nest problem; it's additive new content.
+Clan Nests suffer from a structural problem that's compounding across the whole clan system: the credit earn rate is too low, the content format is identical to content players already do in other contexts (hostile nests), and the round-trip travel between the clan base and nest locations adds real-time friction to an already unrewarding activity.
 
-A note for devs: the nest format exhaustion is partly a content variety problem. @fearlessdave observes that "nests" appear in too many systems simultaneously. Adding another content type to the clan credit earn system (even if it's just "any mission with two or more clan members earns small credit rewards") would break the monotony more effectively than tuning the existing nest rewards alone.
+The four-per-week cap means even motivated players hit a ceiling quickly, and after that cap the activity becomes nearly pointless.
+
+The most common solutions in order of frequency: fast travel (eliminates the biggest friction point immediately), higher rewards or difficulty scaling (makes the activity feel proportionate to its grind), and an increase to the weekly cap. These are all incremental and feasible.
+
+The more ambitious ask — clan vs. clan wars — represents a distinct design space that several players are excited about, but it's not a fix for the core nest problem; it's additive new content.
+
+A note for devs: the nest format exhaustion is partly a content variety problem. @fearlessdave observes that "nests" appear in too many systems simultaneously.
+
+Adding another content type to the clan credit earn system (even if it's just "any mission with two or more clan members earns small credit rewards") would break the monotony more effectively than tuning the existing nest rewards alone.
 
 @dauntlessdante's co-op earn proposal and @x3mlyncomffee's group scaling proposal both point toward the same underlying design principle: reward clan members for playing together across all content, not just one specific repeated mission type.

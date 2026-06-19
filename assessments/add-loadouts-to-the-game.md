@@ -11,7 +11,10 @@
 New Feature
 
 ## Summary
-Players are overwhelmingly asking for a loadout system that lets them save and quickly swap between full gear configurations without manually re-equipping every piece. The primary driver is the game's 10 class/spec combinations (5 classes × 2 specs), making manual swapping impractical — especially on mobile. Secondary asks for a stash/storage locker and better inventory filters emerged as closely related quality-of-life needs.
+
+Players are overwhelmingly asking for a loadout system that lets them save and quickly swap between full gear configurations without manually re-equipping every piece. The primary driver is the game's 10 class/spec combinations (5 classes × 2 specs), making manual swapping impractical — especially on mobile.
+
+Secondary asks for a stash/storage locker and better inventory filters emerged as closely related quality-of-life needs.
 
 ## Primary Asks
 
@@ -54,6 +57,7 @@ Players are overwhelmingly asking for a loadout system that lets them save and q
 - **Loudness:** Medium — High participant-to-message ratio (41 unique authors in 49 messages) signals near-unanimous agreement, but low reaction counts suggest the community is expressing support through text rather than emoji voting.
 
 ## Sentiment
+
 **Overall:** Positive
 
 The tone is enthusiastic and unified — almost no dissent appears anywhere in the thread. Players treat loadouts as an obvious, table-stakes feature ("Should've been a thing since day 1," "It's vital," "Isn't that obvious?"). Several veterans of the PC Division games express mild disbelief that loadouts aren't already in the game.
@@ -87,8 +91,15 @@ Captures the real-world impact on a casual mobile player who defaults to subopti
 Broadens the ask beyond multi-spec players — even single-spec players need loadouts for different content modes.
 
 ## Thread Assessment
-The loadout thread is one of the most unambiguous feedback signals in the forum. Of 49 messages from 41 unique participants, every substantive contribution supports adding a loadout system — there is zero opposition. The core ask is simple: let players save a named slot of gear, weapons, and modules, then switch between slots without manual re-equipping. The urgency is heightened by the game's 10 class/spec combinations, which create a natural expectation of 10 (or more) loadout slots.
 
-A meaningful secondary cluster of feedback links the loadout request to inventory and stash capacity. Several players note that, without a stash to store off-spec gear, inventory fills up with items they can't bear to scrap, which then limits farming throughput. A dev addressing loadouts would likely need to address stash/inventory at the same time to fully resolve the friction.
+The loadout thread is one of the most unambiguous feedback signals in the forum. Of 49 messages from 41 unique participants, every substantive contribution supports adding a loadout system — there is zero opposition.
 
-The most technically specific feedback — shared modules across loadouts and the risk of gear loss if items live in the loadout slot rather than in inventory — came from @chewybarka and @fearlessdave and is worth surfacing to engineering. The suggestion that additional loadout slots could be a premium purchase (@liekong) arrived without community pushback and could represent a low-friction monetisation angle worth considering.
+The core ask is simple: let players save a named slot of gear, weapons, and modules, then switch between slots without manual re-equipping. The urgency is heightened by the game's 10 class/spec combinations, which create a natural expectation of 10 (or more) loadout slots.
+
+A meaningful secondary cluster of feedback links the loadout request to inventory and stash capacity. Several players note that, without a stash to store off-spec gear, inventory fills up with items they can't bear to scrap, which then limits farming throughput.
+
+A dev addressing loadouts would likely need to address stash/inventory at the same time to fully resolve the friction.
+
+The most technically specific feedback — shared modules across loadouts and the risk of gear loss if items live in the loadout slot rather than in inventory — came from @chewybarka and @fearlessdave and is worth surfacing to engineering.
+
+The suggestion that additional loadout slots could be a premium purchase (@liekong) arrived without community pushback and could represent a low-friction monetisation angle worth considering.

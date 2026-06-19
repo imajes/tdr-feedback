@@ -11,7 +11,12 @@
 Balance Change / Rework Request / Multiple
 
 ## Summary
-Players are almost universally agreed that the Double Barrel Shotgun (DB) in combination with the Vanguard Commando's Tactical Link ultimate is overtuned — specifically that the way pellets each trigger individual bullet-return and multishot calculations creates a near-infinite ammo loop that trivialises PvE content and crowds out other builds. There is sharp disagreement, however, about whether this is a "Vanguard problem" or a "DB shotgun interaction problem," and whether Vanguard Recon's underwhelming performance should be addressed in the same pass. A secondary, lower-volume thread of feedback criticises the Recon sub-spec as effectively unplayable outside of highly coordinated teams due to broken skill chips and underwhelming engineering stat translation.
+
+Players are almost universally agreed that the Double Barrel Shotgun (DB) in combination with the Vanguard Commando's Tactical Link ultimate is overtuned — specifically that the way pellets each trigger individual bullet-return and multishot calculations creates a near-infinite ammo loop that trivialises PvE content and crowds out other builds.
+
+There is sharp disagreement, however, about whether this is a "Vanguard problem" or a "DB shotgun interaction problem," and whether Vanguard Recon's underwhelming performance should be addressed in the same pass.
+
+A secondary, lower-volume thread of feedback criticises the Recon sub-spec as effectively unplayable outside of highly coordinated teams due to broken skill chips and underwhelming engineering stat translation.
 
 ---
 
@@ -59,11 +64,14 @@ Players are almost universally agreed that the Double Barrel Shotgun (DB) in com
 ---
 
 ## Sentiment
+
 **Overall:** Mixed
 
 The thread is genuinely split. A significant camp — led by technically-minded players like @rixelated and @jbcode — wants a specific mechanical fix to the pellet/bullet-return interaction, and is careful to frame this as "fix the interaction, not the class."
 
-A second camp, anchored by @agent.nene and @vollkettenfahrzeug, argues that Vanguard Commando is already balanced in context (glass-cannon tradeoff, only 2% of players can build it optimally, and Medic/Bulwark are worse problems in PvP), and that nerfing it punishes skilled players and will slow PvE content that the whole team benefits from. A smaller third camp just wants a blanket nerf and writes short posts like "nerf shotgun build" or "too much dmg 😂."
+A second camp, anchored by @agent.nene and @vollkettenfahrzeug, argues that Vanguard Commando is already balanced in context (glass-cannon tradeoff, only 2% of players can build it optimally, and Medic/Bulwark are worse problems in PvP), and that nerfing it punishes skilled players and will slow PvE content that the whole team benefits from.
+
+A smaller third camp just wants a blanket nerf and writes short posts like "nerf shotgun build" or "too much dmg 😂."
 
 Frustration with Vanguard Recon players runs quieter but is genuine — these players feel sidelined by the Commando meta and ignored by the patch discussion. The emotional tone is contentious but never entirely toxic; a moderator post at message 17 had to remind people to stay productive.
 
@@ -110,9 +118,14 @@ Cynical but widely felt — 3 reactions. Players are sceptical that commercial i
 ---
 
 ## Thread Assessment
-The Vanguard thread is less a feedback thread and more a structured argument, with two well-organised camps debating the same topic across 16 days. The reformers — led by @rixelated with detailed damage calculations — make a technically sound case that the problem is not Vanguard or the DB gun itself, but a specific interaction: pellets counting as individual bullets for talent-proc purposes, and Tactical Link collapsing shotgun spread into a single-point aimbot.
 
-Their proposed fix is elegant: count all pellets in a shot as one shot, and preserve natural spread during Tac Link (aimbot aims the centre of the cone, not a singularity). This would bring DB into line without touching the class's identity. @jbcode suggests an alternative: replace bullet-return with a multishot or ramp-up mechanic, which would also solve the latency-sensitivity issue @holdr0666 raises.
+The Vanguard thread is less a feedback thread and more a structured argument, with two well-organised camps debating the same topic across 16 days.
+
+The reformers — led by @rixelated with detailed damage calculations — make a technically sound case that the problem is not Vanguard or the DB gun itself, but a specific interaction: pellets counting as individual bullets for talent-proc purposes, and Tactical Link collapsing shotgun spread into a single-point aimbot.
+
+Their proposed fix is elegant: count all pellets in a shot as one shot, and preserve natural spread during Tac Link (aimbot aims the centre of the cone, not a singularity). This would bring DB into line without touching the class's identity.
+
+@jbcode suggests an alternative: replace bullet-return with a multishot or ramp-up mechanic, which would also solve the latency-sensitivity issue @holdr0666 raises.
 
 The defenders argue that: (a) very few players can actually achieve the broken numbers, (b) Vanguard is the worst class in PvP precisely because it has no survivability, (c) DB Vanguards are helping the whole team clear PvE faster, and (d) Medic and Bulwark are more urgent problems. These points are all substantively valid and represent genuine tradeoffs.
 
@@ -120,6 +133,8 @@ A developer reading this thread should not dismiss them — a blunt nerf without
 
 The Recon sub-narrative deserves its own thread. Multiple players note that Recon skill chips don't function, engineering stats don't translate into performance, and the sub-spec is only viable in highly coordinated groups. This is a separate bug/balance issue conflated with the Commando discussion because they share a class name.
 
-The key actionable signal for a developer: **the community is closer to consensus than the debate volume suggests.** Almost everyone agrees the DB/Tac Link interaction is overtuned. The disagreement is about method (weapon fix vs. class nerf vs. stat cap) and sequencing (fix DB before or after Medic/Bulwark). The reformers' two-fix proposal (pellets count as one shot; preserve spread during Tac Link) is technically specific enough to implement and has clear support.
+The key actionable signal for a developer: **the community is closer to consensus than the debate volume suggests.** Almost everyone agrees the DB/Tac Link interaction is overtuned. The disagreement is about method (weapon fix vs. class nerf vs. stat cap) and sequencing (fix DB before or after Medic/Bulwark).
+
+The reformers' two-fix proposal (pellets count as one shot; preserve spread during Tac Link) is technically specific enough to implement and has clear support.
 
 The devs should also plan for a Commando passive buff in the same patch, and create a separate Recon thread to capture that sub-community's feedback.

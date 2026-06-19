@@ -11,7 +11,10 @@
 Multiple
 
 ## Summary
-Players find the crafting system fundamentally broken across several dimensions: timers are too long (especially for F2P), RNG is too punishing, the gold quality chance at max level (25%) is far too low, and T2 items cannot be crafted at all. There is broad agreement that crafting currently fails to feel rewarding and that targeted/focused crafting options are badly needed.
+
+Players find the crafting system fundamentally broken across several dimensions: timers are too long (especially for F2P), RNG is too punishing, the gold quality chance at max level (25%) is far too low, and T2 items cannot be crafted at all.
+
+There is broad agreement that crafting currently fails to feel rewarding and that targeted/focused crafting options are badly needed.
 
 ## Primary Asks
 
@@ -62,9 +65,12 @@ Players find the crafting system fundamentally broken across several dimensions:
 - **Loudness:** High — 21 participants across multiple distinct sub-asks, with consistent frustration and several detailed multi-point proposals
 
 ## Sentiment
+
 **Overall:** Frustrated
 
-Players do not see crafting as a minor tuning problem — @chewybarka describes it as "one of the most frustrating systems in the game" and @hadesziel quit engaging with crafting after one week after seeing how punishing it was. There is some nuanced debate about T2 crafting (whether allowing it would undercut elite mission incentives), but even players on opposite sides of that debate agree the current system is broken.
+Players do not see crafting as a minor tuning problem — @chewybarka describes it as "one of the most frustrating systems in the game" and @hadesziel quit engaging with crafting after one week after seeing how punishing it was.
+
+There is some nuanced debate about T2 crafting (whether allowing it would undercut elite mission incentives), but even players on opposite sides of that debate agree the current system is broken.
 
 The timer disparity between F2P and pass holders is called out as a fairness issue. The loading-screen reference to "focused crafting" that isn't in the game yet added visible frustration — players feel they've been shown a promised feature that hasn't arrived.
 
@@ -89,8 +95,13 @@ Points to a potential broken promise — a feature apparently teased in-game tha
 Surfaces a structural dependency that gates solo or small-clan players from even accessing the better version of this system.
 
 ## Thread Assessment
-Crafting has multiple overlapping failure modes that players are clearly able to articulate: too slow, too random, too cheap on quality at max level, and inaccessible for solo/F2P players without a maxed clan. These are not competing opinions — nearly every player agrees on all of them simultaneously. The only real debate is whether T2 should be craftable, and even skeptics (like @chewybarka) acknowledge that the core problem isn't T2 access but the broken RNG and timer systems below it.
 
-The most actionable signals from this thread are: (1) raise the gold quality chance at level 10 significantly — 25% is widely seen as insulting after the time and material investment required; (2) investigate focused/targeted crafting which appears to already be teased in loading screens; (3) address the F2P vs. pass holder timer gap which is generating fairness friction. @rixelated's proposal on T2 crafting using T2-dismantle mats is the most structurally sound suggestion and worth examining as a design path.
+Crafting has multiple overlapping failure modes that players are clearly able to articulate: too slow, too random, too cheap on quality at max level, and inaccessible for solo/F2P players without a maxed clan. These are not competing opinions — nearly every player agrees on all of them simultaneously.
+
+The only real debate is whether T2 should be craftable, and even skeptics (like @chewybarka) acknowledge that the core problem isn't T2 access but the broken RNG and timer systems below it.
+
+The most actionable signals from this thread are: (1) raise the gold quality chance at level 10 significantly — 25% is widely seen as insulting after the time and material investment required; (2) investigate focused/targeted crafting which appears to already be teased in loading screens; (3) address the F2P vs. pass holder timer gap which is generating fairness friction.
+
+@rixelated's proposal on T2 crafting using T2-dismantle mats is the most structurally sound suggestion and worth examining as a design path.
 
 One under-noted thread: @jbcode gave up on crafting as a gearing path entirely and uses it only for SHD level tasks. If crafting is supposed to be a primary gearing loop, this represents a total system failure for at least some portion of the player base.

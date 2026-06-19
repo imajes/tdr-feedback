@@ -11,7 +11,10 @@
 New Feature / QoL Improvement
 
 ## Summary
-Players unanimously want an expanded shooting range for testing builds, with detailed analytics and configurable enemy settings. The existing range in the BOO is seen as a starting point but insufficient — players need DPS meters, healing/HPS readouts, and the ability to spawn enemies of varying types, factions, and difficulty tiers to simulate real combat conditions accurately.
+
+Players unanimously want an expanded shooting range for testing builds, with detailed analytics and configurable enemy settings.
+
+The existing range in the BOO is seen as a starting point but insufficient — players need DPS meters, healing/HPS readouts, and the ability to spawn enemies of varying types, factions, and difficulty tiers to simulate real combat conditions accurately.
 
 ## Primary Asks
 
@@ -43,6 +46,7 @@ Players unanimously want an expanded shooting range for testing builds, with det
 - **Loudness:** High — Strong emoji support on the top messages and unanimous agreement across all 13 posts; zero dissent.
 
 ## Sentiment
+
 **Overall:** Positive
 
 Players are constructive and enthusiastic — this is a pure wish-list thread with no frustration about an existing broken feature, just excitement about a missing one. The tone is collaborative, with players building on each other's ideas (Beltha laid out a detailed spec; others added specific sub-asks like element damage testing).
@@ -68,8 +72,11 @@ Surfaces a real build-testing gap: knowing your DPS in a vacuum is meaningless w
 A pragmatic, tiered implementation suggestion that could fit the existing game structure.
 
 ## Thread Assessment
+
 The ask is simple and unanimous: players want a proper shooting range where they can test builds against representative enemies with meaningful readouts. Every player in the thread agrees, and the top reactions are among the highest in any thread in this set. There is no disagreement, no debate, and no edge-case dissent.
 
 The secondary discussion is about *where* to put it — the BOO (already has a basic range), the Clan FOB, or both. The most popular sub-proposal is a tiered structure: a basic range at the BOO, a fully-featured one as a Clan FOB upgrade. This would give individual players immediate value while tying the premium version to clan progression.
 
-A dev reading this thread should note: players are not just asking for dummy targets. They want actionable data — DPS, HPS, damage mitigation under realistic conditions. The feature is also implicitly a build-transparency ask: players feel they cannot trust their builds without a controlled test environment, which signals the current build system lacks sufficient feedback loops.
+A dev reading this thread should note: players are not just asking for dummy targets. They want actionable data — DPS, HPS, damage mitigation under realistic conditions.
+
+The feature is also implicitly a build-transparency ask: players feel they cannot trust their builds without a controlled test environment, which signals the current build system lacks sufficient feedback loops.

@@ -11,7 +11,12 @@
 Balance Change / QoL Improvement
 
 ## Summary
-Players are broadly dissatisfied with the current 20-minute Dark Zone session timer, with the majority asking for it to be removed entirely or significantly extended (to 30–60 minutes minimum). However, a meaningful minority argues the timer serves an important anti-camping function and should be retained — shifting debate toward reducing *landmark and boss respawn timers* rather than extending the session limit. A secondary but persistent ask is for more Heroic landmarks and a larger DZ map to give players enough content to justify a longer session.
+
+Players are broadly dissatisfied with the current 20-minute Dark Zone session timer, with the majority asking for it to be removed entirely or significantly extended (to 30–60 minutes minimum).
+
+However, a meaningful minority argues the timer serves an important anti-camping function and should be retained — shifting debate toward reducing *landmark and boss respawn timers* rather than extending the session limit.
+
+A secondary but persistent ask is for more Heroic landmarks and a larger DZ map to give players enough content to justify a longer session.
 
 ## Primary Asks
 
@@ -64,11 +69,16 @@ Players are broadly dissatisfied with the current 20-minute Dark Zone session ti
 - **Loudness:** High — The highest reaction total of any thread assessed, with the top single message receiving 16 reactions. The thread generated substantial back-and-forth debate and is the most engaged DZ feedback thread in the dataset.
 
 ## Sentiment
+
 **Overall:** Mixed / Frustrated
 
-The majority of players are frustrated with the current 20-minute limit, framing it as too short to accomplish anything meaningful — particularly given the 4–6 minute travel time from spawn to a Heroic landmark, and then frequently arriving to find the boss on cooldown. The frustration compounds: a player can conceivably spend most of a 20-minute session just waiting for a respawn.
+The majority of players are frustrated with the current 20-minute limit, framing it as too short to accomplish anything meaningful — particularly given the 4–6 minute travel time from spawn to a Heroic landmark, and then frequently arriving to find the boss on cooldown.
 
-However, there is genuine disagreement — not just passive absence of support for the timer. @dauntlessdante, @bigheaddjango_0009, @daviscrimson, @el_gato.123456, and @n1trozipp3r (in one message) all argue the timer serves a legitimate purpose: preventing powerful players and clans from permanently camping landmarks and locking out newer or solo players, a problem they cite from The Division 1 and 2. This minority view has real weight and reflects a legitimate design tension the developers will need to resolve.
+The frustration compounds: a player can conceivably spend most of a 20-minute session just waiting for a respawn.
+
+However, there is genuine disagreement — not just passive absence of support for the timer. @dauntlessdante, @bigheaddjango_0009, @daviscrimson, @el_gato.123456, and @n1trozipp3r (in one message) all argue the timer serves a legitimate purpose: preventing powerful players and clans from permanently camping landmarks and locking out newer or solo players, a problem they cite from The Division 1 and 2.
+
+This minority view has real weight and reflects a legitimate design tension the developers will need to resolve.
 
 The mask mechanic rework idea from @ventz_arctic attracted a small but positive response as a potential middle ground — replacing the blunt time limit with a soft pressure system that discourages camping without forcing a hard reset.
 
@@ -99,12 +109,21 @@ Minority but considered position; references franchise history as evidence rathe
 The most creative design proposal in the thread; 1 reaction but attracted follow-up support from multiple players. Worth flagging as a potential design direction.
 
 ## Thread Assessment
-The thread reveals a real and unresolved design tension in the Dark Zone. The majority of players — including the most engaged contributors — want the session timer removed or dramatically extended, citing a frustrating gameplay loop where travel time and respawn waits consume most of a 20-minute session before meaningful farming can begin. The data point that stings most: players report spending 15 of 20 minutes waiting for a heroic boss to respawn, only to watch it get one-shotted by another group.
+
+The thread reveals a real and unresolved design tension in the Dark Zone.
+
+The majority of players — including the most engaged contributors — want the session timer removed or dramatically extended, citing a frustrating gameplay loop where travel time and respawn waits consume most of a 20-minute session before meaningful farming can begin.
+
+The data point that stings most: players report spending 15 of 20 minutes waiting for a heroic boss to respawn, only to watch it get one-shotted by another group.
 
 This makes the session timer feel punitive rather than purposeful.
 
-The dissenting minority makes a credible counter-argument rooted in franchise precedent: without a timer, high-power players will permanently occupy landmarks and lock out lower-geared players, replicating the dead-DZ problem seen in The Division 1 and 2. This is not a fringe concern — it's a structural problem that destroyed the DZ in previous games. Any solution that removes the timer needs to address this directly.
+The dissenting minority makes a credible counter-argument rooted in franchise precedent: without a timer, high-power players will permanently occupy landmarks and lock out lower-geared players, replicating the dead-DZ problem seen in The Division 1 and 2.
 
-The most practically actionable quick fix — and one with cross-aisle support — is reducing landmark and boss *respawn* timers from ~10 minutes to 3–5 minutes. This increases the value of each session without changing the timer debate at all. The most ambitious structural proposal is replacing the hard timer with a mask-degradation mechanic, which could accomplish the same anti-camping goal while feeling less arbitrary.
+This is not a fringe concern — it's a structural problem that destroyed the DZ in previous games. Any solution that removes the timer needs to address this directly.
+
+The most practically actionable quick fix — and one with cross-aisle support — is reducing landmark and boss *respawn* timers from ~10 minutes to 3–5 minutes. This increases the value of each session without changing the timer debate at all.
+
+The most ambitious structural proposal is replacing the hard timer with a mask-degradation mechanic, which could accomplish the same anti-camping goal while feeling less arbitrary.
 
 A dev considering changes to the DZ should treat the respawn timer as the minimum viable improvement and the mask mechanic as a longer-term design direction worth investigating.

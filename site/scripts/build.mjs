@@ -10,6 +10,7 @@ const DESIGN_SYSTEM_DIR = path.join(REPO_DIR, 'docs', 'design-system');
 const DIST_DIR = path.join(SITE_DIR, 'dist');
 
 export const TRELLO_URL = 'https://trello.com/b/qTP1a9cv';
+export const GITHUB_URL = 'https://github.com/imajes/tdr-feedback';
 
 const SENTIMENT_HELP = [
   'Positive: broad support or constructive agreement.',
@@ -150,7 +151,7 @@ const HEADLINES = {
 export function routeForThread(slug) {
   const bucket = BUCKET_BY_THREAD.get(slug);
   if (!bucket) {
-    return META_SLUGS.has(slug) ? '/about/#suggest-a-topic-for-review' : '#';
+    return '#';
   }
   return `/${bucket.id}/${routeSlugForThread(slug)}/`;
 }
@@ -354,7 +355,6 @@ export function parseAssessmentMarkdown(filename, markdown) {
 
 export function buildSiteModel(threads) {
   const visibleThreads = threads.filter((thread) => !META_SLUGS.has(thread.slug));
-  const metaThreads = threads.filter((thread) => META_SLUGS.has(thread.slug));
   const buckets = BUCKETS.map((bucket) => ({
     ...bucket,
     threads: bucket.slugs
@@ -368,18 +368,20 @@ export function buildSiteModel(threads) {
     threadSlug: thread.slug,
     threadTitle: thread.title,
     threadRoute: routeForThread(thread.slug),
+    threadMessageCount: thread.messageCount,
+    threadParticipantCount: thread.uniqueParticipants,
+    threadReactionTotal: thread.reactionTotal,
     score: echoScore(ask) + thread.uniqueParticipants,
   })));
 
   return {
     buckets,
     threads: visibleThreads.map((thread) => ({ ...thread, bucket: BUCKET_BY_THREAD.get(thread.slug) })),
-    metaThreads,
     topAsks: allAsks.sort((left, right) => right.score - left.score).slice(0, 5),
     stats: {
-      totalThreads: threads.length,
+      totalThreads: visibleThreads.length,
       navigableThreads: visibleThreads.length,
-      totalAssessments: threads.length,
+      totalAssessments: visibleThreads.length,
       totalParticipants: visibleThreads.reduce((sum, thread) => sum + thread.uniqueParticipants, 0),
       totalMessages: visibleThreads.reduce((sum, thread) => sum + thread.messageCount, 0),
       buckets: BUCKETS.length,
@@ -575,7 +577,8 @@ function renderHomePage(model, currentPath) {
             <p class="hero-copy">Community forum threads distilled into ranked asks, attributed quotes, and reviewable assessment notes for the development team.</p>
             <div class="hero-actions">
               <a class="button primary" href="#top-priority"><i data-lucide="flag"></i>Review priority asks</a>
-              <a class="button secondary" href="/about/"><i data-lucide="info"></i>Read context</a>
+              <a class="button secondary" href="#review-lanes"><i data-lucide="layout-grid"></i>Review lanes</a>
+              <a class="button secondary" href="/about/"><i data-lucide="info"></i>Learn about this project</a>
             </div>
           </div>
           <div class="hero-panel" aria-label="Feedback coverage">
@@ -591,7 +594,7 @@ function renderHomePage(model, currentPath) {
         </div>
       </header>
 
-      <section class="section">
+      <section class="section" id="review-lanes">
         ${sectionHeader('layout-grid', 'Review lanes', 'Seven feedback workstreams matching the assessment structure.')}
         <div class="bucket-grid">
           ${model.buckets.map((bucket) => bucketCard(bucket)).join('')}
@@ -600,24 +603,9 @@ function renderHomePage(model, currentPath) {
 
       <section class="section" id="top-priority">
         ${sectionHeader('flag', 'Top priority asks', 'Highest-signal asks ranked from participant reach and echo density.')}
-        <div class="ask-list">
+        <div class="ask-list overview">
           ${model.topAsks.map((ask, index) => askCard(ask, index + 1)).join('')}
         </div>
-      </section>
-
-      <section class="section split-section">
-        <article class="callout">
-          <div class="eyebrow">META INTAKE</div>
-          <h2>Suggested review topics stay visible without becoming a lane.</h2>
-          <p>${renderInlineMarkdown(model.metaThreads[0]?.summary ?? 'The meta thread is retained on the homepage and about page for intake continuity.')}</p>
-          <a class="text-link" href="/about/#suggest-a-topic-for-review">Open meta context</a>
-        </article>
-        <article class="callout muted">
-          <div class="eyebrow">BUILD OUTPUT</div>
-          <h2>Every assessment has a static page.</h2>
-          <p>The build creates review-lane pages, individual thread pages, a machine-readable data export, sitemap, and Cloudflare headers.</p>
-          <a class="text-link" href="/data.json">Inspect JSON export</a>
-        </article>
       </section>
     `,
   });
@@ -652,12 +640,15 @@ function renderBucketPage(model, bucket, currentPath) {
 
       <section class="section">
         ${sectionHeader('network', 'Common themes', 'Recurring asks surfaced across this review lane.')}
-        <div class="ask-list compact">
+        <div class="ask-list overview compact">
           ${themes.map((ask, index) => askCard({
             ...ask,
             threadSlug: ask.thread.slug,
             threadTitle: ask.thread.title,
             threadRoute: routeForThread(ask.thread.slug),
+            threadMessageCount: ask.thread.messageCount,
+            threadParticipantCount: ask.thread.uniqueParticipants,
+            threadReactionTotal: ask.thread.reactionTotal,
           }, index + 1)).join('')}
         </div>
       </section>
@@ -721,11 +712,11 @@ function renderThreadPage(model, bucket, thread, currentPath) {
           <div class="sentiment-card-body">
             <div>
               <span class="sentiment-kicker">Overall summary</span>
-              <p>${renderInlineMarkdown(thread.summary)}</p>
+              ${renderInlineParagraphs(thread.summary)}
             </div>
             <div>
               <span class="sentiment-kicker">Sentiment read</span>
-              <p>${renderInlineMarkdown(thread.sentimentNotes || 'No separate sentiment summary was captured for this assessment.')}</p>
+              ${renderInlineParagraphs(thread.sentimentNotes || 'No separate sentiment summary was captured for this assessment.')}
             </div>
           </div>
         </article>
@@ -810,7 +801,6 @@ function renderActionSection(thread, actionModel) {
 }
 
 function renderAboutPage(model, currentPath) {
-  const meta = model.metaThreads[0];
   return layout({
     model,
     currentPath,
@@ -821,29 +811,39 @@ function renderAboutPage(model, currentPath) {
         <div class="breadcrumb"><a href="/">Home</a><span>/</span><span>About</span></div>
         <div class="eyebrow">CONTEXT</div>
         <h1>Community feedback packaged for development review.</h1>
-        <p><span class="user-mention">UBI_James</span> set up structured Discord forum threads for The Division: Resurgence feedback. <span class="user-mention">@imajes</span> consolidated the discussions into Markdown assessments. This site turns those assessments into static pages that are easier to browse, cite, and deploy.</p>
+        <p>We exported structured feedback threads from Discord, analyzed them with two different AI models, and produced one assessment for each thread. Those assessments are plugged into this static site so developers can browse the feedback by review lane, ask, sentiment, source voices, and dev notes. The content and code are available at <a href="${GITHUB_URL}">github.com/imajes/tdr-feedback</a>.</p>
         <div class="hero-actions">
-          <a class="button primary" href="${TRELLO_URL}"><i data-lucide="external-link"></i>Open Trello board</a>
+          <a class="button primary" href="${TRELLO_URL}"><i data-lucide="external-link"></i>TDR Official Trello</a>
           <a class="button secondary" href="/data.json"><i data-lucide="database"></i>View data export</a>
+          <a class="button secondary" href="${GITHUB_URL}"><i data-lucide="github"></i>View source</a>
         </div>
       </header>
 
       <section class="section">
-        ${sectionHeader('list-checks', 'Publishing model', 'The build is intentionally static and auditable.')}
-        <div class="method-grid">
-          ${methodCard('Source', 'Assessments in /assessments remain the source of truth. The generator reads Markdown and preserves asks, quotes, metrics, and assessment prose.')}
-          ${methodCard('Structure', 'Routes follow docs/site-structure.md: homepage, about, review-lane landing pages, and individual thread pages.')}
-          ${methodCard('Design', 'Visual treatment uses docs/design-system tokens, brand assets, restrained dark surfaces, monospace metrics, and muted sentiment badges.')}
-          ${methodCard('Deployment', 'Cloudflare Pages builds site/dist from site/package.json and can deploy on push through the included workflow or Pages Git integration.')}
+        ${sectionHeader('workflow', 'How the assessments were produced', 'A compact chain from raw community discussion to reviewable site content.')}
+        <div class="flow-grid" aria-label="Assessment production flow">
+          ${flowCard('01', 'Discord export', 'Forum thread messages, authors, dates, reactions, attachments, and thread IDs were exported from the TDR Discord.')}
+          ${flowCard('02', 'Model pass A', 'One AI model extracted candidate asks, sentiment, representative voices, and defect evidence from each thread.')}
+          ${flowCard('03', 'Model pass B', 'A second model cross-checked the synthesis, tightened wording, and helped separate bugs from opinions.')}
+          ${flowCard('04', 'Markdown assessments', 'Each thread assessment remains in /assessments as the editable source of truth for the site.')}
+          ${flowCard('05', 'Static site', 'The generator turns the assessments into Cloudflare-ready HTML, CSS, JSON, sitemap, and headers.')}
         </div>
       </section>
 
-      <section class="section" id="suggest-a-topic-for-review">
-        ${sectionHeader('inbox', 'Meta thread', 'Surfaced for intake continuity, not as a navigable review lane.')}
-        <article class="callout">
-          <div class="eyebrow">${escapeHtml(meta?.title ?? 'Suggest a Topic for Review')}</div>
-          <h2>${escapeHtml(meta?.askType ?? 'Community intake')}</h2>
-          <p>${renderInlineMarkdown(meta?.summary ?? 'No meta assessment was found.')}</p>
+      <section class="section" id="data-export">
+        ${sectionHeader('database', 'Data export', 'The generated JSON file exposes the same site model used by the rendered pages.')}
+        <article class="data-export-card">
+          <div>
+            <h2><code>/data.json</code></h2>
+            <p>The export contains the review lanes, visible thread assessments, top priority asks, and aggregate site stats. It is useful for quick inspection, downstream analysis, or rebuilding the site in another presentation layer.</p>
+            <a class="text-link" href="/data.json">Open JSON export</a>
+          </div>
+          <dl class="schema-list">
+            <div><dt><code>buckets[]</code></dt><dd>Review lanes with route IDs, labels, icons, descriptions, and included thread records.</dd></div>
+            <div><dt><code>threads[]</code></dt><dd>Published assessments with metrics, asks, bug findings, sentiment, source links, voices, and dev notes.</dd></div>
+            <div><dt><code>topAsks[]</code></dt><dd>Cross-thread priority asks with source route, category, score, and thread-level signal metrics.</dd></div>
+            <div><dt><code>stats</code></dt><dd>Total assessments, visible threads, participants, messages, screenshots, lanes, and build date.</dd></div>
+          </dl>
         </article>
       </section>
     `,
@@ -893,7 +893,7 @@ function nav(model, currentPath) {
       <div class="nav-scroll">
         ${links.map(([href, label]) => `<a class="${isActivePath(currentPath, href) ? 'active' : ''}" href="${href}">${escapeHtml(label)}</a>`).join('')}
       </div>
-      <a class="trello-link" href="${TRELLO_URL}"><span>Trello board</span><i data-lucide="external-link"></i></a>
+      <a class="trello-link" href="${TRELLO_URL}"><span>TDR Official Trello</span><i data-lucide="external-link"></i></a>
     </nav>
   `;
 }
@@ -903,11 +903,10 @@ function footer(model) {
     <footer class="site-footer">
       <div>
         <strong>TDR Community Feedback</strong>
-        <span>Built from Markdown assessments for Cloudflare Pages.</span>
       </div>
       <div class="footer-meta">
         <span>Last update ${escapeHtml(model.stats.lastUpdated)}</span>
-        <a href="${TRELLO_URL}">Trello</a>
+        <a href="${TRELLO_URL}">TDR Official Trello</a>
         <a href="/sitemap.xml">Sitemap</a>
       </div>
     </footer>
@@ -934,25 +933,26 @@ function threadCard(thread, bucket) {
         ${sentimentBadge(thread.sentiment, thread.sentimentLabel)}
       </div>
       <h3>${escapeHtml(thread.title)}</h3>
-      <p>${renderInlineMarkdown(firstParagraph(thread.summary))}</p>
+      <p>${renderInlineMarkdown(summaryPreview(thread.summary))}</p>
       <div class="thread-card-meta">
-        <span>${formatNumber(thread.messageCount)} msg</span>
-        <span>${formatNumber(thread.uniqueParticipants)} participants</span>
-        <span>${thread.primaryAsks.length} asks</span>
+        <span>${threadSignalMeta(thread)}</span>
       </div>
     </a>
   `;
 }
 
 function askCard(ask, priority) {
+  const signalItems = prioritySignalItems(ask);
   return `
-    <a class="ask-card" href="${ask.threadRoute}">
+    <a class="ask-card overview-card" href="${ask.threadRoute}">
       <span class="priority">#${String(priority).padStart(2, '0')}</span>
-      <p>${renderInlineMarkdown(ask.ask)}</p>
-      <div>
-        ${categoryBadge(ask.category, categoryAccent(ask.category))}
-        <span class="raised">From ${escapeHtml(ask.threadTitle)}</span>
+      <div class="ask-type-tab">${categoryBadge(ask.category, categoryAccent(ask.category))}</div>
+      <div class="ask-heading">
+        <p>${renderInlineMarkdown(ask.ask)}</p>
       </div>
+      <dl class="signal-bar">
+        ${signalItems.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${renderInlineMarkdown(value)}</dd></div>`).join('')}
+      </dl>
     </a>
   `;
 }
@@ -1040,6 +1040,16 @@ function methodCard(title, body) {
   `;
 }
 
+function flowCard(step, title, body) {
+  return `
+    <article class="flow-card">
+      <span>${escapeHtml(step)}</span>
+      <h3>${escapeHtml(title)}</h3>
+      <p>${escapeHtml(body)}</p>
+    </article>
+  `;
+}
+
 function emptyState(message) {
   return `
     <article class="empty-state">
@@ -1103,6 +1113,12 @@ function markdownProse(markdown) {
     .join('');
 }
 
+function renderInlineParagraphs(markdown) {
+  return trimMarkdownParagraphs(markdown)
+    .map((paragraph) => `<p>${renderInlineMarkdown(paragraph)}</p>`)
+    .join('');
+}
+
 function paragraphs(text) {
   return trimMarkdownParagraphs(text)
     .map((paragraph) => escapeHtml(paragraph))
@@ -1135,6 +1151,31 @@ function categoryAccent(category) {
 function echoScore(ask) {
   if (!ask.echoedBy || ask.echoedBy.toLowerCase().includes('no explicit')) return 0;
   return ask.echoedBy.split('@').length - 1;
+}
+
+function prioritySignalItems(ask) {
+  const items = [
+    ['Participants', formatNumber(ask.threadParticipantCount ?? 0)],
+    ['Reactions', formatNumber(ask.threadReactionTotal ?? 0)],
+    ['Echoes', formatNumber(echoScore(ask))],
+    ['Source', ask.threadTitle ?? 'Unlisted'],
+  ];
+
+  return items.filter(([, value]) => value !== '0' || items.length <= 2);
+}
+
+function threadSignalMeta(thread) {
+  return [
+    formatMessageCount(thread.messageCount),
+    formatParticipantCount(thread.uniqueParticipants),
+    formatAskCount(thread.primaryAsks.length),
+  ].join(' &middot; ');
+}
+
+function summaryPreview(text) {
+  const first = firstParagraph(text);
+  const sentences = first.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)?.map((part) => part.trim()).filter(Boolean) ?? [first];
+  return sentences.slice(0, 2).join(' ');
 }
 
 function firstParagraph(text) {
@@ -1182,6 +1223,18 @@ function formatNumber(value) {
 
 function formatThreadCount(count) {
   return `${formatNumber(count)} ${count === 1 ? 'thread' : 'threads'}`;
+}
+
+function formatMessageCount(count) {
+  return `${formatNumber(count)} ${count === 1 ? 'message' : 'messages'}`;
+}
+
+function formatParticipantCount(count) {
+  return `${formatNumber(count)} ${count === 1 ? 'participant' : 'participants'}`;
+}
+
+function formatAskCount(count) {
+  return `${formatNumber(count)} ${count === 1 ? 'ask' : 'asks'}`;
 }
 
 function formatDateRange(value) {

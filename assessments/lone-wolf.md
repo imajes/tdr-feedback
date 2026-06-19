@@ -11,7 +11,10 @@
 Multiple (Rework Request / Balance Change / QoL Improvement)
 
 ## Summary
-Players have three interlocking complaints about Lone Wolf: the mode has not reset since launch (making it dead content for anyone who's completed it), non-DPS classes (medics, tanks, Bulwark, Recon) are at a severe disadvantage and often cannot achieve full stars, and the leaderboard is compromised by cheaters/exploiters. The most-requested changes are regular resets with repeatable rewards, class-appropriate challenges or balance adjustments for support builds, and a leaderboard wipe paired with anti-cheat enforcement.
+
+Players have three interlocking complaints about Lone Wolf: the mode has not reset since launch (making it dead content for anyone who's completed it), non-DPS classes (medics, tanks, Bulwark, Recon) are at a severe disadvantage and often cannot achieve full stars, and the leaderboard is compromised by cheaters/exploiters.
+
+The most-requested changes are regular resets with repeatable rewards, class-appropriate challenges or balance adjustments for support builds, and a leaderboard wipe paired with anti-cheat enforcement.
 
 ## Primary Asks
 
@@ -53,11 +56,16 @@ Players have three interlocking complaints about Lone Wolf: the mode has not res
 - **Loudness:** Medium-High — 26 messages and 17 unique participants is the broadest participation of any thread in this set, reflecting genuine community-wide concern. Reaction totals are moderate (34) but distributed broadly.
 
 ## Sentiment
+
 **Overall:** Mixed / Frustrated
 
-The thread has two emotional registers. Players who completed Lone Wolf are frustrated that it has become dead content — @aoqeez's blunt "Lone Wolf reset when? We're waiting for 2 months now" is representative. Players who haven't completed it (especially non-DPS mains) are frustrated that it feels nearly impossible for their class — @ventz_arctic states flatly that it's "practically impossible to get all 120 stars" as a medic.
+The thread has two emotional registers. Players who completed Lone Wolf are frustrated that it has become dead content — @aoqeez's blunt "Lone Wolf reset when? We're waiting for 2 months now" is representative.
 
-There is brief in-thread friction between @karnivorex1 (who describes being rank 2 Bulwark and unable to pass wave 11 at 23.5k power) and @caelancromwell (who argues power level doesn't determine success, right build does) — a small but notable debate about skill vs. spec as the core problem. A late-thread exchange about season timing (caelancromwell explaining "we're still in Season 1") suggests some confusion about expected cadence, which the team may want to communicate more clearly.
+Players who haven't completed it (especially non-DPS mains) are frustrated that it feels nearly impossible for their class — @ventz_arctic states flatly that it's "practically impossible to get all 120 stars" as a medic.
+
+There is brief in-thread friction between @karnivorex1 (who describes being rank 2 Bulwark and unable to pass wave 11 at 23. 5k power) and @caelancromwell (who argues power level doesn't determine success, right build does) — a small but notable debate about skill vs. spec as the core problem.
+
+A late-thread exchange about season timing (caelancromwell explaining "we're still in Season 1") suggests some confusion about expected cadence, which the team may want to communicate more clearly.
 
 ## Key Comments
 
@@ -86,11 +94,16 @@ Pairs a reward structure proposal with an explicit acknowledgement of PvP/PvE ba
 Proposes class-split challenge design: DPS classes run kill-speed challenges, healer/tank classes run survival challenges. A clean design principle that would solve the class-equity problem.
 
 ## Thread Assessment
-Lone Wolf has three distinct problems that compound each other: it doesn't reset (making it dead for completionists), it's unplayable for support classes (alienating a significant portion of the playerbase), and its leaderboard is compromised (undermining competitive motivation). Any one of these would be significant; all three together make the mode feel abandoned.
+
+Lone Wolf has three distinct problems that compound each other: it doesn't reset (making it dead for completionists), it's unplayable for support classes (alienating a significant portion of the playerbase), and its leaderboard is compromised (undermining competitive motivation).
+
+Any one of these would be significant; all three together make the mode feel abandoned.
 
 The reset ask is the most urgent and most broadly supported. Two months without a reset has effectively ended the mode for anyone who finished it. The community's proposed cadence — 14-day seasons — is reasonable and aligns with how similar modes work in comparable games. Even a simple reset with reward re-availability would restore engagement significantly.
 
-The class balance problem is the most complex. Players make a strong case that the current Lone Wolf design implicitly requires a DPS build to achieve full progression, which excludes tank and healer mains from a core game mode. The most elegant proposed solution — @scabbybear's suggestion of survival-based challenges for tank/healer classes — is worth dev consideration as it avoids the difficulty of building a single challenge that works for all build types.
+The class balance problem is the most complex. Players make a strong case that the current Lone Wolf design implicitly requires a DPS build to achieve full progression, which excludes tank and healer mains from a core game mode.
+
+The most elegant proposed solution — @scabbybear's suggestion of survival-based challenges for tank/healer classes — is worth dev consideration as it avoids the difficulty of building a single challenge that works for all build types.
 
 The specialization potion as a partial fix (converting toughness to damage) is a lower-effort lever that has been suggested twice.
 

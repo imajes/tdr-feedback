@@ -11,7 +11,12 @@
 Multiple (Balance Change / Bug Report / Rework Request / QoL Improvement)
 
 ## Summary
-This thread is a wide-ranging design discussion about the Field Medic spec — covering both the Combat Medic (healing-focused) and Tactical Pharma / Oxic Medic (damage/poison-focused) subclasses. Players identify a cluster of bugs (broken skill mods, non-functional Aggressive Defense chip, armor strengthening mod not working, healing station damage variant not functioning), argue that base Combat Medic heals are too weak to justify the spec, and call urgently for Oxic Medic to receive damage-penetration against armor/DR and better survivability. The most heated sub-debate concerns whether Combat Medic's Hypershot should be nerfed and how it should be rebalanced if so.
+
+This thread is a wide-ranging design discussion about the Field Medic spec — covering both the Combat Medic (healing-focused) and Tactical Pharma / Oxic Medic (damage/poison-focused) subclasses.
+
+Players identify a cluster of bugs (broken skill mods, non-functional Aggressive Defense chip, armor strengthening mod not working, healing station damage variant not functioning), argue that base Combat Medic heals are too weak to justify the spec, and call urgently for Oxic Medic to receive damage-penetration against armor/DR and better survivability.
+
+The most heated sub-debate concerns whether Combat Medic's Hypershot should be nerfed and how it should be rebalanced if so.
 
 ## Primary Asks
 
@@ -73,13 +78,16 @@ This thread is a wide-ranging design discussion about the Field Medic spec — c
 - **Loudness:** Medium — 678 messages is the largest thread in the dataset but only 42 total reactions. Like the sister thread, engagement is deep within a small core group (22 unique participants) rather than broad. The low reaction count reflects Discord power users, not passive lurkers.
 
 ## Sentiment
+
 **Overall:** Mixed / Frustrated
 
 Oxi Medic players are the most frustrated voice in this thread. LaClown's 6-reaction message kicking off the Oxi discussion carries genuine exasperation: the Community Manager's prompt focused on Combat Medic, but the players who actually main Oxi feel entirely overlooked.
 
 Their complaints are specific: poison doesn't penetrate armor or DR in PvP, they die instantly in any open engagement, the armor strengthening mod is bugged, the aggro system punishes them for deploying their core ability, and the 0.03% HP regen is insulting. This combination makes Oxi feel like an incomplete spec.
 
-Combat Medic players are more analytical and less emotional. Ventz, jim, and others debate Hypershot's balance with genuine nuance — acknowledging it currently ignores armor (a bug) while arguing it's the only viable damage tool medics have and removing it without compensation would destroy the spec in PvP. There's a constructive subthread on exactly how to balance Hypershot (range cap, partial armor penetration rather than full ignore).
+Combat Medic players are more analytical and less emotional. Ventz, jim, and others debate Hypershot's balance with genuine nuance — acknowledging it currently ignores armor (a bug) while arguing it's the only viable damage tool medics have and removing it without compensation would destroy the spec in PvP.
+
+There's a constructive subthread on exactly how to balance Hypershot (range cap, partial armor penetration rather than full ignore).
 
 Players also share build data openly, comparing engineering stat contributions to Oxi damage output and testing tactical layering OS effectiveness.
 
@@ -128,16 +136,29 @@ Highlights the absurd design inversion: medics are better at reviving than heali
 Captures a recurring frustration about inconsistent OS behavior — players cannot reliably evaluate builds because core mechanics behave erratically.
 
 ## Thread Assessment
-This thread is in practice two parallel conversations that only occasionally intersect: a Combat Medic thread about Hypershot, DR caps, and base heal output; and an Oxic Medic thread about being an overlooked and underperforming spec with multiple active bugs. LaClown's opening salvo — calling out that everyone is discussing Combat Medic while Oxi Medic is left to rot — captures the structural dynamic well. Developers reading this thread need to treat both subclasses as distinct subjects.
 
-On Combat Medic: the clearest technical finding is that Hypershot currently ignores armor (confirmed as unintended behavior by the players most familiar with the spec). Fixing this bug is the most targeted intervention available. Players have already modeled what a fixed Hypershot looks like: capping it to 20m range, or making it only partially bypass armor rather than fully, would substantially reduce its PvP dominance while keeping it viable for PvE.
+This thread is in practice two parallel conversations that only occasionally intersect: a Combat Medic thread about Hypershot, DR caps, and base heal output; and an Oxic Medic thread about being an overlooked and underperforming spec with multiple active bugs.
+
+LaClown's opening salvo — calling out that everyone is discussing Combat Medic while Oxi Medic is left to rot — captures the structural dynamic well. Developers reading this thread need to treat both subclasses as distinct subjects.
+
+On Combat Medic: the clearest technical finding is that Hypershot currently ignores armor (confirmed as unintended behavior by the players most familiar with the spec). Fixing this bug is the most targeted intervention available.
+
+Players have already modeled what a fixed Hypershot looks like: capping it to 20m range, or making it only partially bypass armor rather than fully, would substantially reduce its PvP dominance while keeping it viable for PvE.
 
 Any nerf to Hypershot must be accompanied by fixes to the currently broken offensive skill mods — if you remove the only working damage tool and don't fix the broken alternatives, medics have no offensive contribution at all.
 
-On Oxic Medic: there are at least four discrete bugs (armor strengthening mod non-functional, Aggressive Defense chip broken, auto-trauma DZ revive non-functional, enemy Oxi poison triggers friendly invincibility). Beyond bugs, the spec has a fundamental design tension: it needs to be in open areas to apply gas effectively, but its survivability tools are useless, forcing it to hide in cover.
+On Oxic Medic: there are at least four discrete bugs (armor strengthening mod non-functional, Aggressive Defense chip broken, auto-trauma DZ revive non-functional, enemy Oxi poison triggers friendly invincibility).
 
-The community's proposed fix is logical — give corrosion some armor/DR penetration (perhaps partial, with a corresponding poison resistance stat added to the game) and give Oxi a shield or armor buffer instead of the current insignificant HP regen. LaClown's suggestion that Oxi should be reconceptualized as a debuffer rather than a pure damage class is worth developer consideration.
+Beyond bugs, the spec has a fundamental design tension: it needs to be in open areas to apply gas effectively, but its survivability tools are useless, forcing it to hide in cover.
 
-The thread also contains actionable engineering data: players have empirically tested that Oxi damage scales primarily with engineering stat, that tactical layering OS substantially increases damage (20–23% increase, though inconsistently), and that with full optimization Oxi can reach approximately 1M DPS in elite missions. This suggests the spec's ceiling is not low — but the floor (for players who don't min-max engineering, don't have Tactical Layering OS, or face armored PvP opponents) is very low, contributing to the perception that Oxi is underpowered.
+The community's proposed fix is logical — give corrosion some armor/DR penetration (perhaps partial, with a corresponding poison resistance stat added to the game) and give Oxi a shield or armor buffer instead of the current insignificant HP regen.
 
-One broader structural note: several players mention that the game provides no in-game explanation for how DR, armor, multiplicative stacking, or skill intensity interact. The consistent community confusion about these mechanics (multiple players believing DR stacks additively when it is multiplicative; players not understanding why their healing stat increases barely affect actual heals; players unable to distinguish which skill mods work vs. are bugged) suggests a QoL ask for better in-game stat transparency that runs beneath this entire thread.
+LaClown's suggestion that Oxi should be reconceptualized as a debuffer rather than a pure damage class is worth developer consideration.
+
+The thread also contains actionable engineering data: players have empirically tested that Oxi damage scales primarily with engineering stat, that tactical layering OS substantially increases damage (20–23% increase, though inconsistently), and that with full optimization Oxi can reach approximately 1M DPS in elite missions.
+
+This suggests the spec's ceiling is not low — but the floor (for players who don't min-max engineering, don't have Tactical Layering OS, or face armored PvP opponents) is very low, contributing to the perception that Oxi is underpowered.
+
+One broader structural note: several players mention that the game provides no in-game explanation for how DR, armor, multiplicative stacking, or skill intensity interact.
+
+The consistent community confusion about these mechanics (multiple players believing DR stacks additively when it is multiplicative; players not understanding why their healing stat increases barely affect actual heals; players unable to distinguish which skill mods work vs. are bugged) suggests a QoL ask for better in-game stat transparency that runs beneath this entire thread.

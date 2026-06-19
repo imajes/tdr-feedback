@@ -11,7 +11,10 @@
 Balance Change
 
 ## Summary
-Players are nearly unanimous that the Pummelling Shield OS is broken in PvP due to its ability to stun enemies indefinitely. The stated 10-second talent cooldown does not apply to the stun effect — only to the overshield — making it trivially chainable at any fire rate. The dominant ask is for a meaningful per-target stun cooldown (6–15 seconds is the commonly cited range), or a universal stun-immunity grace period after any stun. A minority argues that counter-builds or a new stun-resistance talent would be a fairer solution than nerfing the OS itself.
+
+Players are nearly unanimous that the Pummelling Shield OS is broken in PvP due to its ability to stun enemies indefinitely. The stated 10-second talent cooldown does not apply to the stun effect — only to the overshield — making it trivially chainable at any fire rate.
+
+The dominant ask is for a meaningful per-target stun cooldown (6–15 seconds is the commonly cited range), or a universal stun-immunity grace period after any stun. A minority argues that counter-builds or a new stun-resistance talent would be a fairer solution than nerfing the OS itself.
 
 ## Primary Asks
 
@@ -48,11 +51,16 @@ Players are nearly unanimous that the Pummelling Shield OS is broken in PvP due 
 - **Loudness:** High — The largest thread in this batch by message count and participant count, with the highest reaction total (79). Players from multiple regions (NA, Asia, EU) are represented. Several players post video evidence of stunlock encounters. Frustration is high and sustained across the full 16-day window.
 
 ## Sentiment
+
 **Overall:** Frustrated
 
-There is near-universal agreement that the OS is broken in its current state, and even several players who own and use it (notably @jim.7080 and @jbcode) explicitly ask for it to be nerfed. This is unusual in feedback threads covering an item that costs real money or significant grind to obtain. The dominant emotional register is exasperation — players have been experiencing perpetual stunlocks for months with no fix, and late-thread messages reflect fatigue with the timeline.
+There is near-universal agreement that the OS is broken in its current state, and even several players who own and use it (notably @jim. 7080 and @jbcode) explicitly ask for it to be nerfed. This is unusual in feedback threads covering an item that costs real money or significant grind to obtain.
 
-A small contingent (primarily @ripsa5029 and @wanvision_57414) defends the OS on the grounds that build or talent-based counters should be the solution, and their position generates significant pushback. The thread also contains a secondary debate about whether Vanguard and other classes bring similar unfair advantages, which reflects broader PvP balance frustration bleeding into this thread — but these remain tangential to the Pummelling Shield ask specifically.
+The dominant emotional register is exasperation — players have been experiencing perpetual stunlocks for months with no fix, and late-thread messages reflect fatigue with the timeline.
+
+A small contingent (primarily @ripsa5029 and @wanvision_57414) defends the OS on the grounds that build or talent-based counters should be the solution, and their position generates significant pushback.
+
+The thread also contains a secondary debate about whether Vanguard and other classes bring similar unfair advantages, which reflects broader PvP balance frustration bleeding into this thread — but these remain tangential to the Pummelling Shield ask specifically.
 
 ## Key Comments
 
@@ -89,16 +97,29 @@ Raises the emergency-disable option — the first player to explicitly suggest a
 Succinctly explains why a PvE/PvP split is the cleaner solution: the mechanic is designed for and appropriate in PvE, but it was never scoped for player targets.
 
 ## Thread Assessment
-The Pummelling Shield thread is the clearest, most actionable feedback in this batch. The core issue is well-documented and is almost certainly a bug: the OS tooltip implies a 10-second talent cooldown on the stun, but the cooldown is not applied to the stun effect in practice — only to the overshield regeneration. Players have independently identified this, and @azphelyves provides a detailed technical breakdown of the shotgun-pellet multi-hit mechanic that compounds the problem.
+
+The Pummelling Shield thread is the clearest, most actionable feedback in this batch. The core issue is well-documented and is almost certainly a bug: the OS tooltip implies a 10-second talent cooldown on the stun, but the cooldown is not applied to the stun effect in practice — only to the overshield regeneration.
+
+Players have independently identified this, and @azphelyves provides a detailed technical breakdown of the shotgun-pellet multi-hit mechanic that compounds the problem.
 
 The fix required is unambiguous: enforce the 10-second cooldown on the stun trigger, not just the overshield, and potentially add a minimum stun duration of 2 seconds to accompany it.
 
-The broader community ask goes further than just the bug fix. Multiple players — including OS owners — are asking for a universal stun-immunity grace period after any stun, which would prevent rotation abuse by multiple Pummelling Shield users and address related CC-chaining from Bulwark shock spikes and other sources. This is a more significant system change but is widely endorsed and neatly solves the "team of four Bulwarks rotating stuns" scenario that a per-OS cooldown alone cannot address.
+The broader community ask goes further than just the bug fix. Multiple players — including OS owners — are asking for a universal stun-immunity grace period after any stun, which would prevent rotation abuse by multiple Pummelling Shield users and address related CC-chaining from Bulwark shock spikes and other sources.
+
+This is a more significant system change but is widely endorsed and neatly solves the "team of four Bulwarks rotating stuns" scenario that a per-OS cooldown alone cannot address.
 
 The diminishing-returns framing proposed by @chewybarka (shorter stun duration on successive applications) is an elegant middle path that preserves the OS's PvE utility.
 
-There is meaningful support for a PvE/PvP split as the cleanest long-term solution. Pummelling Shield is genuinely useful for locking elite NPCs in place during boss fights, and stripping the OS's function in PvE would generate backlash from PvE-focused players. Several players note that the game's broader design problem — no distinction between PvE and PvP stat scaling — is the root cause, with Pummelling Shield being one of the most obvious symptoms.
+There is meaningful support for a PvE/PvP split as the cleanest long-term solution. Pummelling Shield is genuinely useful for locking elite NPCs in place during boss fights, and stripping the OS's function in PvE would generate backlash from PvE-focused players.
 
-One minority position worth noting: @ripsa5029 argues that a new stun-resistance talent or build-counter is preferable to nerfing the OS. This position is largely rejected (because no such counter currently exists), but @azphelyves later endorses it as a complementary feature rather than a replacement for the cooldown fix. Adding stun resistance as a gear perk or talent would give players agency while preserving OS value — worth considering as a companion change.
+Several players note that the game's broader design problem — no distinction between PvE and PvP stat scaling — is the root cause, with Pummelling Shield being one of the most obvious symptoms.
 
-From a developer standpoint: the stun cooldown bug should be treated as high priority. The stun is effectively rendering the Dark Zone unplayable for any player targeted by a coordinated Pummelling Shield user, and the thread includes reports of deliberate griefing at landmarks and extraction points. A temporary disable of the stun component (leaving the overshield intact) would be a reasonable stopgap pending the full fix, as @silvers1166 suggests.
+One minority position worth noting: @ripsa5029 argues that a new stun-resistance talent or build-counter is preferable to nerfing the OS.
+
+This position is largely rejected (because no such counter currently exists), but @azphelyves later endorses it as a complementary feature rather than a replacement for the cooldown fix.
+
+Adding stun resistance as a gear perk or talent would give players agency while preserving OS value — worth considering as a companion change.
+
+From a developer standpoint: the stun cooldown bug should be treated as high priority. The stun is effectively rendering the Dark Zone unplayable for any player targeted by a coordinated Pummelling Shield user, and the thread includes reports of deliberate griefing at landmarks and extraction points.
+
+A temporary disable of the stun component (leaving the overshield intact) would be a reasonable stopgap pending the full fix, as @silvers1166 suggests.

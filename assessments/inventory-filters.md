@@ -11,6 +11,7 @@
 QoL Improvement / New Feature
 
 ## Summary
+
 Players want a comprehensive inventory filter and management system to handle the growing volume of loot. The core asks span filtering by tier, rarity, item type, and gear set, plus a "mark as junk" system for batch selling/deconstructing. Several players extend this request to vendor and stash screens as well.
 
 ## Primary Asks
@@ -43,6 +44,7 @@ Players want a comprehensive inventory filter and management system to handle th
 - **Loudness:** High — 63 total reactions across 12 messages is strong signal; the top message from Beltha earned 18 reactions on its own, and itasil92's brief endorsement accumulated 20.
 
 ## Sentiment
+
 **Overall:** Positive
 
 The emotional tone is constructive — players are offering concrete, well-reasoned suggestions rather than venting. However, there is a layer of low-grade frustration: @toast0252 flatly states "This shouldn't even be a question; of course more filters are needed," and references the intentionally limited stash space as a compounding factor.
@@ -68,7 +70,10 @@ Identifies a UX issue distinct from filtering: item grouping/sorting, which no o
 Correctly expands the scope: the filter problem doesn't stop at the inventory screen.
 
 ## Thread Assessment
-This thread has strong consensus around a single core request: players need more robust sorting and filtering tools to manage their inventory efficiently. The ask is QoL rather than a fundamental redesign, and the feature precedent exists clearly in The Division 2. Players are well-aligned on what they want — tier, attribute, and type filters — with the "mark as junk" system emerging organically as a related but distinct sub-request.
+
+This thread has strong consensus around a single core request: players need more robust sorting and filtering tools to manage their inventory efficiently. The ask is QoL rather than a fundamental redesign, and the feature precedent exists clearly in The Division 2.
+
+Players are well-aligned on what they want — tier, attribute, and type filters — with the "mark as junk" system emerging organically as a related but distinct sub-request.
 
 The most noteworthy contribution beyond the headline ask is @falcifer777's extension to the vendor and stash screens. Players currently face the same manual-sorting problem at multiple points in the loot loop (pickup → inventory → stash → vendor), and a filter system that only addresses inventory in isolation would feel incomplete.
 

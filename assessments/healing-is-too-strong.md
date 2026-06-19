@@ -11,7 +11,12 @@
 Balance Change / Multiple
 
 ## Summary
-Players are debating whether healing itself is too strong or whether the underlying issue is uncapped Damage Reduction (DR) combined with the Blitz OS. A vocal faction of experienced medic and bulwark mains argues that base healing hive output is actually weak (30k HP/s), and that the true culprit is DR stacking above 70–90% making players nearly unkillable. A smaller faction — mostly NA-based casual DPS players — insists medics and tanks are genuinely unkillable and healing needs a nerf. Both sides ultimately converge on two interventions: cap DR and nerf or rework the Blitz OS.
+
+Players are debating whether healing itself is too strong or whether the underlying issue is uncapped Damage Reduction (DR) combined with the Blitz OS.
+
+A vocal faction of experienced medic and bulwark mains argues that base healing hive output is actually weak (30k HP/s), and that the true culprit is DR stacking above 70–90% making players nearly unkillable.
+
+A smaller faction — mostly NA-based casual DPS players — insists medics and tanks are genuinely unkillable and healing needs a nerf. Both sides ultimately converge on two interventions: cap DR and nerf or rework the Blitz OS.
 
 ## Primary Asks
 
@@ -58,13 +63,18 @@ Players are debating whether healing itself is too strong or whether the underly
 - **Loudness:** Medium — 487 messages from 26 participants is high engagement, but extremely low reaction counts (most messages score 0) indicate the conversation was concentrated within a tight core group rather than resonating across the broader community.
 
 ## Sentiment
+
 **Overall:** Mixed
 
-The thread is split along player archetype lines rather than a clean nerf-vs-defend divide. Experienced medic and bulwark mains (Ventz, Caelan, Rezo, jim, xwrath) consistently argue that healing hive output is genuinely bad and the "immortal" feeling comes from DR stacking and the Blitz OS — not from heals. They are frustrated that less informed players conflate the two issues.
+The thread is split along player archetype lines rather than a clean nerf-vs-defend divide. Experienced medic and bulwark mains (Ventz, Caelan, Rezo, jim, xwrath) consistently argue that healing hive output is genuinely bad and the "immortal" feeling comes from DR stacking and the Blitz OS — not from heals.
+
+They are frustrated that less informed players conflate the two issues.
 
 On the other side, casual DPS players from NA (agent.nene, deviantsandman, sedoidead, ifozzy) report genuinely unkillable medics and tanks from lived PvP experience and feel dismissed.
 
-A notable geographic fault line runs through the thread: EU and Asia players describe a min-maxed environment where everyone runs high DR and medics are challenging but counterable. NA players describe a server where 700k HP medics solo-rogue the entire zone. Both groups are accurately describing their regional experience. Emotional tone is engaged debate with occasional friction but no major hostility. Several players express genuine enjoyment of the medic role and concern that overzealous nerfs will destroy it.
+A notable geographic fault line runs through the thread: EU and Asia players describe a min-maxed environment where everyone runs high DR and medics are challenging but counterable. NA players describe a server where 700k HP medics solo-rogue the entire zone.
+
+Both groups are accurately describing their regional experience. Emotional tone is engaged debate with occasional friction but no major hostility. Several players express genuine enjoyment of the medic role and concern that overzealous nerfs will destroy it.
 
 ## Key Comments
 
@@ -109,11 +119,18 @@ Provides a concrete damage figure showing the highest-burst spec cannot breach t
 Bluntly surfaces the regional disparity: NA feedback may not be representative of the global population balance needs.
 
 ## Thread Assessment
-The thread's headline ask — "healing is too strong" — is contested by the most technically informed participants, who demonstrate with actual numbers that base healing hive output (30k HP/s) is weak compared to any class's DPS. The actual problems identified are: uncapped DR reaching 70–90% that reduces incoming damage below the heal threshold; the Blitz OS providing 15% max HP healing every few seconds (an enormous burst at 500k–1M HP); and post-revive damage immunity that creates near-unkillable scenarios when two medics run together.
 
-There is meaningful consensus on the DR cap. Virtually every participant, including medic mains, acknowledges DR is too high and a hard cap around 50% would be healthy. This is the highest-confidence, lowest-controversy ask in the thread. The Blitz OS nerf has strong support but with an important caveat: if Blitz is nerfed, base medic healing must be buffed to compensate — otherwise medics lose the only thing making them competitive and become the worst healer in the game, outperformed by tech operators.
+The thread's headline ask — "healing is too strong" — is contested by the most technically informed participants, who demonstrate with actual numbers that base healing hive output (30k HP/s) is weak compared to any class's DPS.
 
-The thread surfaces a data quality issue for developers: the NA vs. EU/Asia experience is genuinely different. NA players fighting low-min-max opponents face medics who seem immortal because no one on their server runs Target Acquisition or Vanguard Pulse. EU and Asia players use fully optimized counters and find medics manageable. Any balance change needs to specify which experience it is targeting — what fixes NA casual balance may further nerf specs that are already counterable in the competitive meta.
+The actual problems identified are: uncapped DR reaching 70–90% that reduces incoming damage below the heal threshold; the Blitz OS providing 15% max HP healing every few seconds (an enormous burst at 500k–1M HP); and post-revive damage immunity that creates near-unkillable scenarios when two medics run together.
+
+There is meaningful consensus on the DR cap. Virtually every participant, including medic mains, acknowledges DR is too high and a hard cap around 50% would be healthy. This is the highest-confidence, lowest-controversy ask in the thread.
+
+The Blitz OS nerf has strong support but with an important caveat: if Blitz is nerfed, base medic healing must be buffed to compensate — otherwise medics lose the only thing making them competitive and become the worst healer in the game, outperformed by tech operators.
+
+The thread surfaces a data quality issue for developers: the NA vs. EU/Asia experience is genuinely different. NA players fighting low-min-max opponents face medics who seem immortal because no one on their server runs Target Acquisition or Vanguard Pulse.
+
+EU and Asia players use fully optimized counters and find medics manageable. Any balance change needs to specify which experience it is targeting — what fixes NA casual balance may further nerf specs that are already counterable in the competitive meta.
 
 The Unflinching talent is flagged independently from the medic class. It is available to bulwarks and any toughness build, operates on a 2-second cooldown, and several players argue removing it entirely would address immortality builds without touching class-specific skills at all.
 

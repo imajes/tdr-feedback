@@ -11,7 +11,10 @@
 Balance Change / Rework Request
 
 ## Summary
-Players broadly agree that Demolitionist underperforms relative to other specializations, particularly in the HE Munitions and Field Grenadier specs. Feedback splits into two camps: general damage/cooldown buffs to bring Demo in line with other DPS classes, and a deeper rework of Field Grenadier's talent tree, which players argue is internally inconsistent — its playstyle relies on skill casts, but its talents are proc-chance-based and its cooldowns are too long to reliably trigger those procs.
+
+Players broadly agree that Demolitionist underperforms relative to other specializations, particularly in the HE Munitions and Field Grenadier specs.
+
+Feedback splits into two camps: general damage/cooldown buffs to bring Demo in line with other DPS classes, and a deeper rework of Field Grenadier's talent tree, which players argue is internally inconsistent — its playstyle relies on skill casts, but its talents are proc-chance-based and its cooldowns are too long to reliably trigger those procs.
 
 ## Primary Asks
 
@@ -48,11 +51,14 @@ Players broadly agree that Demolitionist underperforms relative to other special
 - **Loudness:** Low — This is the lowest-reaction thread in the set. The conversation is substantive but didn't attract broad community amplification. It reads more like a focused discussion among Demo mains than a wide community signal.
 
 ## Sentiment
+
 **Overall:** Mixed / Frustrated
 
 Players who main Demolitionist are genuinely frustrated. @tibballt notes that Vanguards "blow us out the water with no effort" and that Pharma feels meaningfully better without optimization. @imajes flags a concerning balance signal: switching to Field Grenadier with completely wrong gear only costs 200 power, implying spec investment has minimal impact.
 
-The most composed and analytical post comes from @sedoi3143, who argues Demo is actually the most *balanced* class but suffers because other classes have broken mechanics — a minority view, but a thoughtful one that a dev should weigh. The Grenade Launcher ult being overpowered in PvP is the only contrary data point (one player thinks it's too strong; everyone else thinks the class is too weak in PvE).
+The most composed and analytical post comes from @sedoi3143, who argues Demo is actually the most *balanced* class but suffers because other classes have broken mechanics — a minority view, but a thoughtful one that a dev should weigh.
+
+The Grenade Launcher ult being overpowered in PvP is the only contrary data point (one player thinks it's too strong; everyone else thinks the class is too weak in PvE).
 
 ## Key Comments
 
@@ -77,7 +83,10 @@ A dissenting but well-reasoned view: Demo's issues may be systemic rather than c
 Captures the visceral disconnect between the fantasy of the class and the actual in-game performance.
 
 ## Thread Assessment
-The Demolitionist thread reveals two distinct but related problems. The first is a general damage deficit across the class — turrets, seeker mines, and grenade skills all feel underpowered compared to equivalent investment in other specs. This is broadly agreed upon and would be addressed by targeted damage buffs. The second is a deeper design problem with Field Grenadier specifically: its talent tree is built around proc-chance triggers that assume frequent skill activations, but the spec's own cooldown structure prevents those procs from firing reliably.
+
+The Demolitionist thread reveals two distinct but related problems. The first is a general damage deficit across the class — turrets, seeker mines, and grenade skills all feel underpowered compared to equivalent investment in other specs. This is broadly agreed upon and would be addressed by targeted damage buffs.
+
+The second is a deeper design problem with Field Grenadier specifically: its talent tree is built around proc-chance triggers that assume frequent skill activations, but the spec's own cooldown structure prevents those procs from firing reliably.
 
 This is a coherence issue, not just a numbers issue, and @ecoboi articulates it precisely.
 

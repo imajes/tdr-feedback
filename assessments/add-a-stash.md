@@ -11,7 +11,10 @@
 New Feature
 
 ## Summary
-Players are unanimously requesting a dedicated stash system — a persistent storage space separate from the backpack. The current inventory fills up quickly, forcing players to dismantle or sell gear they want to keep for alternate specializations or characters. The core desire mirrors the stash systems from Division 1 and Division 2, and many players want it shared across characters.
+
+Players are unanimously requesting a dedicated stash system — a persistent storage space separate from the backpack. The current inventory fills up quickly, forcing players to dismantle or sell gear they want to keep for alternate specializations or characters.
+
+The core desire mirrors the stash systems from Division 1 and Division 2, and many players want it shared across characters.
 
 ## Primary Asks
 
@@ -43,9 +46,12 @@ Players are unanimously requesting a dedicated stash system — a persistent sto
 - **Loudness:** High — 31 unique voices in unanimous agreement across 41 messages with no dissent whatsoever
 
 ## Sentiment
+
 **Overall:** Frustrated
 
-Players are not just requesting a stash, they are bewildered it doesn't already exist. The tone ranges from resigned ("Yes.") to exasperated ("How is this even a question"). Multiple players describe the lack of a stash as actively blocking their play — @madras_ says they "can no longer play the game" due to full inventory, @typed notes the stash is currently "a glorified mailbox."
+Players are not just requesting a stash, they are bewildered it doesn't already exist. The tone ranges from resigned ("Yes.") to exasperated ("How is this even a question").
+
+Multiple players describe the lack of a stash as actively blocking their play — @madras_ says they "can no longer play the game" due to full inventory, @typed notes the stash is currently "a glorified mailbox."
 
 There is zero disagreement in this thread; even nuanced sub-discussions (free vs. paid tiers, character sharing) are additive, not contradictory. The emotional register is urgency bordering on disbelief.
 
@@ -70,8 +76,13 @@ Reasonable caution about monetization gating — players want a real free tier, 
 More skeptical voice warning against using the stash as a predatory monetization hook in a mobile F2P context.
 
 ## Thread Assessment
-This is the clearest signal in the feedback system: 31 unique players over 13 days, zero dissent, unanimous agreement that a functional stash is necessary. The ask is entirely uncontroversial. The closest thing to debate is about implementation details — how much to charge, whether it should be gated behind subscription, whether it should be shared across characters (majority say yes) and across servers (one note of caution about cross-server exploits in DZ).
+
+This is the clearest signal in the feedback system: 31 unique players over 13 days, zero dissent, unanimous agreement that a functional stash is necessary. The ask is entirely uncontroversial.
+
+The closest thing to debate is about implementation details — how much to charge, whether it should be gated behind subscription, whether it should be shared across characters (majority say yes) and across servers (one note of caution about cross-server exploits in DZ).
 
 The Division 1 and 2 precedent is cited repeatedly, setting a clear expectation baseline. Players know what a stash looks like and are confused by its absence. Several players note the current "stash" (what appears to be a mailbox/inbox) fails to meet this need.
 
-A dev reading this thread needs to know: the stash is not a feature request, it's a retention risk. Players are actively limiting or quitting play due to inventory constraints. The monetization angle is present and welcomed — expandable slots, premium tiers — but players are watching for fair treatment. The most productive implementation would give a meaningful free stash (50–100 slots minimum based on suggestions), expand via credits, share across characters, and avoid server-transfer abuse vectors flagged by @tibballt.
+A dev reading this thread needs to know: the stash is not a feature request, it's a retention risk. Players are actively limiting or quitting play due to inventory constraints. The monetization angle is present and welcomed — expandable slots, premium tiers — but players are watching for fair treatment.
+
+The most productive implementation would give a meaningful free stash (50–100 slots minimum based on suggestions), expand via credits, share across characters, and avoid server-transfer abuse vectors flagged by @tibballt.
