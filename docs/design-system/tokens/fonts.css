@@ -1,0 +1,7 @@
+/* ── Webfonts ──────────────────────────────────────────────────────────
+   Montserrat (headings) + Source Sans 3 (body) loaded from Google Fonts.
+   SUBSTITUTION NOTE: these are loaded via Google's CDN @font-face. If you
+   want self-hosted binaries shipped to consumers, drop the .woff2 files in
+   assets/fonts/ and replace the @import below with local @font-face rules. */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');

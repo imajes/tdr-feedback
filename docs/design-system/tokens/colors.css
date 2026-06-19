@@ -1,0 +1,61 @@
+/* ══════════════════════════════════════════════════════════════════════
+   COLORS — TDR Community Feedback
+   Dark tactical "field ops debrief" palette. Near-black GitHub-dark base,
+   desaturated orange-amber accent, cold blue secondary, muted sentiment hues.
+   ══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Base surfaces (dark → lighter steps) ── */
+  --color-bg:            #0d1117;  /* page background */
+  --color-surface-1:     #11161d;  /* sunken panels */
+  --color-surface-2:     #161b22;  /* card base */
+  --color-surface-3:     #1c2128;  /* raised / hover card */
+  --color-surface-4:     #21262d;  /* inputs, chips */
+
+  /* ── Borders / hairlines ── */
+  --color-border:        #2a313a;  /* default 1px hairline */
+  --color-border-strong: #3a424d;  /* emphasised divider */
+  --color-border-faint:  #1e242c;  /* barely-there separators */
+
+  /* ── Text ── */
+  --color-text:          #e6edf3;  /* primary body / headings */
+  --color-text-muted:    #9aa7b4;  /* secondary, labels */
+  --color-text-faint:    #6b7682;  /* timestamps, meta, captions */
+  --color-text-inverse:  #0d1117;  /* on accent fills */
+
+  /* ── Accent: desaturated orange-amber (primary brand) ── */
+  --color-accent:        #d28e54;
+  --color-accent-bright: #e3a268;  /* hover / focus lift */
+  --color-accent-dim:    #a36c3e;  /* pressed / borders */
+  --color-accent-tint:   rgba(210, 142, 84, 0.13); /* fill behind accent text */
+
+  /* ── Secondary: cold blue ── */
+  --color-blue:          #5b94c2;
+  --color-blue-bright:   #74a8d2;
+  --color-blue-tint:     rgba(91, 148, 194, 0.13);
+
+  /* ── Sentiment ── */
+  --color-positive:      #4f9e8c;  /* muted teal */
+  --color-positive-tint: rgba(79, 158, 140, 0.14);
+  --color-negative:      #cf6a4f;  /* warm red-orange */
+  --color-negative-tint: rgba(207, 106, 79, 0.14);
+  --color-neutral:       #7c8794;  /* slate */
+  --color-neutral-tint:  rgba(124, 135, 148, 0.14);
+
+  /* ── Category accents (threads/buckets) ── */
+  --color-cat-specs:     #b07fc4;  /* muted violet */
+  --color-cat-balance:   #c2a14a;  /* dull gold */
+  --color-cat-features:  #5b94c2;  /* reuse cold blue */
+  --color-cat-bugs:      #cf6a4f;  /* reuse warm red */
+
+  /* ── Semantic aliases ── */
+  --surface-page:        var(--color-bg);
+  --surface-card:        var(--color-surface-2);
+  --surface-card-hover:  var(--color-surface-3);
+  --surface-input:       var(--color-surface-4);
+  --text-heading:        var(--color-text);
+  --text-body:           var(--color-text);
+  --text-meta:           var(--color-text-faint);
+  --border-card:         var(--color-border);
+  --focus-ring:          var(--color-accent-bright);
+}

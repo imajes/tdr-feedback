@@ -1,0 +1,30 @@
+/* ══════════════════════════════════════════════════════════════════════
+   SPACING, RADII, LAYOUT — TDR Community Feedback
+   4px base grid. Tight, structured, data-forward.
+   ══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Spacing scale (4px grid) ── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ── Radii (restrained — tactical, not soft) ── */
+  --radius-sm:   4px;   /* badges, chips, inputs */
+  --radius-md:   6px;   /* buttons */
+  --radius-lg:   8px;   /* cards */
+  --radius-pill: 999px; /* sentiment pills, avatars */
+
+  /* ── Layout ── */
+  --nav-height:      60px;
+  --container-max:   1200px;
+  --container-pad:   24px;
+}

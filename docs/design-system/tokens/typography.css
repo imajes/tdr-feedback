@@ -1,0 +1,39 @@
+/* ══════════════════════════════════════════════════════════════════════
+   TYPOGRAPHY — TDR Community Feedback
+   Montserrat (semibold/bold) for headings; Source Sans 3 for body.
+   JetBrains Mono for data/IDs/timestamps where a mono read helps.
+   ══════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Families ── */
+  --font-heading: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+  --font-body:    'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* ── Weights ── */
+  --weight-regular:  400;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* ── Type scale (px) ── */
+  --text-xs:   12px;   /* meta / timestamps */
+  --text-sm:   14px;   /* labels, badges, dense UI */
+  --text-base: 16px;   /* body */
+  --text-md:   18px;   /* lead body / quotes */
+  --text-lg:   22px;   /* card titles */
+  --text-xl:   28px;   /* section headings */
+  --text-2xl:  38px;   /* page headings */
+  --text-3xl:  54px;   /* hero */
+  --text-metric: 46px; /* metric callout number */
+
+  /* ── Line heights ── */
+  --leading-tight:  1.15;
+  --leading-snug:   1.3;
+  --leading-normal: 1.55;
+
+  /* ── Letter spacing ── */
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-label:  0.08em;  /* eyebrow / kicker uppercase */
+}
