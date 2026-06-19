@@ -60,7 +60,9 @@ Players are debating whether healing itself is too strong or whether the underly
 ## Sentiment
 **Overall:** Mixed
 
-The thread is split along player archetype lines rather than a clean nerf-vs-defend divide. Experienced medic and bulwark mains (Ventz, Caelan, Rezo, jim, xwrath) consistently argue that healing hive output is genuinely bad and the "immortal" feeling comes from DR stacking and the Blitz OS — not from heals. They are frustrated that less informed players conflate the two issues. On the other side, casual DPS players from NA (agent.nene, deviantsandman, sedoidead, ifozzy) report genuinely unkillable medics and tanks from lived PvP experience and feel dismissed.
+The thread is split along player archetype lines rather than a clean nerf-vs-defend divide. Experienced medic and bulwark mains (Ventz, Caelan, Rezo, jim, xwrath) consistently argue that healing hive output is genuinely bad and the "immortal" feeling comes from DR stacking and the Blitz OS — not from heals. They are frustrated that less informed players conflate the two issues.
+
+On the other side, casual DPS players from NA (agent.nene, deviantsandman, sedoidead, ifozzy) report genuinely unkillable medics and tanks from lived PvP experience and feel dismissed.
 
 A notable geographic fault line runs through the thread: EU and Asia players describe a min-maxed environment where everyone runs high DR and medics are challenging but counterable. NA players describe a server where 700k HP medics solo-rogue the entire zone. Both groups are accurately describing their regional experience. Emotional tone is engaged debate with occasional friction but no major hostility. Several players express genuine enjoyment of the medic role and concern that overzealous nerfs will destroy it.
 
@@ -107,7 +109,6 @@ Provides a concrete damage figure showing the highest-burst spec cannot breach t
 Bluntly surfaces the regional disparity: NA feedback may not be representative of the global population balance needs.
 
 ## Thread Assessment
-
 The thread's headline ask — "healing is too strong" — is contested by the most technically informed participants, who demonstrate with actual numbers that base healing hive output (30k HP/s) is weak compared to any class's DPS. The actual problems identified are: uncapped DR reaching 70–90% that reduces incoming damage below the heal threshold; the Blitz OS providing 15% max HP healing every few seconds (an enormous burst at 500k–1M HP); and post-revive damage immunity that creates near-unkillable scenarios when two medics run together.
 
 There is meaningful consensus on the DR cap. Virtually every participant, including medic mains, acknowledges DR is too high and a hard cap around 50% would be healthy. This is the highest-confidence, lowest-controversy ask in the thread. The Blitz OS nerf has strong support but with an important caveat: if Blitz is nerfed, base medic healing must be buffed to compensate — otherwise medics lose the only thing making them competitive and become the worst healer in the game, outperformed by tech operators.

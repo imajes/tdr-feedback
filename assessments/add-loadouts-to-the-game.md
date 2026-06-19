@@ -56,7 +56,9 @@ Players are overwhelmingly asking for a loadout system that lets them save and q
 ## Sentiment
 **Overall:** Positive
 
-The tone is enthusiastic and unified — almost no dissent appears anywhere in the thread. Players treat loadouts as an obvious, table-stakes feature ("Should've been a thing since day 1," "It's vital," "Isn't that obvious?"). Several veterans of the PC Division games express mild disbelief that loadouts aren't already in the game. The emotional register is impatient but good-natured, with players proactively adding detail on how loadouts should work (slot count, shared modules, monetisation model) rather than simply complaining. The only friction is marginal: one player posted in the wrong thread (loadouts vs typos), and one thread-adjacent digression into inventory/stash concerns.
+The tone is enthusiastic and unified — almost no dissent appears anywhere in the thread. Players treat loadouts as an obvious, table-stakes feature ("Should've been a thing since day 1," "It's vital," "Isn't that obvious?"). Several veterans of the PC Division games express mild disbelief that loadouts aren't already in the game.
+
+The emotional register is impatient but good-natured, with players proactively adding detail on how loadouts should work (slot count, shared modules, monetisation model) rather than simply complaining. The only friction is marginal: one player posted in the wrong thread (loadouts vs typos), and one thread-adjacent digression into inventory/stash concerns.
 
 ## Key Comments
 
@@ -85,7 +87,6 @@ Captures the real-world impact on a casual mobile player who defaults to subopti
 Broadens the ask beyond multi-spec players — even single-spec players need loadouts for different content modes.
 
 ## Thread Assessment
-
 The loadout thread is one of the most unambiguous feedback signals in the forum. Of 49 messages from 41 unique participants, every substantive contribution supports adding a loadout system — there is zero opposition. The core ask is simple: let players save a named slot of gear, weapons, and modules, then switch between slots without manual re-equipping. The urgency is heightened by the game's 10 class/spec combinations, which create a natural expectation of 10 (or more) loadout slots.
 
 A meaningful secondary cluster of feedback links the loadout request to inventory and stash capacity. Several players note that, without a stash to store off-spec gear, inventory fills up with items they can't bear to scrap, which then limits farming throughput. A dev addressing loadouts would likely need to address stash/inventory at the same time to fully resolve the friction.

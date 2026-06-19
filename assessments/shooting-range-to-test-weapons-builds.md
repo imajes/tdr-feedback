@@ -45,7 +45,9 @@ Players unanimously want an expanded shooting range for testing builds, with det
 ## Sentiment
 **Overall:** Positive
 
-Players are constructive and enthusiastic — this is a pure wish-list thread with no frustration about an existing broken feature, just excitement about a missing one. The tone is collaborative, with players building on each other's ideas (Beltha laid out a detailed spec; others added specific sub-asks like element damage testing). The most telling signal is that even the last message two weeks after thread creation (@legerion14721) simply asks "I hope this is already in progress," reflecting confidence this is a reasonable ask that should happen.
+Players are constructive and enthusiastic — this is a pure wish-list thread with no frustration about an existing broken feature, just excitement about a missing one. The tone is collaborative, with players building on each other's ideas (Beltha laid out a detailed spec; others added specific sub-asks like element damage testing).
+
+The most telling signal is that even the last message two weeks after thread creation (@legerion14721) simply asks "I hope this is already in progress," reflecting confidence this is a reasonable ask that should happen.
 
 ## Key Comments
 
@@ -66,7 +68,6 @@ Surfaces a real build-testing gap: knowing your DPS in a vacuum is meaningless w
 A pragmatic, tiered implementation suggestion that could fit the existing game structure.
 
 ## Thread Assessment
-
 The ask is simple and unanimous: players want a proper shooting range where they can test builds against representative enemies with meaningful readouts. Every player in the thread agrees, and the top reactions are among the highest in any thread in this set. There is no disagreement, no debate, and no edge-case dissent.
 
 The secondary discussion is about *where* to put it — the BOO (already has a basic range), the Clan FOB, or both. The most popular sub-proposal is a tiered structure: a basic range at the BOO, a fully-featured one as a Clan FOB upgrade. This would give individual players immediate value while tying the premium version to clan progression.

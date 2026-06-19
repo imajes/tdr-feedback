@@ -13,9 +13,10 @@ export const TRELLO_URL = 'https://trello.com/b/qTP1a9cv';
 
 const SENTIMENT_HELP = [
   'Positive: broad support or constructive agreement.',
-  'Negative: frustration, defect pressure, or strong dissatisfaction.',
-  'Neutral: primarily informational or low-emotion reporting.',
+  'Frustrated: clear dissatisfaction without a fully negative consensus.',
+  'Negative: defect pressure, strong dissatisfaction, or broad rejection of the current state.',
   'Mixed: split opinion, competing player archetypes, or important caveats.',
+  'Neutral: primarily informational or low-emotion reporting.',
 ].join('||');
 
 const ASK_TYPE_HELP = [
@@ -119,12 +120,39 @@ export const BUCKETS = [
 const META_SLUGS = new Set(['suggest-a-topic-for-review']);
 const BUCKET_BY_THREAD = new Map(BUCKETS.flatMap((bucket) => bucket.slugs.map((slug) => [slug, bucket])));
 
+const HEADLINES = {
+  'add-a-stash': 'Stash Access',
+  'add-loadouts-to-the-game': 'Loadouts',
+  'bulwark-master-thread': 'Bulwark',
+  'clan-nests': 'Clan Nests',
+  'clan-vendor': 'Clan Vendor Economy',
+  'crafting-needs-a-change': 'Crafting Friction',
+  'dark-zone-drops-are-too-plentiful-not-focused-enough': 'Dark Zone Loot Focus',
+  'dark-zone-time-limit': 'Dark Zone Timers',
+  'defence-reduction': 'Defence Reduction',
+  'demolitionist-master-thread': 'Demolitionist',
+  'drop-rates-are-an-issue': 'Targeted Loot Pressure',
+  'elite-patrol-can-be-improved': 'Elite Patrol Design',
+  'field-medic-master-thread': 'Field Medic',
+  'healing-is-too-strong': 'Healing Pressure',
+  'inventory-filters': 'Inventory Filtering',
+  'lone-wolf': 'Solo Play Viability',
+  'loot-system-master-thread': 'Loot Mechanics',
+  'npcs-need': 'NPC Behaviour',
+  'pummelling-shield': 'Pummelling Shield',
+  'recalibration-modules': 'Recalibration Costs',
+  'shooting-range-to-test-weapons-builds': 'Build Testing Range',
+  'spot-a-typo-or-error': 'Text & UI Bugs',
+  'tech-operator-master-thread': 'Tech Operator',
+  'vanguard-master-thread': 'Vanguard',
+};
+
 export function routeForThread(slug) {
   const bucket = BUCKET_BY_THREAD.get(slug);
   if (!bucket) {
     return META_SLUGS.has(slug) ? '/about/#suggest-a-topic-for-review' : '#';
   }
-  return `/${bucket.id}/${slug}/`;
+  return `/${bucket.id}/${routeSlugForThread(slug)}/`;
 }
 
 function section(markdown, heading) {
@@ -146,8 +174,8 @@ function parseCount(value) {
 function normalizeSentiment(value) {
   const lower = value.toLowerCase();
   if (lower.includes('positive')) return 'positive';
-  if (lower.includes('negative') || lower.includes('frustrated')) return 'negative';
   if (lower.includes('mixed')) return 'mixed';
+  if (lower.includes('negative') || lower.includes('frustrated')) return 'negative';
   return 'neutral';
 }
 
@@ -260,7 +288,7 @@ function parseKeyComments(value) {
     }
 
     comments.push({
-      quote,
+      ...parseVoiceQuote(quote),
       note: noteLines.join(' '),
     });
 
@@ -268,6 +296,29 @@ function parseKeyComments(value) {
   }
 
   return comments;
+}
+
+function parseVoiceQuote(value) {
+  const match = value.match(/^["“]([\s\S]+)["”]\s+—\s+(@[a-z0-9._-]+)(?:\s+\(([^)]+)\))?,\s+(\d{4}-\d{2}-\d{2})(?:\s+\(([^)]+)\))?$/i);
+  if (!match) {
+    return {
+      quote: value,
+      body: value,
+      handle: '',
+      displayName: '',
+      date: '',
+      reactionNote: '',
+    };
+  }
+
+  return {
+    quote: value,
+    body: match[1].trim(),
+    handle: match[2].trim(),
+    displayName: match[3]?.trim() ?? '',
+    date: match[4].trim(),
+    reactionNote: match[5]?.trim() ?? '',
+  };
 }
 
 export function parseAssessmentMarkdown(filename, markdown) {
@@ -280,7 +331,8 @@ export function parseAssessmentMarkdown(filename, markdown) {
 
   return {
     slug,
-    title,
+    sourceTitle: title,
+    title: headlineForThread(slug, title),
     threadId: metadataValue(markdown, 'Thread ID'),
     messageCount: parseCount(metadataValue(markdown, 'Total Messages')),
     dateRange: metadataValue(markdown, 'Date Range'),
@@ -344,9 +396,12 @@ async function readAssessments() {
   for (const file of files) {
     const markdown = await fs.readFile(path.join(ASSESSMENTS_DIR, file), 'utf8');
     const assessment = parseAssessmentMarkdown(file, markdown);
+    const sourceMetadata = await readThreadSourceMetadata(assessment.slug, assessment.threadId);
     threads.push({
       ...assessment,
-      ...await readThreadSourceMetadata(assessment.slug, assessment.threadId),
+      sourceThreadName: sourceMetadata.sourceThreadName,
+      discordUrl: sourceMetadata.discordUrl,
+      keyComments: assessment.keyComments.map((comment) => enrichVoiceComment(comment, sourceMetadata)),
     });
   }
   return threads;
@@ -356,6 +411,7 @@ async function readThreadSourceMetadata(slug, threadId) {
   const sourcePath = path.join(REPO_DIR, 'threads', `${slug}.jsonl`);
   let threadName = '';
   let guildId = '';
+  const sourceMessages = [];
 
   try {
     const contents = await fs.readFile(sourcePath, 'utf8');
@@ -364,7 +420,17 @@ async function readThreadSourceMetadata(slug, threadId) {
       const message = JSON.parse(line);
       threadName ||= message.thread_name || '';
       guildId ||= message.message_reference?.guild_id || '';
-      if (threadName && guildId) break;
+      sourceMessages.push({
+        id: message.id,
+        threadId: message.thread_id || threadId,
+        username: message.author?.username || '',
+        globalName: message.author?.global_name || '',
+        content: message.content || '',
+        date: message.timestamp?.slice(0, 10) || '',
+        reactionTotal: Array.isArray(message.reactions)
+          ? message.reactions.reduce((sum, reaction) => sum + Number(reaction.count || 0), 0)
+          : 0,
+      });
     }
   } catch (error) {
     if (error.code !== 'ENOENT') throw error;
@@ -373,7 +439,56 @@ async function readThreadSourceMetadata(slug, threadId) {
   return {
     sourceThreadName: threadName,
     discordUrl: guildId && threadId ? `https://discord.com/channels/${guildId}/${threadId}` : '',
+    sourceMessages,
+    guildId,
   };
+}
+
+function enrichVoiceComment(comment, sourceMetadata) {
+  const match = findSourceMessage(comment, sourceMetadata.sourceMessages);
+  const messageUrl = match && sourceMetadata.guildId
+    ? `https://discord.com/channels/${sourceMetadata.guildId}/${match.threadId}/${match.id}`
+    : '';
+
+  return {
+    ...comment,
+    messageUrl,
+    threadUrl: sourceMetadata.discordUrl,
+    reactionTotal: match?.reactionTotal ?? 0,
+  };
+}
+
+function findSourceMessage(comment, sourceMessages) {
+  if (!comment.handle || !comment.body) return null;
+  const handle = comment.handle.replace(/^@/, '').toLowerCase();
+  const quote = normalizeVoiceText(comment.body);
+  const quoteSegments = voiceQuoteSegments(comment.body);
+
+  return sourceMessages.find((message) => {
+    if (message.username.toLowerCase() !== handle) return false;
+    if (comment.date && message.date !== comment.date) return false;
+
+    const source = normalizeVoiceText(message.content);
+    if (!source || !quote) return false;
+    if (source.includes(quote) || quote.includes(source)) return true;
+    return quoteSegments.length > 0 && quoteSegments.every((segment) => source.includes(segment));
+  }) ?? null;
+}
+
+function voiceQuoteSegments(value) {
+  return String(value)
+    .split(/\.{3}|…/g)
+    .map((segment) => normalizeVoiceText(segment))
+    .filter((segment) => segment.length >= 18);
+}
+
+function normalizeVoiceText(value) {
+  return plainText(value)
+    .replace(/\.{3}|…/g, ' ')
+    .replace(/[^\p{L}\p{N}@]+/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLowerCase();
 }
 
 async function build() {
@@ -390,7 +505,7 @@ async function build() {
   for (const bucket of model.buckets) {
     await writePage(`${bucket.id}/index.html`, renderBucketPage(model, bucket, `/${bucket.id}/`));
     for (const thread of bucket.threads) {
-      await writePage(`${bucket.id}/${thread.slug}/index.html`, renderThreadPage(model, bucket, thread, routeForThread(thread.slug)));
+      await writePage(`${bucket.id}/${routeSlugForThread(thread.slug)}/index.html`, renderThreadPage(model, bucket, thread, routeForThread(thread.slug)));
     }
   }
 
@@ -470,7 +585,7 @@ function renderHomePage(model, currentPath) {
             </article>
             <article class="hero-stat">
               <strong>${formatNumber(model.stats.totalParticipants)}</strong>
-              <span>Participant touches</span>
+              <span>Unique participants</span>
             </article>
           </div>
         </div>
@@ -569,43 +684,71 @@ function renderThreadPage(model, bucket, thread, currentPath) {
               ${askTypeBadge(thread.askType)}
             </div>
             <h1>${escapeHtml(thread.title)}</h1>
-            <p>${renderInlineMarkdown(thread.summary)}</p>
-            <div class="hero-actions thread-actions">
-              <a class="button secondary" href="#assessment"><i data-lucide="file-text"></i>Jump to assessment</a>
-            </div>
           </div>
           <aside class="thread-meta">
-            <div><span>DISCORD THREAD</span><strong>${thread.discordUrl ? `<a href="${escapeAttribute(thread.discordUrl)}">${escapeHtml(thread.sourceThreadName || thread.title)}</a>` : escapeHtml(thread.sourceThreadName || thread.title)}</strong></div>
+            <div><span>DISCORD THREAD</span><strong>${thread.discordUrl ? `<a href="${escapeAttribute(thread.discordUrl)}">${escapeHtml(thread.sourceThreadName || thread.sourceTitle || thread.title)}</a>` : escapeHtml(thread.sourceThreadName || thread.sourceTitle || thread.title)}</strong></div>
             <div><span>DATE RANGE</span><strong>${escapeHtml(formatDateRange(thread.dateRange) || 'Unlisted')}</strong></div>
           </aside>
         </div>
       </header>
 
-      <section class="metrics-row">
-        ${metricCard('messages-square', thread.messageCount, 'Messages', 'excluding OP')}
-        ${metricCard('users', thread.uniqueParticipants, 'Participants', 'unique contributors')}
-        ${metricCard('radio', thread.reactionTotal, 'Reactions', 'thread total')}
-        ${metricCard(actionModel.icon, actionModel.count, actionModel.metricLabel, actionModel.metricSublabel)}
+      <nav class="thread-toc" aria-label="Thread sections">
+        ${threadTocLink('bar-chart-3', '#signals', 'Signals', 'signals')}
+        ${threadTocLink('activity', '#sentiment', 'Summary', `sentiment ${thread.sentiment}`)}
+        ${threadTocLink(actionModel.type === 'bugs' ? 'bug' : 'flag', `#${actionModel.sectionId}`, actionModel.tocLabel, actionModel.type === 'bugs' ? 'bugs' : 'asks')}
+        ${threadTocLink('message-circle', '#community-voices', 'Voices', 'voices')}
+        ${threadTocLink('file-text', '#assessment', 'Dev notes', 'dev-notes')}
+        ${threadTocLink('corner-down-right', '#related-threads', 'Related', 'related')}
+      </nav>
+
+      <section class="section narrative-overview" id="signals">
+        ${sectionHeader('bar-chart-3', 'Review signals', 'Start with the scale and shape of the thread before reading the asks.', 'signals')}
+        <div class="metrics-row">
+          ${metricCard(thread.messageCount, 'Messages', 'excluding OP')}
+          ${metricCard(thread.uniqueParticipants, 'Participants', 'unique contributors')}
+          ${metricCard(thread.reactionTotal, 'Reactions', 'thread total')}
+          ${metricCard(actionModel.count, actionModel.metricLabel, actionModel.metricSublabel)}
+        </div>
+      </section>
+
+      <section class="section sentiment-section" id="sentiment">
+        ${sectionHeader('activity', 'Summary and sentiment', 'The short read before diving into the detailed asks and evidence.', `sentiment ${thread.sentiment}`)}
+        <article class="sentiment-card ${thread.sentiment}">
+          <div class="sentiment-card-head">
+            ${sentimentBadge(thread.sentiment, thread.sentimentLabel, true)}
+            ${askTypeBadge(thread.askType)}
+          </div>
+          <div class="sentiment-card-body">
+            <div>
+              <span class="sentiment-kicker">Overall summary</span>
+              <p>${renderInlineMarkdown(thread.summary)}</p>
+            </div>
+            <div>
+              <span class="sentiment-kicker">Sentiment read</span>
+              <p>${renderInlineMarkdown(thread.sentimentNotes || 'No separate sentiment summary was captured for this assessment.')}</p>
+            </div>
+          </div>
+        </article>
       </section>
 
       ${renderActionSection(thread, actionModel)}
 
-      <section class="section">
-        ${sectionHeader('message-circle', 'Community voices', 'Representative comments preserved from the synthesis.')}
+      <section class="section" id="community-voices">
+        ${sectionHeader('message-circle', 'Community voices', 'Representative comments preserved from the synthesis.', 'voices')}
         <div class="quote-grid">
-          ${thread.keyComments.slice(0, 4).map((comment) => quoteCard(comment, thread.sentiment)).join('')}
+          ${thread.keyComments.slice(0, 4).map((comment, index) => quoteCard(comment, thread.sentiment, index + 1)).join('')}
         </div>
       </section>
 
       <section class="section assessment-section" id="assessment">
-        ${sectionHeader('file-text', 'Assessment', 'Editorial synthesis for developer review.')}
+        ${sectionHeader('file-text', 'Dev notes', 'Editorial synthesis for developer review.', 'dev-notes')}
         <article class="prose">
           ${markdownProse(thread.assessment)}
         </article>
       </section>
 
-      <section class="section">
-        ${sectionHeader('corner-down-right', 'Related threads', `More assessments in ${bucket.label}.`)}
+      <section class="section" id="related-threads">
+        ${sectionHeader('corner-down-right', 'Related threads', `More assessments in ${bucket.label}.`, 'related')}
         <div class="related-grid">
           ${related.map((candidate) => threadCard(candidate, bucket)).join('')}
         </div>
@@ -623,6 +766,8 @@ function threadActionModel(thread) {
       metricLabel: 'Findings',
       metricSublabel: 'reported issues',
       title: 'Reported bugs',
+      sectionId: 'reported-bugs',
+      tocLabel: 'Reported bugs',
       description: 'Concrete text, labelling, localisation, and UI defects extracted from the report thread.',
     };
   }
@@ -634,6 +779,8 @@ function threadActionModel(thread) {
     metricLabel: 'Primary asks',
     metricSublabel: thread.askType,
     title: 'Primary asks',
+    sectionId: 'primary-asks',
+    tocLabel: 'Primary asks',
     description: 'Actionable requests extracted from the synthesis.',
   };
 }
@@ -641,8 +788,8 @@ function threadActionModel(thread) {
 function renderActionSection(thread, actionModel) {
   if (actionModel.type === 'bugs') {
     return `
-      <section class="section">
-        ${sectionHeader('bug', actionModel.title, actionModel.description)}
+      <section class="section" id="${actionModel.sectionId}">
+        ${sectionHeader('bug', actionModel.title, actionModel.description, 'bugs')}
         <div class="finding-list">
           ${thread.bugFindings.map((finding, index) => bugFindingCard(finding, index + 1)).join('')}
         </div>
@@ -651,8 +798,8 @@ function renderActionSection(thread, actionModel) {
   }
 
   return `
-    <section class="section">
-      ${sectionHeader('flag', actionModel.title, actionModel.description)}
+    <section class="section" id="${actionModel.sectionId}">
+      ${sectionHeader('flag', actionModel.title, actionModel.description, 'asks')}
       ${thread.primaryAsks.length > 0 ? `
         <div class="ask-list">
           ${thread.primaryAsks.map((ask, index) => askDetailCard(ask, index + 1)).join('')}
@@ -772,7 +919,7 @@ function bucketCard(bucket) {
     <a class="bucket-card" href="/${bucket.id}/">
       <span class="icon-tile ${bucket.accent}"><i data-lucide="${bucket.icon}"></i></span>
       <span>
-        <span class="card-title-row"><strong>${escapeHtml(bucket.label)}</strong><em>${bucket.threads.length} threads</em></span>
+        <span class="card-title-row"><strong>${escapeHtml(bucket.label)}</strong><em>${formatThreadCount(bucket.threads.length)}</em></span>
         <span>${escapeHtml(bucket.description)}</span>
       </span>
     </a>
@@ -814,12 +961,14 @@ function askDetailCard(ask, priority) {
   return `
     <article class="ask-card detail">
       <span class="priority">#${String(priority).padStart(2, '0')}</span>
-      <p>${renderInlineMarkdown(ask.ask)}</p>
+      <div class="ask-type-tab">${categoryBadge(ask.category, categoryAccent(ask.category))}</div>
+      <div class="ask-heading">
+        <p>${renderInlineMarkdown(ask.ask)}</p>
+      </div>
       <dl>
         <div><dt>Raised by</dt><dd class="people-line">${renderInlineMarkdown(ask.firstRaisedBy || 'Not specified')}</dd></div>
         <div><dt>Echoed by</dt><dd class="people-line">${renderInlineMarkdown(ask.echoedBy || 'No explicit echo captured')}</dd></div>
       </dl>
-      <div>${categoryBadge(ask.category, categoryAccent(ask.category))}</div>
     </article>
   `;
 }
@@ -852,11 +1001,32 @@ function evidenceItem(item) {
   return `<a class="evidence-link" href="${escapeAttribute(item.href)}">${escapeHtml(item.label)}</a>`;
 }
 
-function quoteCard(comment, sentiment) {
+function quoteCard(comment, sentiment, index) {
+  const authorLabel = comment.displayName || comment.handle || 'Community voice';
+  const dateLabel = comment.date ? formatDate(parseDateOnly(comment.date), true) : '';
+  const reactionLabel = comment.reactionTotal ? `${formatNumber(comment.reactionTotal)} reactions` : comment.reactionNote;
+  const sourceLink = comment.messageUrl || '';
+  const fallbackLink = sourceLink || comment.threadUrl || '';
+  const sourceLabel = sourceLink ? 'Discord message' : 'Discord thread';
+
   return `
     <figure class="quote-card ${sentiment}">
-      <blockquote>${renderInlineMarkdown(comment.quote)}</blockquote>
-      ${comment.note ? `<figcaption>${renderInlineMarkdown(comment.note)}</figcaption>` : ''}
+      <figcaption class="voice-card-head">
+        <span class="voice-index">Voice ${String(index).padStart(2, '0')}</span>
+        ${fallbackLink ? `<a href="${escapeAttribute(fallbackLink)}"><i data-lucide="external-link"></i><span>${sourceLabel}</span></a>` : ''}
+      </figcaption>
+      <blockquote>${renderInlineMarkdown(comment.body || comment.quote)}</blockquote>
+      <div class="voice-meta">
+        <span class="voice-author">${renderInlineMarkdown(comment.handle && comment.displayName ? `${comment.handle} (${comment.displayName})` : authorLabel)}</span>
+        ${dateLabel ? `<span>${escapeHtml(dateLabel)}</span>` : ''}
+        ${reactionLabel ? `<span>${escapeHtml(reactionLabel)}</span>` : ''}
+      </div>
+      ${comment.note ? `
+        <div class="voice-note">
+          <span>Why it matters</span>
+          <p>${renderInlineMarkdown(comment.note)}</p>
+        </div>
+      ` : ''}
     </figure>
   `;
 }
@@ -879,10 +1049,9 @@ function emptyState(message) {
   `;
 }
 
-function metricCard(icon, value, label, sublabel) {
+function metricCard(value, label, sublabel) {
   return `
     <article class="metric-card">
-      ${icon ? `<span class="metric-icon"><i data-lucide="${icon}"></i></span>` : ''}
       <strong>${formatNumber(value)}</strong>
       <span>${escapeHtml(label)}</span>
       <em>${escapeHtml(sublabel)}</em>
@@ -890,9 +1059,18 @@ function metricCard(icon, value, label, sublabel) {
   `;
 }
 
-function sectionHeader(icon, title, description) {
+function threadTocLink(icon, href, label, tone) {
+  return `<a class="toc-${escapeAttribute(tone).replaceAll(' ', ' toc-')}" href="${escapeAttribute(href)}"><i data-lucide="${icon}"></i><span>${escapeHtml(label)}</span></a>`;
+}
+
+function sectionHeader(icon, title, description, tone = '') {
+  const toneClass = String(tone)
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => `section-header-${part}`)
+    .join(' ');
   return `
-    <div class="section-header">
+    <div class="section-header${toneClass ? ` ${escapeAttribute(toneClass)}` : ''}">
       <span><i data-lucide="${icon}"></i></span>
       <div>
         <h2>${escapeHtml(title)}</h2>
@@ -907,7 +1085,7 @@ function categoryBadge(label, accent) {
 }
 
 function askTypeBadge(label) {
-  return `<button class="badge neutral meta-chip" type="button" data-popover-title="Ask type" data-popover-content="${escapeAttribute(ASK_TYPE_HELP)}">${escapeHtml(label)}</button>`;
+  return `<button class="badge neutral meta-chip" type="button" data-popover-title="Ask type" data-popover-content="${escapeAttribute(ASK_TYPE_HELP)}">${escapeHtml(compactAskTypeLabel(label))}</button>`;
 }
 
 function sentimentBadge(tone, label, interactive = false) {
@@ -967,9 +1145,43 @@ function titleFromSlug(slug) {
   return slug.split('-').map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
 }
 
+function routeSlugForThread(slug) {
+  return slugify(HEADLINES[slug] ?? slug.replace(/-master-thread$/i, ''));
+}
+
+function slugify(value) {
+  return String(value)
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-{2,}/g, '-')
+    .toLowerCase();
+}
+
+function headlineForThread(slug, fallback) {
+  return HEADLINES[slug] ?? fallback.replace(/\s+Master Thread$/i, '').trim();
+}
+
+function compactAskTypeLabel(label) {
+  const value = String(label).toLowerCase();
+  if (value.includes('multiple')) return 'Multiple asks';
+  if (value.includes('bug')) return 'Bug report';
+  if (value.includes('balance')) return 'Balance';
+  if (value.includes('qol') || value.includes('quality')) return 'QoL';
+  if (value.includes('new feature')) return 'New feature';
+  if (value.includes('rework')) return 'Rework';
+  return label;
+}
+
 function formatNumber(value) {
   if (typeof value === 'number') return new Intl.NumberFormat('en-US').format(value);
   return String(value);
+}
+
+function formatThreadCount(count) {
+  return `${formatNumber(count)} ${count === 1 ? 'thread' : 'threads'}`;
 }
 
 function formatDateRange(value) {

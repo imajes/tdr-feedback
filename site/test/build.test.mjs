@@ -59,7 +59,8 @@ describe('assessment parsing', () => {
     const thread = parseAssessmentMarkdown('healing-is-too-strong.md', healingAssessment);
 
     assert.equal(thread.slug, 'healing-is-too-strong');
-    assert.equal(thread.title, 'Healing Is Too Strong');
+    assert.equal(thread.sourceTitle, 'Healing Is Too Strong');
+    assert.equal(thread.title, 'Healing Pressure');
     assert.equal(thread.threadId, '1511728186470437016');
     assert.equal(thread.messageCount, 487);
     assert.equal(thread.uniqueParticipants, 26);
@@ -86,7 +87,8 @@ describe('site model', () => {
     ]);
 
     assert.equal(BUCKETS.length, 7);
-    assert.equal(routeForThread('healing-is-too-strong'), '/balance/healing-is-too-strong/');
+    assert.equal(routeForThread('healing-is-too-strong'), '/balance/healing-pressure/');
+    assert.equal(routeForThread('add-loadouts-to-the-game'), '/features-qol/loadouts/');
     assert.equal(model.buckets.find((bucket) => bucket.id === 'balance').threads.length, 1);
     assert.equal(model.stats.totalThreads, 1);
     assert.equal(model.stats.totalAssessments, 1);

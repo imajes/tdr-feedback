@@ -53,9 +53,11 @@ Players are overwhelmingly asking for a hard cap on Defence Reduction (DR), whic
 - **Loudness:** Medium — Strong message-count and broad agreement on the core fix, but low reaction counts suggest the community considers it a known issue rather than one requiring rallying cries.
 
 ## Sentiment
-**Overall:** Mixed-Negative
+**Overall:** Mixed / Negative
 
-Most participants agree that DR needs a cap, making this one of the less contentious feedback threads. However, sentiment is frustrated rather than constructive: players feel the problem is obvious and overdue for a fix, and late-thread commentary (Ventz and Lani) predicts balance changes won't arrive until after December and expresses concern about the Steam release. The minority position — held mainly by @caelancromwell (Caelan) — argues that existing DR-reduction tools (scans, bleeds, target acquisition) are underutilised counters rather than proof the stat is broken, which generates pushback but also some genuine educational exchange. A small thread of discussion about whether DR and Armor are redundant stats reflects a deeper systemic concern that goes beyond a simple number cap.
+Most participants agree that DR needs a cap, making this one of the less contentious feedback threads. However, sentiment is frustrated rather than constructive: players feel the problem is obvious and overdue for a fix, and late-thread commentary (Ventz and Lani) predicts balance changes won't arrive until after December and expresses concern about the Steam release.
+
+The minority position — held mainly by @caelancromwell (Caelan) — argues that existing DR-reduction tools (scans, bleeds, target acquisition) are underutilised counters rather than proof the stat is broken, which generates pushback but also some genuine educational exchange. A small thread of discussion about whether DR and Armor are redundant stats reflects a deeper systemic concern that goes beyond a simple number cap.
 
 ## Key Comments
 
@@ -88,8 +90,9 @@ The most technically novel proposal: a conversion mechanic rather than a hard cu
 Reflects a credible, widely-held concern about development priority sequencing and the proximity of the Steam release.
 
 ## Thread Assessment
+The consensus in this thread is unusually clear for a balance discussion: virtually every participant agrees that DR should be capped, and there are almost no voices defending the status quo. The disagreement is procedural — where exactly should the cap sit, and should Bulwark (and to a lesser extent Medic) receive class-specific exceptions above that floor? The range proposed spans from 30% (@chewybarka) to 70–80% (@ventz_arctic for Bulwark-shielded specifically), with the practical consensus landing around 60% as a baseline.
 
-The consensus in this thread is unusually clear for a balance discussion: virtually every participant agrees that DR should be capped, and there are almost no voices defending the status quo. The disagreement is procedural — where exactly should the cap sit, and should Bulwark (and to a lesser extent Medic) receive class-specific exceptions above that floor? The range proposed spans from 30% (@chewybarka) to 70–80% (@ventz_arctic for Bulwark-shielded specifically), with the practical consensus landing around 60% as a baseline. The class-exception framing — cap gear-sourced DR but let skill-granted DR from class abilities exceed it — is the most technically coherent proposal and is endorsed by multiple participants.
+The class-exception framing — cap gear-sourced DR but let skill-granted DR from class abilities exceed it — is the most technically coherent proposal and is endorsed by multiple participants.
 
 A secondary issue deserves attention: players are frustrated by the opacity of two overlapping survivability stats. DR reduces incoming damage before Armor reduces final damage, and neither stat has documented breakpoints or interaction clarity in-game. Several players discovered interaction rules (e.g. bleed/poison damage also being reduced by DR; DR debuffs not affecting Armor) mid-thread rather than from in-game documentation. This suggests a tooltip and stat-communication problem alongside the balance problem.
 

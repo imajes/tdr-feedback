@@ -101,7 +101,14 @@ function createMetaPopover() {
       .filter(Boolean)
       .map((item) => {
         const li = document.createElement('li');
-        li.textContent = item;
+        const separator = item.indexOf(':');
+        if (separator > 0) {
+          const strong = document.createElement('strong');
+          strong.textContent = item.slice(0, separator);
+          li.append(strong, document.createTextNode(item.slice(separator)));
+        } else {
+          li.textContent = item;
+        }
         return li;
       }));
 

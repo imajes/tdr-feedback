@@ -59,7 +59,9 @@ Players are frustrated with drop rates across multiple game modes, but the threa
 ## Sentiment
 **Overall:** Frustrated
 
-The thread has a tone of resigned frustration rather than outrage. Several players note the systemic compounding of the issue: drop rates are bad *and* recalibration is unreliable *and* the OS farming window is only 3-4 days per week *and* the Lone Wolf reset was removed. @azphelyves explicitly articulates a conspiracy-adjacent suspicion that the progression slow-down is intentional to buy development time. There is minor disagreement on the T2-in-Heroic ask — @visc3ra makes a coherent game-design argument against it that receives some support — but the targeted loot ask is virtually unopposed. The maths exchange on purple OS odds (a 1-in-5000 chance for a specific one) visually demonstrates the problem but doesn't generate much reaction, perhaps because players already feel it intuitively.
+The thread has a tone of resigned frustration rather than outrage. Several players note the systemic compounding of the issue: drop rates are bad *and* recalibration is unreliable *and* the OS farming window is only 3-4 days per week *and* the Lone Wolf reset was removed. @azphelyves explicitly articulates a conspiracy-adjacent suspicion that the progression slow-down is intentional to buy development time.
+
+There is minor disagreement on the T2-in-Heroic ask — @visc3ra makes a coherent game-design argument against it that receives some support — but the targeted loot ask is virtually unopposed. The maths exchange on purple OS odds (a 1-in-5000 chance for a specific one) visually demonstrates the problem but doesn't generate much reaction, perhaps because players already feel it intuitively.
 
 ## Key Comments
 
@@ -88,7 +90,6 @@ Clean two-part ask: quality floor for Heroic + targeted loot expansion into DZ.
 Practical suggestion: add a Heroic Bounty tier with guaranteed high-end rewards; directly addresses the OS supply problem without changing drop *rates*.
 
 ## Thread Assessment
-
 The thread title ("Drop rates are an issue") is slightly misleading — players aren't primarily complaining that there's too much loot, but that loot is too unfocused and too low-quality for the activity tier. Heroic content still drops blues and greens; the DZ chip supply is a single point of failure; OS Protocols are locked behind a 3-day weekly window with statistically hostile odds. The root diagnosis from the most active contributors is that the game has no reliable build-completion path.
 
 The targeted loot ask is the most concrete and consensus-backed solution in the thread. It has precedent in The Division 2, multiple players cite it by name, and it would address several issues simultaneously (gear set farming, weapon type targeting, OS protocol targeting). The pity system ask is a natural companion to targeted loot and appears in several forms across the thread.

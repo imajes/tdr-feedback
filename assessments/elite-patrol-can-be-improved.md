@@ -53,9 +53,11 @@ Players are largely unaware that Elite Patrols exist as active encounters — mo
 - **Loudness:** Medium — 17 messages and 13 unique voices shows good breadth, but the reaction totals are moderate (28), suggesting engagement without strong amplification outside this channel.
 
 ## Sentiment
-**Overall:** Frustrated / Mixed
+**Overall:** Mixed / Frustrated
 
-The dominant emotion is bewilderment — players feel mocked by a feature that theoretically exists but is functionally invisible to most of them. @grendel1979 expresses this most sharply: "I say they don't exist. It's just some notification we get every few days." Multiple early messages from experienced players admit they've seen two or three patrols over two months. The frustration is less about the design concept and more about the implementation being completely inert for the majority of the playerbase. There is no disagreement about the problem; the variation is only in proposed solutions (boss event vs. respawn timer vs. clan-gated spawns).
+The dominant emotion is bewilderment — players feel mocked by a feature that theoretically exists but is functionally invisible to most of them. @grendel1979 expresses this most sharply: "I say they don't exist. It's just some notification we get every few days." Multiple early messages from experienced players admit they've seen two or three patrols over two months.
+
+The frustration is less about the design concept and more about the implementation being completely inert for the majority of the playerbase. There is no disagreement about the problem; the variation is only in proposed solutions (boss event vs. respawn timer vs. clan-gated spawns).
 
 ## Key Comments
 
@@ -80,7 +82,6 @@ Surfaces two distinct issues: spawn timing being opaque/predictable, and rewards
 A detailed, pragmatic redesign proposal that addresses both the engagement model and the reward structure simultaneously.
 
 ## Thread Assessment
-
 Elite Patrols are currently a ghost feature. The thread makes clear that the vast majority of players interact with this system only via a notification they can't act on. The root cause is a combination of spawn rarity, low enemy durability, and reward value too low to motivate coordination. The feature's potential is visible in the discussion — players are excited by the concept of an open-world boss event — but the current implementation fails to deliver it.
 
 The most supported solution is converting Elite Patrols into a world boss model: server-wide broadcast when a patrol spawns, significantly higher health and difficulty requiring group cooperation, structured respawn intervals, and materially better loot. This is a meaningful rework, not a simple number tweak. Several players specifically contrast the current patrol experience with heroic nests, which apparently work well as timed group content — applying a similar design pattern to patrols is the implicit recommendation.

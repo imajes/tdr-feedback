@@ -62,7 +62,9 @@ Despite the thread title suggesting drops are too abundant, the player consensus
 ## Sentiment
 **Overall:** Mixed
 
-Players generally like the Dark Zone concept but find the current implementation stale and unrewarding. The tone is more constructive than frustrated — most messages offer specific suggestions rather than pure complaints. There is genuine disagreement on the timer (some want it removed, others prefer keeping it but fixing respawn pacing), and on whether to add a legendary bracket. The most emotionally charged sub-topic is the block/rogue player issue, with @toast0252 expressing genuine fatigue at being forced to encounter the same rogue players repeatedly in a PvP-adjacent mode.
+Players generally like the Dark Zone concept but find the current implementation stale and unrewarding. The tone is more constructive than frustrated — most messages offer specific suggestions rather than pure complaints. There is genuine disagreement on the timer (some want it removed, others prefer keeping it but fixing respawn pacing), and on whether to add a legendary bracket.
+
+The most emotionally charged sub-topic is the block/rogue player issue, with @toast0252 expressing genuine fatigue at being forced to encounter the same rogue players repeatedly in a PvP-adjacent mode.
 
 ## Key Comments
 
@@ -82,7 +84,6 @@ Surfaces a social layer problem: a broken block system combined with mandatory D
 Reframes the timer debate precisely: the issue isn't session length, it's that most of that session is idle waiting.
 
 ## Thread Assessment
-
 The thread title ("too plentiful") doesn't match what players are actually saying. The consensus is almost the inverse: the DZ drops the wrong things (too many blues/T0s), not too many things overall. Players would welcome significantly more drops if those drops were high-quality and focused. The framing in the OP may have originated from a minority view or an earlier build state; the thread has effectively recontextualized the premise.
 
 The dominant signals are: map expansion (by far the most reacted idea), removal of low-tier loot, and respawn timer reductions. Targeted loot — letting players direct what they're farming for by gear or weapon type — is the most structurally important ask and would make the existing content significantly more rewarding without requiring new content.

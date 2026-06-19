@@ -178,9 +178,13 @@ Multiple distinct bugs flagged, several of which have been reportedly open for m
 ---
 
 ## Sentiment
-**Overall:** Mixed — earnest but frustrated
+**Overall:** Mixed / Frustrated
 
-The baseline tone is constructive: most players are making genuine, specific suggestions rather than venting. However, frustration surfaces consistently around three things: (1) bugs that have been open for months with no fix (inverted Y-axis, outpost annihilation, vault-over-railing cache), (2) progression systems that feel designed to extract time or money rather than reward skill, and (3) a sense that feedback isn't meaningfully reaching development. The @senninra post about being told inverted Y-axis "wasn't a high priority" drew significant agreement and generated visible disappointment. The @reddy_ind long-form post about content cadence and player retention expresses a concern shared by several engaged endgame players: the game has the bones of something great but the feedback loop between community and dev is too slow. There is no coordinated negativity campaign — the thread reflects genuine love for the Division franchise alongside specific frustration with gaps in this title.
+The baseline tone is constructive: most players are making genuine, specific suggestions rather than venting. However, frustration surfaces consistently around three things: (1) bugs that have been open for months with no fix (inverted Y-axis, outpost annihilation, vault-over-railing cache), (2) progression systems that feel designed to extract time or money rather than reward skill, and (3) a sense that feedback isn't meaningfully reaching development.
+
+The @senninra post about being told inverted Y-axis "wasn't a high priority" drew significant agreement and generated visible disappointment. The @reddy_ind long-form post about content cadence and player retention expresses a concern shared by several engaged endgame players: the game has the bones of something great but the feedback loop between community and dev is too slow.
+
+There is no coordinated negativity campaign — the thread reflects genuine love for the Division franchise alongside specific frustration with gaps in this title.
 
 ---
 
@@ -221,7 +225,6 @@ Unusual meta-suggestion but genuinely well-reasoned; the bug backlog and missing
 ---
 
 ## Thread Assessment
-
 This thread functions as a community wishlist and bug tracker rolled into one. The 373 messages from 129 participants span virtually every system in the game, which makes it more useful as a topic-identification tool than a focused feedback channel. The most important job for a developer reading this thread is to surface the items that have clear, high-reaction consensus — and those are few but significant.
 
 The single most urgent item is the inverted Y-axis control option, which has 63 combined reactions and is explicitly described as making the game unplayable for affected users. The prior response from staff that it "wasn't high priority" has become a community talking point and is eroding trust in the feedback process. Fixing this — or at minimum communicating a concrete timeline — would have outsized positive effect on community sentiment relative to the development effort involved.
@@ -230,4 +233,6 @@ The second tier of clearly-supported asks clusters around build loadouts (effect
 
 The Dark Zone section is the most contentious and structurally complex. The bugs — invincibility from oxi medic + poison interaction, the Pummelling Shield infinite stun, and rampant uncapped damage reduction — are more urgent than the design suggestions. The invincibility bug in particular is game-breaking and should be treated as a P1 fix rather than a topics-review item.
 
-The meta-feedback about Steam launch timing and content cadence deserves attention at a product level. The players raising these points are long-term, engaged users who understand the franchise deeply. Their concern is not that the game is bad — it's that the gap between current state and launch-ready state is visible from the outside, and the feedback loop from community to development feels too slow. The suggestion to enable reactions on this channel (which has since been done) was a good step; the next step is demonstrating, visibly, that specific high-reaction suggestions are being tracked.
+The meta-feedback about Steam launch timing and content cadence deserves attention at a product level. The players raising these points are long-term, engaged users who understand the franchise deeply. Their concern is not that the game is bad — it's that the gap between current state and launch-ready state is visible from the outside, and the feedback loop from community to development feels too slow.
+
+The suggestion to enable reactions on this channel (which has since been done) was a good step; the next step is demonstrating, visibly, that specific high-reaction suggestions are being tracked.

@@ -55,7 +55,9 @@ Players find TAM prices at the Clan Vendor prohibitively expensive given the rat
 ## Sentiment
 **Overall:** Negative
 
-Players feel the math simply doesn't work — @n1trozipp3r worked out that a single weapon TAM costs 150k clan credits and at current rates takes months to acquire. @lordskeletor1 estimated nine months to buy all TAMs through dailies alone. The grind feels disproportionate. However, @stratager's dissent is substantive: refreshing TAMs could hand power to hardcore grinders and make the DZ and PvP unbalanced. This is one of the few threads in the dataset where there is a genuine design tension being aired, not just a one-sided complaint.
+Players feel the math simply doesn't work — @n1trozipp3r worked out that a single weapon TAM costs 150k clan credits and at current rates takes months to acquire. @lordskeletor1 estimated nine months to buy all TAMs through dailies alone. The grind feels disproportionate. However, @stratager's dissent is substantive: refreshing TAMs could hand power to hardcore grinders and make the DZ and PvP unbalanced.
+
+This is one of the few threads in the dataset where there is a genuine design tension being aired, not just a one-sided complaint.
 
 ## Key Comments
 
@@ -75,7 +77,6 @@ A year-long grind to complete the vendor is the clearest statement of how severe
 Surfaces a compounding problem: the earn rate from nests (the primary credit source) is itself inadequate, making the math even worse than the nominal prices suggest.
 
 ## Thread Assessment
-
 The core issue here is a math problem: credit earn rates from clan nests and dailies are dramatically lower than the cost of TAMs. Players have done the arithmetic and it produces grind estimates of six months to over a year for a full vendor clear. Whether that's intentional pacing or an oversight, it reads to players as a dead end.
 
 The tension between accessibility and powercreep (flagged by @stratager) is the most useful design framing from this thread. A monthly refresh with a price reduction is the most popular proposal, but if TAMs provide significant PvP power, that change needs to be evaluated against DZ balance. A possible middle path — visible in @jbcode's suggestion — would be allowing regular credits to buy consumables like crafting mats, reserving clan credits exclusively for TAMs, so the credits players earn aren't split between routine needs and aspirational goals.

@@ -63,9 +63,11 @@ Players are raising two largely separate sets of concerns about the Tech Operato
 - **Loudness:** Low — The thread is small and reactions are sparse. However, the Hypershot-removal panic at the end (posted late in the review window) landed with the highest single-message reaction count in the thread and may attract more responses if the removal is confirmed.
 
 ## Sentiment
-**Overall:** Frustrated / Mixed
+**Overall:** Mixed / Frustrated
 
-The Offensive Tech Operator half of the thread is quietly desperate: players feel the class is unplayable in endgame PvE and entirely irrelevant in PvP, but the thread is small enough that it reads more like a known problem being dutifully documented than a community outcry. The tone turns sharply more heated at the end when the potential removal of Hypershot is raised — @ifozzy. and @xgriff_ feel the class is already at the bottom tier and that removing its only high-ceiling mechanic without parity treatment of Combat Medic signals developer bias. There is no meaningful disagreement about the class's problems; the debate, where it exists, is about whether individual skill mods are actually broken or just weaker than expected.
+The Offensive Tech Operator half of the thread is quietly desperate: players feel the class is unplayable in endgame PvE and entirely irrelevant in PvP, but the thread is small enough that it reads more like a known problem being dutifully documented than a community outcry.
+
+The tone turns sharply more heated at the end when the potential removal of Hypershot is raised — @ifozzy. and @xgriff_ feel the class is already at the bottom tier and that removing its only high-ceiling mechanic without parity treatment of Combat Medic signals developer bias. There is no meaningful disagreement about the class's problems; the debate, where it exists, is about whether individual skill mods are actually broken or just weaker than expected.
 
 ## Key Comments
 
@@ -98,10 +100,11 @@ Articulates why Hypershot is not just a nice-to-have but the class's primary val
 Highlights a stat-transparency gap that exists independently of balance; players are making builds based on community guesswork rather than documented values.
 
 ## Thread Assessment
-
 This thread covers two distinct problem areas that happen to share a class name. The Offensive (Striker drone) half has a near-universal diagnosis: drones are too fragile, too slow, locked to a single armor type at deployment, and provide no burst damage option. These are primarily tuning and bug issues with a clear desired direction — more HP, speed, and Skill Intensity scaling for drones; fixes to the armor-type-locking interaction and the cutscene despawn bug. There is no meaningful disagreement here.
 
-The Aegis (support) half is more fragmented. The chest-stealing interruption and the drone hitbox-blocking issue are both quality-of-life fixes with no opposition. The Teamfight skill mod status is genuinely uncertain — one player (Facu) believes it works but is subtle; others cannot verify any effect — suggesting either a display/feedback problem or a real bug. The Hypershot documentation gap is separately important: @xgriff_ provides the only community-documented thresholds (2K engineering base, 200% skill critical damage, 60%+ skill crit chance) and notes these were self-discovered, not officially communicated.
+The Aegis (support) half is more fragmented. The chest-stealing interruption and the drone hitbox-blocking issue are both quality-of-life fixes with no opposition. The Teamfight skill mod status is genuinely uncertain — one player (Facu) believes it works but is subtle; others cannot verify any effect — suggesting either a display/feedback problem or a real bug.
+
+The Hypershot documentation gap is separately important: @xgriff_ provides the only community-documented thresholds (2K engineering base, 200% skill critical damage, 60%+ skill crit chance) and notes these were self-discovered, not officially communicated.
 
 The Hypershot-removal signal at the end of the thread is the highest-priority item for developer awareness. Even if the planned change is a bug fix rather than a deliberate nerf, the player community will perceive it as the latter unless Communication is proactive and unless Combat Medic's equivalent mechanic is treated consistently. The two messages on this (from @ifozzy. and @xgriff_) arrived very late in the observation window and are likely to generate substantially more response; this thread should be revisited after those messages propagate.
 

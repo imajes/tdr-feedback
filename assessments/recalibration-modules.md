@@ -58,7 +58,9 @@ Players are frustrated by two intertwined problems: Recalibration Modules (books
 ## Sentiment
 **Overall:** Frustrated
 
-This thread has the most concentrated frustration of any thread analyzed. Players describe the recalibration system as "the worst part of the game" (@toxic_trades), "the hardest grind" (same), and note that items can consume 10+ books without producing a wanted result — that's an entire week's worth of Conflict farming for a single item. The AFK-farming problem in Conflict (players going idle to collect books passively) is raised as a symptom of a broken incentive structure. Importantly, multiple players aren't just frustrated — they're describing how this one system is bottlenecking their entire gear progression.
+This thread has the most concentrated frustration of any thread analyzed. Players describe the recalibration system as "the worst part of the game" (@toxic_trades), "the hardest grind" (same), and note that items can consume 10+ books without producing a wanted result — that's an entire week's worth of Conflict farming for a single item. The AFK-farming problem in Conflict (players going idle to collect books passively) is raised as a symptom of a broken incentive structure.
+
+Importantly, multiple players aren't just frustrated — they're describing how this one system is bottlenecking their entire gear progression.
 
 ## Key Comments
 
@@ -81,7 +83,6 @@ Strong language, but the reaction pattern across the thread validates the sentim
 4 reactions; the most analytically framed post, distinguishing the earn-side from the spend-side as two separate problems — a useful frame for dev prioritization.
 
 ## Thread Assessment
-
 Recalibration Modules generate more reaction engagement than any other topic in this thread set, which is a reliable signal of depth of feeling. The problem has two distinct halves: supply (books are gated behind a PvP mode many players don't enjoy or can access reliably) and spend rate (the escalating per-roll cost means books disappear faster than they can be earned, especially with bad RNG). Both halves need addressing; fixing only one would still leave players frustrated.
 
 The Division 2 Recalibration Library is the reference solution that multiple players independently raise. It would address the RNG frustration by allowing players to bank specific attributes they've found and apply them deliberately. Whether a full library is technically feasible for this title is a dev question, but the player signal is clear that the current one-random-roll-per-book model is not working.
