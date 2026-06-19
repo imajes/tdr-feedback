@@ -16,46 +16,130 @@ Players submitted a range of text errors, mistranslations, incorrect stat displa
 ## Error Categories Found
 
 ### 1. Localisation / Translation Errors (German)
+
 - Two weapon talents with the same name in German; the first should be renamed "Ruhige Hände" to match The Division 2 convention — @berserkaries (berserk Aries)
+
+  ![Two German talents share the same name](screenshots/spot-a-typo/berserkaries_2026-06-07_1.png)
+
 - Inconsistent use of "Waffe" vs "Waffen" throughout German UI; attribute names should follow a standardised format ("Waffe: Mehrfachschusschance" etc.) — @berserkaries
+
+  ![Waffe/Waffen inconsistency in attribute names](screenshots/spot-a-typo/berserkaries_2026-06-04_7.png)
+
 - Lady Death's German name is inconsistently rendered as "Unterweltgöttin" in some places but should be "Todesbraut" — @berserkaries
+
+  ![Lady Death incorrect German name](screenshots/spot-a-typo/berserkaries_2026-06-04_8.png)
+
 - "Aktivitäten-Playlist" is confusing in German; should simply be "Aktivitäten" — @berserkaries
-- Sealed caches have different names from their associated specializations in German — @berserkaries
+
+  !["Aktivitäten-Playlist" label](screenshots/spot-a-typo/berserkaries_2026-06-04_4.png)
+
+- An in-game sum is displayed incorrectly — @berserkaries
+
+  ![Sum display error (1)](screenshots/spot-a-typo/berserkaries_2026-06-04_5.png)
+  ![Sum display error (2)](screenshots/spot-a-typo/berserkaries_2026-06-04_6.png)
+
+- Sealed caches have different names from their associated specializations in German — @berserkaries *(no image)*
 
 ### 2. Skill / Talent Description Errors (English)
+
 - **Explosive Burst** backpack talent: duration (2 sec) and stack limit (10) are reversed compared to the logically correct values; contrast with Explosive Fury which reads correctly — @acnat. (JackBriggs)
+
+  ![Explosive Burst reversed values](screenshots/spot-a-typo/acnat_2026-06-05_1.png)
+  ![Explosive Fury for comparison](screenshots/spot-a-typo/acnat_2026-06-05_2.png)
+
 - **Warlord proficiency requirement** reads "Assist in killing Agents 30 times" but should clarify that the target is agent *skills*, not agents themselves — @imajes (imajes)
+
+  ![Warlord proficiency wording](screenshots/spot-a-typo/imajes_2026-06-04_1.png)
+
 - **Skill range mismatch:** a skill description reads "Skill Hits within 20 meters" but actually triggers only when hitting targets *beyond* 20 meters — @ethanboon_ (EB)
+
+  ![Skill range description mismatch](screenshots/spot-a-typo/ethanboon_2026-06-04_1.png)
+
 - Ability description uses double negative: "inflicts negative damage reduction" should read "causes the enemy to take more damage" — @pixues (Pix)
+
+  !["inflicts negative damage reduction" double negative](screenshots/spot-a-typo/pixues_2026-06-05_1.jpg)
+
 - Wrong skill mod name in Agent Career / Specialisation Training: "Fire Control Device" should be "Wingman" (confirmed in Vanguard; other specs likely affected) — @silverwolf0313 (SilverWolf0313)
 
+  ![Wrong skill mod name — original report](screenshots/spot-a-typo/silverwolf0313_2026-06-05_3.jpg)
+  ![Wrong skill mod name — second screenshot](screenshots/spot-a-typo/silverwolf0313_2026-06-05_4.jpg)
+  ![Proposed colour-coded presentation (follow-up)](screenshots/spot-a-typo/silverwolf0313_2026-06-05_1.jpg)
+  ![Proposed colour-coded presentation (follow-up)](screenshots/spot-a-typo/silverwolf0313_2026-06-05_2.jpg)
+  [Comprehensive errors doc](screenshots/spot-a-typo/silverwolf0313_2026-06-06_1.docx)
+
 ### 3. Armory / UI Ordering Errors
+
 - Weapon talents are displayed in the wrong order in Armory → Weapon Detail — @silverwolf0313
-- Skill mod combos in Specialisation Training are in a confusing order — @silverwolf0313
+
+  ![Weapon talent ordering issue](screenshots/spot-a-typo/silverwolf0313_2026-06-07_1.png)
+
+- Skill mod combos in Specialisation Training are in a confusing order — @silverwolf0313 *(see also section 2 images above)*
 
 ### 4. Store / Economy UI Errors
+
 - **OS Protocol Sealed Cache** in the store is described as a "standard sealed cache" but actually requires a gold SHD key — @imajes
+
+  ![OS Protocol Sealed Cache mislabelling](screenshots/spot-a-typo/imajes_2026-06-05_1.png)
+
 - Rewards UI shows "DZ Intel" and "DZ Credits" labels that appear to be mislabelled — @thewaveyhazard (TheWaveyHazard) and @imajes
 
+  ![DZ label mislabelling (a)](screenshots/spot-a-typo/imajes_2026-06-04_2.png)
+  ![DZ label mislabelling (b)](screenshots/spot-a-typo/imajes_2026-06-04_3.png)
+
 ### 5. Commendation / Collectible Count Error
+
 - "New York City Collector" commendation shows 21/33 encrypted caches but the count appears to be a typo — every other collectible in the category has a matching commendation with a round number — @a.m.r.egypt (A.M.R.)
 
+  ![Commendation 21/33 count (a)](screenshots/spot-a-typo/a_m_r_egypt_2026-06-04_1.png)
+  ![Commendation 21/33 count (b)](screenshots/spot-a-typo/a_m_r_egypt_2026-06-04_2.png)
+
 ### 6. Countdown Timer Display
+
 - Timer is shown backwards — @vollkettenfahrzeug (Vollkettenfahrzeug)
 - "Avaliable" is misspelled; should be "Available" — @vollkettenfahrzeug
 
+  ![Countdown timer backwards + spelling error](screenshots/spot-a-typo/vollkettenfahrzeug_2026-06-04_1.png)
+
 ### 7. Legendary Mode Icon Error
-- Legendary difficulty incorrectly shows the Heroic symbol at the top of the screen — @berserkaries
+
+- Legendary difficulty incorrectly shows the Heroic symbol at the top of the screen — @berserkaries *(no image attached)*
 
 ### 8. NPC Dialogue / World Error
-- Enemies at a deal site continue their dialogue even after the player kills them from range before reaching the site — @mazuro_ (Mazuro) *(borderline bug vs text error)*
+
+- Enemies at a deal site continue their dialogue even after the player kills them from range before reaching the site — @mazuro_ (Mazuro) *(borderline bug vs text error; no image)*
 
 ### 9. Grammar / Punctuation (English)
+
 - Use of "they're" / "their" error in at least one UI string — @martin_07092 (Martin)
-- Button text reads "on" when it should read "open" — @thewaveyhazard (TheWaveyHazard)
+
+  !["they're" grammar error in UI](screenshots/spot-a-typo/martin_07092_2026-06-05_2.png)
+
+- Button text reads "on" when it should read "open" — @thewaveyhazard (TheWaveyHazard) *(no image)*
 
 ### 10. Character Art / Typography
+
 - "POLICE" lettering on Agent Kelly's vest uses an incorrect typeface — the letter "I" is misaligned compared to real-world tactical gear — @martin_07092 (Martin) *(aesthetic/immersion flag, lower priority)*
+
+  ![Agent Kelly POLICE typeface (a)](screenshots/spot-a-typo/martin_07092_2026-06-05_1.jpg)
+  ![Agent Kelly POLICE typeface (b)](screenshots/spot-a-typo/martin_07092_2026-06-06_1.png)
+
+### 11. UI Navigation / Menu Errors (Additional — @berserkaries)
+
+These reports were posted by @berserkaries with screenshots but don't map cleanly to the other categories above. The first is more of a UX suggestion than a typo; the latter two are clearer text/logic errors.
+
+- HUD layout feedback: radar and team button positioning flagged as unnecessary / poorly placed — @berserkaries *(borderline; UX suggestion)*
+
+  ![HUD layout suggestion](screenshots/spot-a-typo/berserkaries_2026-06-04_1.png)
+
+- Two UI menu options appear identical but perform different actions — @berserkaries
+
+  ![Two menu options look the same](screenshots/spot-a-typo/berserkaries_2026-06-04_2.png)
+
+- An NPC exit option incorrectly reads "I want to see clan information" — @berserkaries
+
+  ![NPC option incorrect text](screenshots/spot-a-typo/berserkaries_2026-06-04_3.png)
+
+---
 
 ## Volume & Loudness
 
