@@ -204,11 +204,12 @@ function parsePrimaryAsks(value) {
     .filter(Boolean);
 
   return chunks.map((chunk) => ({
-    ask: chunk.match(/^- \*\*Ask:\*\*\s*([\s\S]*?)(?=\n\s+- \*\*First raised by:\*\*|\n\s+- \*\*Echoed by:\*\*|\n\s+- \*\*Category:\*\*|\n\s+- \*\*Likely lane:\*\*|$)/)?.[1].trim() ?? '',
+    ask: chunk.match(/^- \*\*Ask:\*\*\s*([\s\S]*?)(?=\n\s+- \*\*First raised by:\*\*|\n\s+- \*\*Echoed by:\*\*|\n\s+- \*\*Category:\*\*|\n\s+- \*\*Likely lane:\*\*|\n\s+- \*\*Likely thread:\*\*|$)/)?.[1].trim() ?? '',
     firstRaisedBy: chunk.match(/\n\s+- \*\*First raised by:\*\*\s*([^\n]+)/)?.[1].trim() ?? '',
     echoedBy: chunk.match(/\n\s+- \*\*Echoed by:\*\*\s*([^\n]+)/)?.[1].trim() ?? '',
     category: chunk.match(/\n\s+- \*\*Category:\*\*\s*([^\n]+)/)?.[1].trim() ?? 'General',
     lane: chunk.match(/\n\s+- \*\*Likely lane:\*\*\s*([^\n]+)/)?.[1].trim() ?? '',
+    likelyThread: chunk.match(/\n\s+- \*\*Likely thread:\*\*\s*([^\n]+)/)?.[1].trim() ?? '',
   })).filter((ask) => ask.ask);
 }
 
@@ -971,6 +972,22 @@ function askCard(ask, priority, options = {}) {
 }
 
 function askDetailCard(ask, priority) {
+  const likelyThreadChip = threadBadge(ask.likelyThread);
+  const routingItems = [
+    ask.lane ? `
+      <div>
+        <dt>Likely lane</dt>
+        <dd>${laneBadge(ask.lane)}</dd>
+      </div>
+    ` : '',
+    likelyThreadChip ? `
+      <div>
+        <dt>Likely thread</dt>
+        <dd>${likelyThreadChip}</dd>
+      </div>
+    ` : '',
+  ].filter(Boolean).join('');
+
   return `
     <article class="ask-card detail">
       <span class="priority">#${String(priority).padStart(2, '0')}</span>
@@ -978,11 +995,10 @@ function askDetailCard(ask, priority) {
       <div class="ask-heading">
         <p>${renderInlineMarkdown(ask.ask)}</p>
       </div>
-      ${ask.lane ? `
-        <div class="ask-lane">
-          <span>Likely lane</span>
-          ${laneBadge(ask.lane)}
-        </div>
+      ${routingItems ? `
+        <dl class="ask-routing">
+          ${routingItems}
+        </dl>
       ` : ''}
       <dl>
         <div><dt>Raised by</dt><dd class="people-line">${renderInlineMarkdown(ask.firstRaisedBy || 'Not specified')}</dd></div>
@@ -1115,6 +1131,28 @@ function categoryBadge(label, accent) {
 
 function laneBadge(label) {
   return `<span class="badge lane ${categoryAccent(label)}">${renderInlineMarkdown(label)}</span>`;
+}
+
+function threadBadge(label) {
+  const slug = slugForLikelyThread(label);
+  if (!slug) return '';
+
+  const route = routeForThread(slug);
+  const accent = BUCKET_BY_THREAD.get(slug)?.accent ?? categoryAccent(label);
+  const content = renderInlineMarkdown(label);
+  return `<a class="badge thread ${accent}" href="${escapeAttribute(route)}">${content}</a>`;
+}
+
+function slugForLikelyThread(label) {
+  const normalized = plainText(label).trim().toLowerCase();
+  if (!normalized || normalized.includes('needs dedicated thread')) {
+    return '';
+  }
+
+  const match = Object.entries(HEADLINES).find(([, headline]) => headline.toLowerCase() === normalized)
+    ?? Object.keys(HEADLINES).map((slug) => [slug, titleFromSlug(slug)]).find(([, title]) => title.toLowerCase() === normalized);
+
+  return match ? match[0] : '';
 }
 
 function askTypeBadge(label) {

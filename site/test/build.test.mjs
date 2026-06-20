@@ -30,6 +30,7 @@ Players are debating whether healing itself is too strong or whether the underly
   - **Echoed by:** @caelancromwell (Caelan), @ventz_arctic (Ventz)
   - **Category:** Balance
   - **Likely lane:** Balance
+  - **Likely thread:** Defence Reduction
 
 - **Ask:** Nerf or rework the Blitz OS
   - **First raised by:** @ventz_arctic (Ventz)
@@ -76,6 +77,7 @@ describe('assessment parsing', () => {
       echoedBy: '@caelancromwell (Caelan), @ventz_arctic (Ventz)',
       category: 'Balance',
       lane: 'Balance',
+      likelyThread: 'Defence Reduction',
     });
     assert.equal(thread.keyComments.length, 1);
     assert.equal(thread.assessment.includes('uncapped DR'), true);

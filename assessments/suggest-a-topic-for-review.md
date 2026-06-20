@@ -27,114 +27,133 @@ Beyond that, the dominant themes are: build loadouts, loot and OS system improve
   - **Echoed by:** 63 combined reactions across the touch and PC reports
   - **Category:** Bug Report / Accessibility
   - **Likely lane:** Features & QoL
+  - **Likely thread:** Needs dedicated thread
 
 - **Ask:** Add full build loadouts so players can save and switch complete gear, weapon, OS, and skill setups.
   - **First raised by:** @wlee_uwu, @itasil92 (Itasil92)
   - **Echoed by:** @darkcrusher81, @b0bachef, @vksq8, @x3mlyncomffee, @matt7085, @j_precocious
   - **Category:** QoL
   - **Likely lane:** Features & QoL
+  - **Likely thread:** Loadouts
 
 - **Ask:** Expand stash capacity and improve inventory management for players maintaining multiple builds.
   - **First raised by:** @b0bachef, @itasil92 (Itasil92), @emy.emillian, @irdcngl
   - **Echoed by:** Multiple players in the build-management cluster
   - **Category:** QoL
   - **Likely lane:** Features & QoL
+  - **Likely thread:** Stash Access
 
 - **Ask:** Add stronger inventory filtering, sorting, search, and duplicate grouping tools.
   - **First raised by:** @brocklanders_og (Brock Landers), @jorge8a27, @ajm17
   - **Echoed by:** @itasil92 (Itasil92), @brocklanders_og (Brock Landers)
   - **Category:** QoL
   - **Likely lane:** Features & QoL
+  - **Likely thread:** Inventory Filtering
 
 - **Ask:** Add an OS pity, trade-in, or targeted acquisition path so progression does not depend entirely on random drops.
   - **First raised by:** @ventz_arctic (Ventz)
   - **Echoed by:** @facu7535, @maku95, @ngting. (NG-TING), @visc3ra
   - **Category:** Rework Request
   - **Likely lane:** Progression & Economy
+  - **Likely thread:** Loot Mechanics
 
 - **Ask:** Reform weapon attributes and recalibration so incompatible stat rolls do not consume scarce materials.
   - **First raised by:** @xejvs (xej)
   - **Echoed by:** @mehsah, @fluffehcorgi
   - **Category:** Rework Request
   - **Likely lane:** Progression & Economy
+  - **Likely thread:** Recalibration Costs
 
 - **Ask:** Improve reward clarity, targeted loot, crafting control, and endgame drop quality.
   - **First raised by:** @wanvision_57414 (Wanvision), @caelancromwell, @reddy_ind (reddy_ind)
   - **Echoed by:** @ngting. (NG-TING), @visc3ra, @milk1xx, @ephr4im
   - **Category:** Rework Request
   - **Likely lane:** Progression & Economy
+  - **Likely thread:** Targeted Loot Pressure
 
 - **Ask:** Cap or redesign extreme Damage Reduction so Dark Zone players cannot become effectively unkillable.
   - **First raised by:** @fluffehcorgi (FluffehCorgi), @skiepher (Skiepher), @rezorex (Rezo)
   - **Echoed by:** @toxplosive
   - **Category:** Balance Change
   - **Likely lane:** Balance
+  - **Likely thread:** Defence Reduction
 
 - **Ask:** Fix Dark Zone hit registration and bullet non-registration against fast-moving or speed-boosted players.
   - **First raised by:** @laclown_ (LaClown)
   - **Echoed by:** @mannyjpc, @contracept, @chewybarka, @ino_suke95, @chaser_catto
   - **Category:** Bug Report
   - **Likely lane:** Balance
+  - **Likely thread:** Needs dedicated thread
 
 - **Ask:** Fix the Oxi medic plus Bulwark invincibility interaction where poison can make Bulwark and Combat Medic players immune to damage.
   - **First raised by:** @ezioraw (EzioRAW)
   - **Echoed by:** @charlesu9, @scabbybear, @hoodlum06243
   - **Category:** Bug Report
   - **Likely lane:** Specialisation Deep-Dives: Bulwark / Combat Medic
+  - **Likely thread:** Bulwark
 
 - **Ask:** Fix the Pummelling Shield infinite stun exploit.
   - **First raised by:** @rezorex (Rezo)
   - **Echoed by:** @fluffehcorgi (FluffehCorgi)
   - **Category:** Bug Report / Balance
   - **Likely lane:** Balance
+  - **Likely thread:** Pummelling Shield
 
 - **Ask:** Add clan war, clan invasion, clan-vs-clan, and stronger clan event loops.
   - **First raised by:** @zionplaz (!| ZionPlaZ |!), @aura0006
   - **Echoed by:** @mqkoi, @ventz_arctic
   - **Category:** New Feature
   - **Likely lane:** Clan & Social
+  - **Likely thread:** Clan Nests
 
 - **Ask:** Improve clan nests, clan vendor offers, clan capacity, and moderator tooling.
   - **First raised by:** @emy.emillian, @evybini, @megapixels420, @xx.viperxx_26827
   - **Echoed by:** Clan-focused participants across the thread
   - **Category:** QoL
   - **Likely lane:** Clan & Social
+  - **Likely thread:** Clan Vendor Economy
 
 - **Ask:** Fix performance degradation, mission crashes, unreachable collectibles, broken vaulting, and other stability defects.
   - **First raised by:** @idespisegeology (Danial), @gggunit_67815, @xxhammerzxx, @xejvs (xej), @ventz_arctic (Ventz)
   - **Echoed by:** @g40x., @emy.emillian, @jayjay1871, @hurdahur
   - **Category:** Bug Report
   - **Likely lane:** Bug Reports & Polish
+  - **Likely thread:** Needs dedicated thread
 
 - **Ask:** Fix profanity filter, localisation, Korean translation, OS description, skill chip, and talent text mismatches.
   - **First raised by:** @zeryano (Zeryano), @ttsia_, @clivesghost, @brocklanders_og (Brock Landers), @tibballt, @ventz_arctic (Ventz), @berserkaries
   - **Echoed by:** Multiple bug reporters in the stability and text-quality cluster
   - **Category:** Bug Report
   - **Likely lane:** Bug Reports & Polish
+  - **Likely thread:** Text & UI Bugs
 
 - **Ask:** Expand endgame content through raids, open-world revamps, world bosses, Underground-style missions, and better daily or weekly variety.
   - **First raised by:** @reddy_ind (reddy_ind), @meatballia, @brocklanders_og (Brock Landers), @ecoboi, @itasil92 (Itasil92), @x3mlyncomffee
   - **Echoed by:** @caperguy, @jhieswagger1
   - **Category:** New Feature
   - **Likely lane:** World & Content
+  - **Likely thread:** Needs dedicated thread
 
 - **Ask:** Add a firing range, build test environment, or public test server so players can validate builds and issues before live release.
   - **First raised by:** @tibballt, @milk1xx, @j_precocious, @tentoriko
   - **Echoed by:** Players requesting test-server access and better build validation
   - **Category:** New Feature
   - **Likely lane:** Features & QoL
+  - **Likely thread:** Build Testing Range
 
 - **Ask:** Improve social, cosmetic, trading, privacy, and regional population tools.
   - **First raised by:** @bianca2249_, @ventz_arctic (Ventz), @reddy_ind (reddy_ind), @sheltawn, @ajm17, @redadmiralza9812, @itasil92 (Itasil92), @aura0006, @j_precocious
   - **Echoed by:** Participants in the social and cosmetics cluster
   - **Category:** New Feature / QoL
   - **Likely lane:** Clan & Social
+  - **Likely thread:** Needs dedicated thread
 
 - **Ask:** Treat Steam-release timing, content cadence, anti-cheat response, and visible feedback tracking as program-level risks.
   - **First raised by:** @klein402 (Klein402), @senninra (SenninRa), @reddy_ind (reddy_ind), @karnivorex1, @brocklanders_og (Brock Landers), @ventz_arctic (Ventz)
   - **Echoed by:** Players concerned that unfixed issues and slow feedback loops will harm launch trust
   - **Category:** Program Feedback
   - **Likely lane:** Review Intake
+  - **Likely thread:** Suggested Topics
 
 ---
 

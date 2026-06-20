@@ -769,18 +769,19 @@ h1 {
   padding-right: 0;
 }
 
-.ask-lane {
-  align-items: center;
-  color: var(--color-text-faint);
-  font-family: var(--font-heading);
-  font-size: 10px;
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
+.ask-card dl.ask-routing {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: calc(var(--space-2) * -1) 0 0;
 }
 
-.ask-lane .badge {
+.ask-routing .badge {
   font-size: 10px;
+}
+
+.ask-routing a.badge {
+  text-decoration: none;
 }
 
 .ask-card .raised {
