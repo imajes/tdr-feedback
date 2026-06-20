@@ -739,7 +739,7 @@ h1 {
 
 .ask-heading {
   align-items: flex-start;
-  padding: var(--space-1) var(--space-9) var(--space-2) 0;
+  padding: var(--space-3) var(--space-9) var(--space-4) 0;
 }
 
 .ask-list.overview.compact .ask-heading {
@@ -772,12 +772,36 @@ h1 {
 .ask-card dl.ask-routing {
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
-  margin: calc(var(--space-2) * -1) 0 0;
+  align-items: center;
+  gap: var(--space-3);
+  margin: calc(var(--space-1) * -1) 0 var(--space-1);
+  padding-top: 0;
+  border-top: 0;
+}
+
+.ask-card dl.ask-routing > div {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.ask-card dl.ask-routing > div + div {
+  padding-left: 0;
+  border-left: 0;
 }
 
 .ask-routing .badge {
+  min-height: 20px;
+  padding-right: var(--space-3);
   font-size: 10px;
+}
+
+.ask-card dl.ask-routing dt {
+  white-space: nowrap;
+}
+
+.ask-card dl.ask-routing dd {
+  margin: 0;
 }
 
 .ask-routing a.badge {
@@ -797,7 +821,7 @@ h1 {
   margin: 0;
 }
 
-.ask-card.detail dl {
+.ask-card.detail > dl:not(.ask-routing) {
   margin-top: auto;
   padding-top: var(--space-3);
   border-top: var(--border-1);
