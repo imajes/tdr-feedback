@@ -604,7 +604,9 @@ function renderHomePage(model, currentPath) {
       <section class="section" id="top-priority">
         ${sectionHeader('flag', 'Top priority asks', 'Highest-signal asks ranked from participant reach and echo density.')}
         <div class="ask-list overview">
-          ${model.topAsks.map((ask, index) => askCard(ask, index + 1)).join('')}
+          ${model.topAsks.map((ask, index) => askCard(ask, index + 1, {
+            concise: index === 1 || index === 2,
+          })).join('')}
         </div>
       </section>
     `,
@@ -941,14 +943,15 @@ function threadCard(thread, bucket) {
   `;
 }
 
-function askCard(ask, priority) {
+function askCard(ask, priority, options = {}) {
   const signalItems = prioritySignalItems(ask);
+  const askText = options.concise ? conciseAskPreview(ask.ask) : ask.ask;
   return `
-    <a class="ask-card overview-card" href="${ask.threadRoute}">
+    <a class="ask-card overview-card" href="${ask.threadRoute}" title="${escapeAttribute(plainText(ask.ask))}" aria-label="${escapeAttribute(plainText(ask.ask))}">
       <span class="priority">#${String(priority).padStart(2, '0')}</span>
       <div class="ask-type-tab">${categoryBadge(ask.category, categoryAccent(ask.category))}</div>
       <div class="ask-heading">
-        <p>${renderInlineMarkdown(ask.ask)}</p>
+        <p>${renderInlineMarkdown(askText)}</p>
       </div>
       <dl class="signal-bar">
         ${signalItems.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${renderInlineMarkdown(value)}</dd></div>`).join('')}
@@ -1176,6 +1179,13 @@ function summaryPreview(text) {
   const first = firstParagraph(text);
   const sentences = first.match(/[^.!?]+[.!?]+(?:\s|$)|[^.!?]+$/g)?.map((part) => part.trim()).filter(Boolean) ?? [first];
   return sentences.slice(0, 2).join(' ');
+}
+
+function conciseAskPreview(text) {
+  const normalized = plainText(text).replace(/\s+/g, ' ').trim();
+  const firstSentence = normalized.match(/^[^.!?]+[.!?]?/)?.[0] ?? normalized;
+  const words = firstSentence.replace(/[.!?]+$/, '').split(' ').filter(Boolean);
+  return `${words.slice(0, 5).join(' ')}...`;
 }
 
 function firstParagraph(text) {
