@@ -499,6 +499,12 @@ h1 {
   color: var(--color-negative);
 }
 
+.icon-tile.neutral,
+.badge.neutral {
+  background: var(--color-neutral-tint);
+  color: var(--color-neutral);
+}
+
 .card-title-row {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 84px;
@@ -579,10 +585,6 @@ h1 {
 .badge.meta-chip[aria-expanded='true'] {
   background: var(--color-surface-4);
   color: var(--color-text);
-}
-
-.badge.neutral {
-  color: var(--color-text-muted);
 }
 
 .badge.sentiment.positive {
@@ -765,6 +767,20 @@ h1 {
 .ask-heading p {
   flex: 1 1 420px;
   padding-right: 0;
+}
+
+.ask-lane {
+  align-items: center;
+  color: var(--color-text-faint);
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.ask-lane .badge {
+  font-size: 10px;
 }
 
 .ask-card .raised {

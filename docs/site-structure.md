@@ -87,8 +87,12 @@ Trello board (TDR team): https://trello.com/b/qTP1a9cv
 |--------|------|
 | Spot a Typo or Error | `spot-a-typo-or-error` |
 
-### Meta (not a navigable bucket — surfaced on homepage only)
-- Suggest a Topic for Review (`suggest-a-topic-for-review`)
+### 8. Review Intake
+*Cross-lane suggestions, bug reports, and program feedback routed for follow-up.*
+
+| Thread | Slug |
+|--------|------|
+| Suggest a Topic for Review | `suggest-a-topic-for-review` |
 
 ---
 
@@ -96,7 +100,7 @@ Trello board (TDR team): https://trello.com/b/qTP1a9cv
 
 ### Homepage
 1. Hero — two-line context statement + two headline stats (total threads, total participants)
-2. Bucket grid — seven cards: icon, name, thread count, one-liner
+2. Bucket grid — eight cards: icon, name, thread count, one-liner
 3. Top Priority Asks strip — 3–5 highest-consensus asks pulled across all threads
 4. Footer — credits, Trello link, date of last update
 
@@ -119,6 +123,6 @@ Trello board (TDR team): https://trello.com/b/qTP1a9cv
 ## Stats (for homepage)
 
 - **Total threads:** 25
-- **Buckets:** 7
+- **Buckets:** 8
 - **Assessments complete:** 25
 - **Screenshots (spot-a-typo):** 29

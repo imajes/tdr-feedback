@@ -29,6 +29,7 @@ Players are debating whether healing itself is too strong or whether the underly
   - **First raised by:** @maxstriker (MaxStriker)
   - **Echoed by:** @caelancromwell (Caelan), @ventz_arctic (Ventz)
   - **Category:** Balance
+  - **Likely lane:** Balance
 
 - **Ask:** Nerf or rework the Blitz OS
   - **First raised by:** @ventz_arctic (Ventz)
@@ -74,6 +75,7 @@ describe('assessment parsing', () => {
       firstRaisedBy: '@maxstriker (MaxStriker)',
       echoedBy: '@caelancromwell (Caelan), @ventz_arctic (Ventz)',
       category: 'Balance',
+      lane: 'Balance',
     });
     assert.equal(thread.keyComments.length, 1);
     assert.equal(thread.assessment.includes('uncapped DR'), true);
@@ -86,9 +88,10 @@ describe('site model', () => {
       parseAssessmentMarkdown('healing-is-too-strong.md', healingAssessment),
     ]);
 
-    assert.equal(BUCKETS.length, 7);
+    assert.equal(BUCKETS.length, 8);
     assert.equal(routeForThread('healing-is-too-strong'), '/balance/healing-pressure/');
     assert.equal(routeForThread('add-loadouts-to-the-game'), '/features-qol/loadouts/');
+    assert.equal(routeForThread('suggest-a-topic-for-review'), '/review-intake/suggested-topics/');
     assert.equal(model.buckets.find((bucket) => bucket.id === 'balance').threads.length, 1);
     assert.equal(model.stats.totalThreads, 1);
     assert.equal(model.stats.totalAssessments, 1);

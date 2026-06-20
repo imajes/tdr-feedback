@@ -116,9 +116,17 @@ export const BUCKETS = [
     description: 'Text errors, mislabelling, localisation issues.',
     slugs: ['spot-a-typo-or-error'],
   },
+  {
+    id: 'review-intake',
+    label: 'Review Intake',
+    shortLabel: 'Intake',
+    icon: 'inbox',
+    accent: 'neutral',
+    description: 'Cross-lane suggestions, bug reports, and program feedback routed for follow-up.',
+    slugs: ['suggest-a-topic-for-review'],
+  },
 ];
 
-const META_SLUGS = new Set(['suggest-a-topic-for-review']);
 const BUCKET_BY_THREAD = new Map(BUCKETS.flatMap((bucket) => bucket.slugs.map((slug) => [slug, bucket])));
 
 const HEADLINES = {
@@ -144,6 +152,7 @@ const HEADLINES = {
   'recalibration-modules': 'Recalibration Costs',
   'shooting-range-to-test-weapons-builds': 'Build Testing Range',
   'spot-a-typo-or-error': 'Text & UI Bugs',
+  'suggest-a-topic-for-review': 'Suggested Topics',
   'tech-operator-master-thread': 'Tech Operator',
   'vanguard-master-thread': 'Vanguard',
 };
@@ -195,10 +204,11 @@ function parsePrimaryAsks(value) {
     .filter(Boolean);
 
   return chunks.map((chunk) => ({
-    ask: chunk.match(/^- \*\*Ask:\*\*\s*([\s\S]*?)(?=\n\s+- \*\*First raised by:\*\*|\n\s+- \*\*Echoed by:\*\*|\n\s+- \*\*Category:\*\*|$)/)?.[1].trim() ?? '',
+    ask: chunk.match(/^- \*\*Ask:\*\*\s*([\s\S]*?)(?=\n\s+- \*\*First raised by:\*\*|\n\s+- \*\*Echoed by:\*\*|\n\s+- \*\*Category:\*\*|\n\s+- \*\*Likely lane:\*\*|$)/)?.[1].trim() ?? '',
     firstRaisedBy: chunk.match(/\n\s+- \*\*First raised by:\*\*\s*([^\n]+)/)?.[1].trim() ?? '',
     echoedBy: chunk.match(/\n\s+- \*\*Echoed by:\*\*\s*([^\n]+)/)?.[1].trim() ?? '',
     category: chunk.match(/\n\s+- \*\*Category:\*\*\s*([^\n]+)/)?.[1].trim() ?? 'General',
+    lane: chunk.match(/\n\s+- \*\*Likely lane:\*\*\s*([^\n]+)/)?.[1].trim() ?? '',
   })).filter((ask) => ask.ask);
 }
 
@@ -354,7 +364,7 @@ export function parseAssessmentMarkdown(filename, markdown) {
 }
 
 export function buildSiteModel(threads) {
-  const visibleThreads = threads.filter((thread) => !META_SLUGS.has(thread.slug));
+  const visibleThreads = threads;
   const buckets = BUCKETS.map((bucket) => ({
     ...bucket,
     threads: bucket.slugs
@@ -743,7 +753,7 @@ function renderThreadPage(model, bucket, thread, currentPath) {
       <section class="section" id="related-threads">
         ${sectionHeader('corner-down-right', 'Related threads', `More assessments in ${bucket.label}.`, 'related')}
         <div class="related-grid">
-          ${related.map((candidate) => threadCard(candidate, bucket)).join('')}
+          ${related.length > 0 ? related.map((candidate) => threadCard(candidate, bucket)).join('') : emptyState('No other assessments are currently grouped in this review lane.')}
         </div>
       </section>
     `,
@@ -968,6 +978,12 @@ function askDetailCard(ask, priority) {
       <div class="ask-heading">
         <p>${renderInlineMarkdown(ask.ask)}</p>
       </div>
+      ${ask.lane ? `
+        <div class="ask-lane">
+          <span>Likely lane</span>
+          ${laneBadge(ask.lane)}
+        </div>
+      ` : ''}
       <dl>
         <div><dt>Raised by</dt><dd class="people-line">${renderInlineMarkdown(ask.firstRaisedBy || 'Not specified')}</dd></div>
         <div><dt>Echoed by</dt><dd class="people-line">${renderInlineMarkdown(ask.echoedBy || 'No explicit echo captured')}</dd></div>
@@ -1097,6 +1113,10 @@ function categoryBadge(label, accent) {
   return `<span class="badge category ${accent}">${escapeHtml(label)}</span>`;
 }
 
+function laneBadge(label) {
+  return `<span class="badge lane ${categoryAccent(label)}">${renderInlineMarkdown(label)}</span>`;
+}
+
 function askTypeBadge(label) {
   return `<button class="badge neutral meta-chip" type="button" data-popover-title="Ask type" data-popover-content="${escapeAttribute(ASK_TYPE_HELP)}">${escapeHtml(compactAskTypeLabel(label))}</button>`;
 }
@@ -1148,6 +1168,7 @@ function categoryAccent(category) {
   if (value.includes('bug')) return 'bugs';
   if (value.includes('balance')) return 'balance';
   if (value.includes('spec') || value.includes('class')) return 'specs';
+  if (value.includes('review') || value.includes('intake') || value.includes('program')) return 'neutral';
   return 'features';
 }
 
