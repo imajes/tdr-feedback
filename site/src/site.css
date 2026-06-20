@@ -739,11 +739,11 @@ h1 {
 
 .ask-heading {
   align-items: flex-start;
-  padding: var(--space-3) var(--space-9) var(--space-4) 0;
+  padding: var(--space-5) var(--space-9) var(--space-5) 0;
 }
 
 .ask-list.overview.compact .ask-heading {
-  padding-top: var(--space-3);
+  padding-top: var(--space-4);
 }
 
 .ask-type-tab {
