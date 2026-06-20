@@ -1,4 +1,4 @@
-# Demolitionist Master Thread
+# Demolitionist Primary Thread
 
 **Thread ID:** 1511983860370509884
 **Total Messages:** 13 (excluding OP)

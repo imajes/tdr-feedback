@@ -36,7 +36,7 @@ export const BUCKETS = [
     shortLabel: 'Specialisations',
     icon: 'shield',
     accent: 'specs',
-    description: 'Master threads, one per spec. Long-form community analysis of each class.',
+    description: 'Primary threads, one per spec. Long-form community analysis of each class.',
     slugs: [
       'bulwark-master-thread',
       'demolitionist-master-thread',
@@ -377,7 +377,7 @@ export function buildSiteModel(threads) {
   return {
     buckets,
     threads: visibleThreads.map((thread) => ({ ...thread, bucket: BUCKET_BY_THREAD.get(thread.slug) })),
-    topAsks: allAsks.sort((left, right) => right.score - left.score).slice(0, 5),
+    topAsks: selectTopAsks(allAsks),
     stats: {
       totalThreads: visibleThreads.length,
       navigableThreads: visibleThreads.length,
@@ -605,7 +605,7 @@ function renderHomePage(model, currentPath) {
         ${sectionHeader('flag', 'Top priority asks', 'Highest-signal asks ranked from participant reach and echo density.')}
         <div class="ask-list overview">
           ${model.topAsks.map((ask, index) => askCard(ask, index + 1, {
-            concise: index === 1 || index === 2,
+            preview: true,
           })).join('')}
         </div>
       </section>
@@ -679,7 +679,7 @@ function renderThreadPage(model, bucket, thread, currentPath) {
             <h1>${escapeHtml(thread.title)}</h1>
           </div>
           <aside class="thread-meta">
-            <div><span>DISCORD THREAD</span><strong>${thread.discordUrl ? `<a href="${escapeAttribute(thread.discordUrl)}">${escapeHtml(thread.sourceThreadName || thread.sourceTitle || thread.title)}</a>` : escapeHtml(thread.sourceThreadName || thread.sourceTitle || thread.title)}</strong></div>
+            <div><span>DISCORD THREAD</span><strong>${thread.discordUrl ? `<a href="${escapeAttribute(thread.discordUrl)}">${escapeHtml(displayThreadSourceName(thread))}</a>` : escapeHtml(displayThreadSourceName(thread))}</strong></div>
             <div><span>DATE RANGE</span><strong>${escapeHtml(formatDateRange(thread.dateRange) || 'Unlisted')}</strong></div>
           </aside>
         </div>
@@ -945,7 +945,7 @@ function threadCard(thread, bucket) {
 
 function askCard(ask, priority, options = {}) {
   const signalItems = prioritySignalItems(ask);
-  const askText = options.concise ? conciseAskPreview(ask.ask) : ask.ask;
+  const askText = options.preview ? priorityAskPreview(ask.ask) : ask.ask;
   return `
     <a class="ask-card overview-card" href="${ask.threadRoute}" title="${escapeAttribute(plainText(ask.ask))}" aria-label="${escapeAttribute(plainText(ask.ask))}">
       <span class="priority">#${String(priority).padStart(2, '0')}</span>
@@ -1156,6 +1156,20 @@ function echoScore(ask) {
   return ask.echoedBy.split('@').length - 1;
 }
 
+function selectTopAsks(asks, limit = 5) {
+  const selected = [];
+  const seenThreads = new Set();
+
+  for (const ask of asks.sort((left, right) => right.score - left.score)) {
+    if (seenThreads.has(ask.threadSlug)) continue;
+    seenThreads.add(ask.threadSlug);
+    selected.push(ask);
+    if (selected.length === limit) break;
+  }
+
+  return selected;
+}
+
 function prioritySignalItems(ask) {
   const items = [
     ['Participants', formatNumber(ask.threadParticipantCount ?? 0)],
@@ -1181,15 +1195,27 @@ function summaryPreview(text) {
   return sentences.slice(0, 2).join(' ');
 }
 
-function conciseAskPreview(text) {
+function priorityAskPreview(text) {
   const normalized = plainText(text).replace(/\s+/g, ' ').trim();
-  const firstSentence = normalized.match(/^[^.!?]+[.!?]?/)?.[0] ?? normalized;
-  const words = firstSentence.replace(/[.!?]+$/, '').split(' ').filter(Boolean);
-  return `${words.slice(0, 5).join(' ')}...`;
+  const phrase = normalized
+    .split(/\s+[—–-]\s+|\s+\(/)[0]
+    .replace(/[.!?]+$/, '')
+    .trim();
+
+  if (phrase.length >= 32 && phrase.length < normalized.length) {
+    return `${phrase}...`;
+  }
+
+  return normalized;
 }
 
 function firstParagraph(text) {
   return trimMarkdownParagraphs(text)[0] ?? '';
+}
+
+function displayThreadSourceName(thread) {
+  return (thread.sourceThreadName || thread.sourceTitle || thread.title)
+    .replace(/\bmaster thread\b/gi, 'primary thread');
 }
 
 function titleFromSlug(slug) {

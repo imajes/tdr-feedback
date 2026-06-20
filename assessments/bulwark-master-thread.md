@@ -1,4 +1,4 @@
-# Bulwark Master Thread
+# Bulwark Primary Thread
 
 **Thread ID:** 1511749913564938270
 **Total Messages:** 109 (excluding OP)

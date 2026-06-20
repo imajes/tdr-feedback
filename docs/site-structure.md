@@ -22,7 +22,7 @@ Trello board (TDR team): https://trello.com/b/qTP1a9cv
 ## Content Buckets
 
 ### 1. Specialisation Deep-Dives
-*Master threads, one per spec. Long-form community analysis of each class.*
+*Primary threads, one per spec. Long-form community analysis of each class.*
 
 | Thread | Slug |
 |--------|------|

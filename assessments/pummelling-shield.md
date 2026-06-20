@@ -54,7 +54,7 @@ The dominant ask is for a meaningful per-target stun cooldown (6–15 seconds is
 
 **Overall:** Frustrated
 
-There is near-universal agreement that the OS is broken in its current state, and even several players who own and use it (notably @jim. 7080 and @jbcode) explicitly ask for it to be nerfed. This is unusual in feedback threads covering an item that costs real money or significant grind to obtain.
+There is near-universal agreement that the OS is broken in its current state, and even several players who own and use it (notably @jim.7080 and @jbcode) explicitly ask for it to be nerfed. This is unusual in feedback threads covering an item that costs real money or significant grind to obtain.
 
 The dominant emotional register is exasperation — players have been experiencing perpetual stunlocks for months with no fix, and late-thread messages reflect fatigue with the timeline.
 

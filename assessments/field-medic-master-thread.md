@@ -1,4 +1,4 @@
-# Field Medic Master Thread
+# Field Medic Primary Thread
 
 **Thread ID:** 1511749850608304179
 **Total Messages:** 678 (excluding OP)

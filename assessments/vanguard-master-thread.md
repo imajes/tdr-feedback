@@ -1,4 +1,4 @@
-# Vanguard Master Thread
+# Vanguard Primary Thread
 
 **Thread ID:** 1511749667879256318
 **Total Messages:** 302 (excluding OP and StickyBot)
