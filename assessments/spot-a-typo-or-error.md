@@ -54,8 +54,6 @@ The overall volume of distinct bugs reported is high relative to the participant
 
 - **Warlord proficiency requirement** reads "Assist in killing Agents 30 times" but should clarify that the target is agent *skills*, not agents themselves — @imajes (imajes)
 
-  ![Warlord proficiency wording](screenshots/spot-a-typo/imajes_2026-06-04_1.png)
-
 - **Skill range mismatch:** a skill description reads "Skill Hits within 20 meters" but actually triggers only when hitting targets *beyond* 20 meters — @ethanboon_ (EB)
 
   ![Skill range description mismatch](screenshots/spot-a-typo/ethanboon_2026-06-04_1.png)
@@ -115,11 +113,13 @@ The overall volume of distinct bugs reported is high relative to the participant
 
 ### 9. Grammar / Punctuation (English)
 
-- Use of "they're" / "their" error in at least one UI string — @martin_07092 (Martin)
+- Unlocalized ISAC comms database string appears as an internal key (for example, "comms10") instead of player-facing text — @martin_07092 (Martin)
 
-  !["they're" grammar error in UI](screenshots/spot-a-typo/martin_07092_2026-06-05_2.png)
+  ![Unlocalized ISAC comms database string](screenshots/spot-a-typo/martin_07092_2026-06-05_2.png)
 
-- Button text reads "on" when it should read "open" — @thewaveyhazard (TheWaveyHazard) *(no image)*
+- Button text reads "on" when it should read "open" — @thewaveyhazard (TheWaveyHazard)
+
+  ![Button text reads "On" instead of "Open"](screenshots/spot-a-typo/imajes_2026-06-04_1.png)
 
 ### 10. Character Art / Typography
 
